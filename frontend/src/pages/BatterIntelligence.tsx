@@ -92,7 +92,7 @@ export const BatterIntelligence: React.FC<BatterIntelligenceProps> = ({ initialP
   };
 
   return (
-    <div className="p-6 md:p-8 space-y-6 max-w-7xl mx-auto">
+    <div className="space-y-6 w-full max-w-[1550px] mx-auto">
       {/* Standardized Compact Hero Section */}
       <PageHeroCard
         badge="Evaluation Engine"

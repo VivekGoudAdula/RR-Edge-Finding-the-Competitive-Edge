@@ -36,7 +36,7 @@ export const App: React.FC = () => {
       />
 
       {/* Main Content Area */}
-      <div className="flex-1 flex flex-col min-w-0 lg:pl-72 transition-all bg-grid-pattern">
+      <div className="flex-1 flex flex-col min-w-0 lg:pl-64 xl:pl-72 transition-all bg-grid-pattern">
         {/* Top Header */}
         <Header
           currentPage={currentPage}
@@ -44,7 +44,7 @@ export const App: React.FC = () => {
         />
 
         {/* Dynamic Page Views */}
-        <main className="flex-1 px-4 sm:px-6 lg:px-8 py-6 max-w-[1600px] mx-auto w-full">
+        <main className="flex-1 px-3 sm:px-5 lg:px-6 py-5 max-w-[1600px] mx-auto w-full">
           {currentPage === 'overview' && (
             <ExecutiveOverview onNavigate={handleNavigate} />
           )}
