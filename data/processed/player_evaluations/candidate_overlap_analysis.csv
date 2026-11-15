@@ -1,0 +1,7 @@
+discipline,threshold_label,min_balls,min_matches,qualified_count,retained_pct_of_broad
+Batter,"Broad / Discovery (30b, 4m)",30,4,372,100.0
+Batter,"Balanced (60b, 6m)",60,6,267,71.8
+Batter,"Strict / High Evidence (100b, 8m)",100,8,205,55.1
+Bowler,"Broad / Discovery (30b, 4m)",30,4,253,100.0
+Bowler,"Balanced (60b, 6m)",60,6,187,73.9
+Bowler,"Strict / High Evidence (100b, 8m)",100,8,127,50.2

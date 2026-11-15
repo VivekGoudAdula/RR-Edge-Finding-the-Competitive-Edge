@@ -1,0 +1,81 @@
+{
+  "dataset": {
+    "total_deliveries": 194014,
+    "legal_deliveries": 185715,
+    "total_matches": 837
+  },
+  "batter_post_dot": {
+    "metric_name": "Post-Dot Drought State Scoring Recovery (Preceded by >= 2 Dots)",
+    "trigger_definition": "Sequence where an individual batter reaches k >= 2 consecutive personal dot balls in an innings",
+    "observation_window": "All deliveries faced while remaining in the drought state (streak >= 2) until broken by a scoring shot",
+    "unit_of_observation": "Batter delivery faced under drought state (striker_id, match_id, delivery_id)",
+    "numerator_definition": "Sum of off-bat runs scored across all drought-state deliveries",
+    "denominator_definition": "Total legal deliveries faced while in the drought state (streak >= 2)",
+    "total_trigger_sequences": 14876,
+    "total_drought_state_deliveries_observed": 19818,
+    "strict_single_ball_t1_deliveries_faced": 12653,
+    "deliveries_per_trigger_sequence": 1.33,
+    "reconciliation_explanation": "Subsequent observations (19,818) exceed trigger sequences (14,876) because the metric evaluates every delivery faced while the batter is in a drought state (streak >= 2). When a drought streak compounds to 3, 4, or 5 consecutive dots, each additional dot faced is evaluated under the drought state, generating multiple observations per trigger (mean 1.33 balls per trigger sequence). If strictly restricted to a single subsequent delivery at t+1 per trigger sequence, there are exactly 12,653 deliveries faced (the remaining 2,223 triggers were truncated by the end of the innings or dismissal).",
+    "distinct_matches": 834,
+    "distinct_players": 689,
+    "minimum_evidence_threshold": "Confident >= 30, Provisional >= 15, else Insufficient Evidence",
+    "handling_of_boundaries": "Dot streaks strictly reset at innings boundary or match conclusion. Deliveries spanning innings boundaries are impossible because grouping is partitioned by (match_id, innings, striker_id). Incomplete streaks (< 2 dots) produce zero triggers.",
+    "zero_leakage_status": "VERIFIED: Trigger evaluates only preceding delivery outcomes (runs == 0). Outcomes are evaluated strictly forward in time."
+  },
+  "batter_post_wicket": {
+    "metric_name": "Post-Wicket Consolidation Window",
+    "trigger_definition": "Team wicket event (is_wicket == True) occurring in the match innings",
+    "observation_window": "First 6 legal deliveries of the innings following the wicket event",
+    "unit_of_observation": "Delivery faced by striker in window (striker_id, match_id, delivery_id)",
+    "numerator_definition": "Sum of off-bat runs scored in post-wicket window",
+    "denominator_definition": "Total legal deliveries faced in post-wicket window",
+    "total_trigger_events": 10486,
+    "total_observed_deliveries": 49560,
+    "distinct_matches": 833,
+    "distinct_players": 811,
+    "minimum_evidence_threshold": "Confident >= 30, Provisional >= 15",
+    "handling_of_boundaries": "Windows do not cross innings boundaries. Deliveries in 20th over stop at end of innings (window truncated naturally without distortion).",
+    "zero_leakage_status": "VERIFIED: Trigger event occurs prior to window deliveries."
+  },
+  "bowler_post_boundary": {
+    "metric_name": "Post-Boundary Bounce-Back Containment (t+1)",
+    "trigger_definition": "Delivery where runs off the bat in (4, 6) conceded by the bowler",
+    "observation_window": "The immediate next legal delivery (t+1) bowled by the SAME bowler in the SAME over",
+    "unit_of_observation": "Bowler delivery (bowler_id, match_id, delivery_id)",
+    "numerator_definition": "Total runs conceded by bowler on (t+1) delivery (including wides/no-balls charged)",
+    "denominator_definition": "Total legal deliveries bowled on (t+1)",
+    "total_trigger_events": 32662,
+    "total_observed_deliveries": 29219,
+    "distinct_matches": 836,
+    "distinct_players": 577,
+    "minimum_evidence_threshold": "Confident >= 30, Provisional >= 15",
+    "handling_of_boundaries": "Deliveries on the 6th ball of an over CANNOT have a (t+1) delivery in the same over; they are strictly excluded from the intra-over bounce-back denominator to prevent confounding cross-over spell breaks.",
+    "zero_leakage_status": "VERIFIED: Trigger delivery strictly precedes (t+1) delivery in match timeline."
+  },
+  "bowler_post_cluster": {
+    "metric_name": "Cluster Hemorrhage Resistance",
+    "trigger_definition": "Bowler conceding >= 8 runs across a rolling 3-ball window in the same innings",
+    "observation_window": "The delivery immediately following the 3-ball cluster",
+    "unit_of_observation": "Bowler delivery",
+    "numerator_definition": "Runs conceded on subsequent ball",
+    "denominator_definition": "Total legal deliveries observed after cluster",
+    "total_trigger_events": 24303,
+    "total_observed_deliveries": 24303,
+    "distinct_matches": 834,
+    "distinct_players": 553,
+    "minimum_evidence_threshold": "Confident >= 30, Provisional >= 15",
+    "handling_of_boundaries": "Rolling clusters strictly partition by (match_id, innings, bowler_id). Cannot cross match innings.",
+    "zero_leakage_status": "VERIFIED: Rolling window evaluates backward 3 deliveries only."
+  },
+  "bowler_inning_over_progression": {
+    "metric_name": "Cumulative Inning Over Exposure Progression",
+    "trigger_definition": "Bowler's personal delivery count in match: Early Phase (Deliveries 1-12) vs Late Phase (Deliveries 13-24+)",
+    "observation_window": "Deliveries within the bowler's cumulative count for that match innings",
+    "unit_of_observation": "Bowler delivery",
+    "numerator_definition": "Total runs conceded in each cumulative phase",
+    "denominator_definition": "Total legal balls bowled in each cumulative phase",
+    "early_deliveries_observed": 110664,
+    "late_deliveries_observed": 75051,
+    "terminology_clarification": "Renamed from 'Spell Progression/Fatigue' to 'Cumulative Inning Over Exposure Progression'. T20 bowlers typically bowl partitioned spells (e.g., 2 overs in Powerplay, 2 overs at Death) rather than continuous 4-over spells. This metric captures early-match vs late-match allocation performance, controlling for match inning context."
+  }
+}

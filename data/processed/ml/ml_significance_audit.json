@@ -1,0 +1,454 @@
+{
+  "bootstrap_results": {
+    "replicates": 1000,
+    "seed": 42,
+    "cluster_unit": "match_id",
+    "batter_expected_runs": {
+      "lightgbm_vs_dummy_mean": {
+        "delta_rmse": {
+          "mean": -0.02692,
+          "ci_95": [
+            -0.03157,
+            -0.02276
+          ],
+          "contains_zero": false,
+          "statistically_significant": true
+        },
+        "delta_mae": {
+          "mean": -0.00633,
+          "ci_95": [
+            -0.01727,
+            0.00483
+          ],
+          "contains_zero": true,
+          "statistically_significant": false
+        }
+      },
+      "lightgbm_vs_context_grid": {
+        "delta_rmse": {
+          "mean": -0.0209,
+          "ci_95": [
+            -0.02456,
+            -0.01734
+          ],
+          "contains_zero": false,
+          "statistically_significant": true
+        },
+        "delta_mae": {
+          "mean": 0.00238,
+          "ci_95": [
+            -0.00561,
+            0.01029
+          ],
+          "contains_zero": true,
+          "statistically_significant": false
+        }
+      },
+      "lightgbm_vs_xgboost": {
+        "delta_rmse": {
+          "mean": 0.0001,
+          "ci_95": [
+            -0.00055,
+            0.00075
+          ],
+          "contains_zero": true,
+          "statistically_significant": false
+        },
+        "delta_mae": {
+          "mean": -0.0008,
+          "ci_95": [
+            -0.0017,
+            4e-05
+          ],
+          "contains_zero": true,
+          "statistically_significant": false
+        }
+      }
+    },
+    "bowler_expected_runs": {
+      "lightgbm_vs_dummy_mean": {
+        "delta_rmse": {
+          "mean": -0.02227,
+          "ci_95": [
+            -0.02608,
+            -0.01871
+          ],
+          "contains_zero": false,
+          "statistically_significant": true
+        },
+        "delta_mae": {
+          "mean": -0.0009,
+          "ci_95": [
+            -0.01148,
+            0.00947
+          ],
+          "contains_zero": true,
+          "statistically_significant": false
+        }
+      },
+      "lightgbm_vs_context_grid": {
+        "delta_rmse": {
+          "mean": -0.01677,
+          "ci_95": [
+            -0.02027,
+            -0.0137
+          ],
+          "contains_zero": false,
+          "statistically_significant": true
+        },
+        "delta_mae": {
+          "mean": 0.00636,
+          "ci_95": [
+            -0.00116,
+            0.01466
+          ],
+          "contains_zero": true,
+          "statistically_significant": false
+        }
+      },
+      "lightgbm_vs_xgboost": {
+        "delta_rmse": {
+          "mean": 0.00019,
+          "ci_95": [
+            -0.00042,
+            0.0008
+          ],
+          "contains_zero": true,
+          "statistically_significant": false
+        },
+        "delta_mae": {
+          "mean": -0.00095,
+          "ci_95": [
+            -0.00195,
+            -3e-05
+          ],
+          "contains_zero": false,
+          "statistically_significant": true
+        }
+      }
+    },
+    "bowler_wicket_probability": {
+      "lightgbm_vs_dummy_prior": {
+        "delta_brier": {
+          "mean": -0.00025,
+          "ci_95": [
+            -0.00035,
+            -0.00015
+          ],
+          "contains_zero": false,
+          "statistically_significant": true
+        }
+      },
+      "lightgbm_vs_context_grid": {
+        "delta_brier": {
+          "mean": -8e-05,
+          "ci_95": [
+            -0.00016,
+            -2e-05
+          ],
+          "contains_zero": false,
+          "statistically_significant": true
+        }
+      },
+      "lightgbm_vs_xgboost": {
+        "delta_brier": {
+          "mean": 2e-05,
+          "ci_95": [
+            -1e-05,
+            6e-05
+          ],
+          "contains_zero": true,
+          "statistically_significant": false
+        }
+      }
+    }
+  },
+  "latency_results": {
+    "methodology": "200 repeated single-row pre-delivery inferences after 30 warmup iterations",
+    "batter_runs": {
+      "lightgbm_latency_ms": {
+        "mean": 7.4219,
+        "std": 1.89,
+        "p50": 6.7633,
+        "p95": 11.4609
+      },
+      "xgboost_latency_ms": {
+        "mean": 16.9444,
+        "std": 11.8681,
+        "p50": 14.3044,
+        "p95": 25.3416
+      }
+    },
+    "bowler_runs": {
+      "lightgbm_latency_ms": {
+        "mean": 7.5726,
+        "std": 0.7277,
+        "p50": 7.5202,
+        "p95": 8.599
+      },
+      "xgboost_latency_ms": {
+        "mean": 16.6887,
+        "std": 5.2009,
+        "p50": 14.653,
+        "p95": 26.76
+      }
+    }
+  },
+  "feature_importance_breakdown": {
+    "batter_runs": [
+      {
+        "feature": "current_score",
+        "split_count": 546,
+        "gain": 56751.18,
+        "gain_share_pct": 22.08
+      },
+      {
+        "feature": "prev_6_wickets",
+        "split_count": 184,
+        "gain": 37578.86,
+        "gain_share_pct": 14.62
+      },
+      {
+        "feature": "batting_order",
+        "split_count": 524,
+        "gain": 30796.97,
+        "gain_share_pct": 11.98
+      },
+      {
+        "feature": "balls_remaining",
+        "split_count": 420,
+        "gain": 30297.45,
+        "gain_share_pct": 11.79
+      },
+      {
+        "feature": "current_run_rate",
+        "split_count": 369,
+        "gain": 18458.77,
+        "gain_share_pct": 7.18
+      },
+      {
+        "feature": "legal_balls_bowled",
+        "split_count": 300,
+        "gain": 13453.36,
+        "gain_share_pct": 5.23
+      },
+      {
+        "feature": "required_run_rate",
+        "split_count": 365,
+        "gain": 13372.97,
+        "gain_share_pct": 5.2
+      },
+      {
+        "feature": "prev_6_runs",
+        "split_count": 302,
+        "gain": 11781.56,
+        "gain_share_pct": 4.58
+      },
+      {
+        "feature": "delta_rrr",
+        "split_count": 377,
+        "gain": 10320.54,
+        "gain_share_pct": 4.02
+      },
+      {
+        "feature": "target_runs",
+        "split_count": 281,
+        "gain": 8373.78,
+        "gain_share_pct": 3.26
+      },
+      {
+        "feature": "par_deficit",
+        "split_count": 204,
+        "gain": 5977.28,
+        "gain_share_pct": 2.33
+      },
+      {
+        "feature": "wickets_lost",
+        "split_count": 158,
+        "gain": 5930.03,
+        "gain_share_pct": 2.31
+      },
+      {
+        "feature": "over_num",
+        "split_count": 89,
+        "gain": 3705.05,
+        "gain_share_pct": 1.44
+      },
+      {
+        "feature": "innings_phase",
+        "split_count": 56,
+        "gain": 3288.08,
+        "gain_share_pct": 1.28
+      },
+      {
+        "feature": "prev_6_dots",
+        "split_count": 100,
+        "gain": 2302.43,
+        "gain_share_pct": 0.9
+      },
+      {
+        "feature": "wickets_remaining",
+        "split_count": 42,
+        "gain": 1697.63,
+        "gain_share_pct": 0.66
+      },
+      {
+        "feature": "batter_pressure_tier",
+        "split_count": 69,
+        "gain": 1685.17,
+        "gain_share_pct": 0.66
+      },
+      {
+        "feature": "competition_type",
+        "split_count": 43,
+        "gain": 1107.83,
+        "gain_share_pct": 0.43
+      },
+      {
+        "feature": "is_knockout",
+        "split_count": 8,
+        "gain": 131.03,
+        "gain_share_pct": 0.05
+      },
+      {
+        "feature": "innings",
+        "split_count": 1,
+        "gain": 35.2,
+        "gain_share_pct": 0.01
+      }
+    ],
+    "bowler_runs": [
+      {
+        "feature": "current_score",
+        "split_count": 423,
+        "gain": 40202.49,
+        "gain_share_pct": 19.03
+      },
+      {
+        "feature": "prev_6_wickets",
+        "split_count": 203,
+        "gain": 36594.88,
+        "gain_share_pct": 17.32
+      },
+      {
+        "feature": "bowler_pressure_tier",
+        "split_count": 51,
+        "gain": 26014.16,
+        "gain_share_pct": 12.31
+      },
+      {
+        "feature": "expected_scoring_rate",
+        "split_count": 430,
+        "gain": 21891.1,
+        "gain_share_pct": 10.36
+      },
+      {
+        "feature": "balls_remaining",
+        "split_count": 249,
+        "gain": 16776.37,
+        "gain_share_pct": 7.94
+      },
+      {
+        "feature": "current_run_rate",
+        "split_count": 333,
+        "gain": 16233.84,
+        "gain_share_pct": 7.68
+      },
+      {
+        "feature": "legal_balls_bowled",
+        "split_count": 228,
+        "gain": 10918.26,
+        "gain_share_pct": 5.17
+      },
+      {
+        "feature": "wickets_lost",
+        "split_count": 230,
+        "gain": 9461.65,
+        "gain_share_pct": 4.48
+      },
+      {
+        "feature": "prev_6_runs",
+        "split_count": 260,
+        "gain": 8523.75,
+        "gain_share_pct": 4.03
+      },
+      {
+        "feature": "par_deficit",
+        "split_count": 177,
+        "gain": 4982.63,
+        "gain_share_pct": 2.36
+      },
+      {
+        "feature": "required_run_rate",
+        "split_count": 129,
+        "gain": 3779.54,
+        "gain_share_pct": 1.79
+      },
+      {
+        "feature": "over_num",
+        "split_count": 87,
+        "gain": 3514.51,
+        "gain_share_pct": 1.66
+      },
+      {
+        "feature": "wickets_remaining",
+        "split_count": 87,
+        "gain": 3377.68,
+        "gain_share_pct": 1.6
+      },
+      {
+        "feature": "runs_to_defend",
+        "split_count": 126,
+        "gain": 3030.1,
+        "gain_share_pct": 1.43
+      },
+      {
+        "feature": "innings_phase",
+        "split_count": 48,
+        "gain": 2829.49,
+        "gain_share_pct": 1.34
+      },
+      {
+        "feature": "prev_6_dots",
+        "split_count": 87,
+        "gain": 2311.48,
+        "gain_share_pct": 1.09
+      },
+      {
+        "feature": "competition_type",
+        "split_count": 24,
+        "gain": 640.15,
+        "gain_share_pct": 0.3
+      },
+      {
+        "feature": "bowler_resource_context",
+        "split_count": 8,
+        "gain": 196.31,
+        "gain_share_pct": 0.09
+      },
+      {
+        "feature": "innings",
+        "split_count": 0,
+        "gain": 0.0,
+        "gain_share_pct": 0.0
+      },
+      {
+        "feature": "is_knockout",
+        "split_count": 0,
+        "gain": 0.0,
+        "gain_share_pct": 0.0
+      }
+    ]
+  },
+  "wkt_calibration_summary": {
+    "test_deliveries": 32529,
+    "test_wickets": 1656,
+    "test_base_rate": 0.0509,
+    "dummy_prior_brier": 0.0483,
+    "context_grid_brier": 0.0481,
+    "lightgbm_brier": 0.0481,
+    "xgboost_brier": 0.048,
+    "delta_brier_lgb_vs_dummy": -0.00025,
+    "calibration_audit_findings": "Because wickets occur on only ~5.1% of deliveries, the dummy prior benchmark achieves a Brier score of 0.0483. LightGBM achieves 0.0481 (a difference of -0.00025). While LightGBM provides meaningful ranking discrimination (ROC-AUC 0.5902, PR-AUC 0.0715), overall Brier score is dominated by class rarity. Natural class prevalence does NOT guarantee calibration; unweighted tree probability predictions remain conditionally conservative."
+  }
+}

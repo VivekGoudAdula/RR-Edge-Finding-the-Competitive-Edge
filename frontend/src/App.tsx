@@ -1,0 +1,97 @@
+import React, { useState } from 'react';
+import { Sidebar, PageId } from './components/layout/Sidebar';
+import { Header } from './components/layout/Header';
+import { ExecutiveOverview } from './pages/ExecutiveOverview';
+import { PressureIntelligence } from './pages/PressureIntelligence';
+import { BatterIntelligence } from './pages/BatterIntelligence';
+import { BowlerIntelligence } from './pages/BowlerIntelligence';
+import { PlayerComparisonLab } from './pages/PlayerComparisonLab';
+import { BehavioralIntelligence } from './pages/BehavioralIntelligence';
+import { MethodologyLab } from './pages/MethodologyLab';
+import { ModelLab } from './pages/ModelLab';
+import { DataExplorer } from './pages/DataExplorer';
+import { ScenarioLab } from './pages/ScenarioLab';
+import { PlayerGallery } from './pages/PlayerGallery';
+import { CricketSimulator } from './pages/CricketSimulator';
+
+export const App: React.FC = () => {
+  const [currentPage, setCurrentPage] = useState<PageId>('overview');
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [selectedPlayerId, setSelectedPlayerId] = useState<number | undefined>(undefined);
+
+  const handleNavigate = (page: PageId, playerId?: number) => {
+    setCurrentPage(page);
+    setSelectedPlayerId(playerId);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  return (
+    <div className="min-h-screen bg-rr-warm bg-grid-pattern flex text-rr-charcoal font-sans antialiased">
+      {/* Left Navigation Sidebar */}
+      <Sidebar
+        currentPage={currentPage}
+        onSelectPage={(page) => handleNavigate(page)}
+        mobileOpen={mobileOpen}
+        onCloseMobile={() => setMobileOpen(false)}
+      />
+
+      {/* Main Content Area */}
+      <div className="flex-1 flex flex-col min-w-0 lg:pl-72 transition-all bg-grid-pattern">
+        {/* Top Header */}
+        <Header
+          currentPage={currentPage}
+          onOpenMobile={() => setMobileOpen(true)}
+        />
+
+        {/* Dynamic Page Views */}
+        <main className="flex-1 px-4 sm:px-6 lg:px-8 py-6 max-w-[1600px] mx-auto w-full">
+          {currentPage === 'overview' && (
+            <ExecutiveOverview onNavigate={handleNavigate} />
+          )}
+          {currentPage === 'pressure' && (
+            <PressureIntelligence />
+          )}
+          {currentPage === 'batters' && (
+            <BatterIntelligence initialPlayerId={selectedPlayerId} />
+          )}
+          {currentPage === 'bowlers' && (
+            <BowlerIntelligence initialPlayerId={selectedPlayerId} />
+          )}
+          {currentPage === 'scenarios' && (
+            <ScenarioLab
+              onNavigateToGallery={(playerId) => handleNavigate('gallery', playerId)}
+            />
+          )}
+          {currentPage === 'simulator' && (
+            <CricketSimulator />
+          )}
+          {currentPage === 'gallery' && (
+            <PlayerGallery
+              initialPlayerId={selectedPlayerId}
+              onNavigateToScenarios={(scenarioId, playerId) => handleNavigate('scenarios', playerId)}
+              onNavigateToComparison={(playerId) => handleNavigate('comparison', playerId)}
+            />
+          )}
+          {currentPage === 'comparison' && (
+            <PlayerComparisonLab />
+          )}
+          {currentPage === 'behavioral' && (
+            <BehavioralIntelligence />
+          )}
+          {currentPage === 'ml_lab' && (
+            <ModelLab />
+          )}
+          {currentPage === 'methodology' && (
+            <MethodologyLab />
+          )}
+          {currentPage === 'explorer' && (
+            <DataExplorer />
+          )}
+        </main>
+      </div>
+    </div>
+  );
+};
+
+export default App;
+

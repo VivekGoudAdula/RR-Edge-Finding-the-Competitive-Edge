@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-rr-warm text-rr-charcoal antialiased selection:bg-rr-soft selection:text-rr-deep;
+    background-color: #FFFBFD;
+    background-image: 
+      linear-gradient(to right, rgba(230, 0, 126, 0.14) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(230, 0, 126, 0.14) 1px, transparent 1px);
+    background-size: 22px 22px;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+
+  /* Custom scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #FFF5FA;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #F0E7ED;
+    border-radius: 9999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #FCE7F2;
+  }
+}
+
+.text-gradient-rr {
+  background: linear-gradient(135deg, #E6007E 0%, #B90063 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@layer utilities {
+  .bg-grid-pattern {
+    background-color: #FFFBFD;
+    background-image: 
+      linear-gradient(to right, rgba(230, 0, 126, 0.14) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(230, 0, 126, 0.14) 1px, transparent 1px);
+    background-size: 22px 22px;
+  }
+}
+
+

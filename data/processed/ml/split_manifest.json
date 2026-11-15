@@ -1,0 +1,55 @@
+{
+  "train": {
+    "seasons": [
+      "2022",
+      "2022/23",
+      "2023",
+      "2023/24",
+      "2024",
+      "2024/25"
+    ],
+    "matches": 498,
+    "deliveries": 111806,
+    "batter_deliveries_faced": 111806,
+    "bowler_deliveries_bowled": 116211,
+    "wides_excluded_from_batters": 4405,
+    "ipl_matches": 219,
+    "t20i_matches": 279,
+    "start_date": "2022-01-22",
+    "end_date": "2025-01-02"
+  },
+  "validation": {
+    "seasons": [
+      "2025"
+    ],
+    "matches": 195,
+    "deliveries": 41993,
+    "batter_deliveries_faced": 41993,
+    "bowler_deliveries_bowled": 43633,
+    "wides_excluded_from_batters": 1640,
+    "ipl_matches": 74,
+    "t20i_matches": 121,
+    "start_date": "2025-01-22",
+    "end_date": "2025-12-19"
+  },
+  "test": {
+    "seasons": [
+      "2026"
+    ],
+    "matches": 144,
+    "deliveries": 31165,
+    "batter_deliveries_faced": 31165,
+    "bowler_deliveries_bowled": 32529,
+    "wides_excluded_from_batters": 1364,
+    "ipl_matches": 74,
+    "t20i_matches": 70,
+    "start_date": "2026-01-07",
+    "end_date": "2026-11-01"
+  },
+  "total_matches": 837,
+  "total_deliveries": 184964,
+  "total_batter_deliveries_faced": 184964,
+  "total_bowler_deliveries_bowled": 192373,
+  "total_wides_in_primary_cohort": 7409,
+  "reconciliation_note": "In MCC Law 22, batters do not face wide deliveries, so wides are excluded from the batter population (184,964 total, 31,165 test). In MCC Law 21/22, bowlers are charged runs and can effect dismissals on wides, so bowler models evaluate all primary cohort balls (192,373 total, 32,529 test). The 1,364 test difference represents exact legal wides in the 2026 partition (32,529 - 31,165 = 1,364)."
+}

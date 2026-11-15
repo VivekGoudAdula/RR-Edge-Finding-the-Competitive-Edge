@@ -1,0 +1,122 @@
+player_id,player_name,discipline,format,qualification_tier,pressure_volume,pressure_matches,risk_flag_count,risk_severity,flag_sample_fragility,flag_dot_ball_vulnerability,flag_boundary_reliance,flag_phase_specialization,flag_match_volatility,flag_crunch_collapse,flag_context_dropoff,risk_notes
+50284,Vaibhav Sooryavanshi,Batter,IPL,Balanced,76,12,2,MODERATE_RISK,False,False,True,True,False,False,False,High boundary reliance: 92.0% runs from boundaries | Phase concentration: 90.8% deliveries in a single innings phase
+7341,Jake McGurk,Batter,IPL,Discovery,36,6,4,HIGH_RISK,True,False,True,True,True,False,False,Sample limitation: 36 pressure balls across 6 matches | High boundary reliance: 91.3% runs from boundaries | Phase concentration: 86.1% deliveries in a single innings phase | Match-level pass rate 33.3% (<50% target consistency)
+143,Dinesh Karthik,Batter,IPL,Strict,216,23,0,LOW_RISK,False,False,False,False,False,False,False,No significant tactical or sample vulnerabilities detected
+25669,Priyansh Arya,Batter,IPL,Balanced,68,16,2,MODERATE_RISK,False,False,True,True,False,False,False,High boundary reliance: 83.8% runs from boundaries | Phase concentration: 92.6% deliveries in a single innings phase
+4821,Mahipal Lomror,Batter,IPL,Balanced,66,10,1,LOW_RISK,False,False,True,False,False,False,False,High boundary reliance: 77.9% runs from boundaries
+4007,Ryan Rickelton,Batter,IPL,Strict,109,14,2,MODERATE_RISK,False,False,True,True,False,False,False,High boundary reliance: 83.3% runs from boundaries | Phase concentration: 90.8% deliveries in a single innings phase
+6396,Tim David,Batter,IPL,Strict,334,32,0,LOW_RISK,False,False,False,False,False,False,False,No significant tactical or sample vulnerabilities detected
+6819,Yashasvi Jaiswal,Batter,IPL,Strict,266,38,2,MODERATE_RISK,False,False,True,True,False,False,False,High boundary reliance: 83.4% runs from boundaries | Phase concentration: 87.2% deliveries in a single innings phase
+8654,Cooper Connolly,Batter,IPL,Strict,122,9,1,LOW_RISK,False,False,True,False,False,False,False,High boundary reliance: 75.8% runs from boundaries
+4722,Rashid Khan,Batter,IPL,Strict,198,26,0,LOW_RISK,False,False,False,False,False,False,False,No significant tactical or sample vulnerabilities detected
+8101,Ashutosh Sharma,Batter,IPL,Strict,250,21,0,LOW_RISK,False,False,False,False,False,False,False,No significant tactical or sample vulnerabilities detected
+838,Glenn Maxwell,Batter,IPL,Strict,177,18,0,LOW_RISK,False,False,False,False,False,False,False,No significant tactical or sample vulnerabilities detected
+6272,William Jacks,Batter,IPL,Balanced,98,9,1,LOW_RISK,False,False,True,False,False,False,False,High boundary reliance: 75.9% runs from boundaries
+3125,Nicholas Pooran,Batter,IPL,Strict,491,38,0,LOW_RISK,False,False,False,False,False,False,False,No significant tactical or sample vulnerabilities detected
+46066,Vipraj Nigam,Batter,IPL,Balanced,77,8,1,LOW_RISK,False,False,True,False,False,False,False,High boundary reliance: 77.7% runs from boundaries
+6931,Pathum Nissanka,Batter,IPL,Balanced,86,6,0,LOW_RISK,False,False,False,False,False,False,False,No significant tactical or sample vulnerabilities detected
+25139,Shubham Dubey,Batter,IPL,Strict,111,14,0,LOW_RISK,False,False,False,False,False,False,False,No significant tactical or sample vulnerabilities detected
+2639,Marcus Stoinis,Batter,IPL,Strict,433,35,0,LOW_RISK,False,False,False,False,False,False,False,No significant tactical or sample vulnerabilities detected
+6281,Abhishek Sharma,Batter,IPL,Strict,353,36,0,LOW_RISK,False,False,False,False,False,False,False,No significant tactical or sample vulnerabilities detected
+1699,Suryakumar Yadav,Batter,IPL,Strict,579,34,0,LOW_RISK,False,False,False,False,False,False,False,No significant tactical or sample vulnerabilities detected
+1205,Jonny Bairstow,Batter,IPL,Strict,108,13,1,LOW_RISK,False,False,True,False,False,False,False,High boundary reliance: 77.4% runs from boundaries
+47,Virat Kohli,Batter,IPL,Strict,278,30,0,LOW_RISK,False,False,False,False,False,False,False,No significant tactical or sample vulnerabilities detected
+7216,Prabhsimran Singh,Batter,IPL,Strict,222,33,2,MODERATE_RISK,False,False,True,True,False,False,False,High boundary reliance: 77.4% runs from boundaries | Phase concentration: 82.4% deliveries in a single innings phase
+48504,Ayush Mhatre,Batter,IPL,Balanced,61,8,0,LOW_RISK,False,False,False,False,False,False,False,No significant tactical or sample vulnerabilities detected
+2367,Travis Head,Batter,IPL,Strict,130,19,2,MODERATE_RISK,False,False,True,True,False,False,False,High boundary reliance: 83.9% runs from boundaries | Phase concentration: 84.6% deliveries in a single innings phase
+4260,Heinrich Klaasen,Batter,IPL,Strict,409,29,0,LOW_RISK,False,False,False,False,False,False,False,No significant tactical or sample vulnerabilities detected
+7625,Suryansh Shedge,Batter,IPL,Discovery,71,5,2,MODERATE_RISK,True,False,False,True,False,False,False,Sample limitation: 71 pressure balls across 5 matches | Phase concentration: 80.3% deliveries in a single innings phase
+2382,Jamie Overton,Batter,IPL,Balanced,84,7,1,LOW_RISK,False,False,False,False,False,True,False,Measured SR drops from 165.5 to 123.9 when wickets remaining <= 3
+4736,Josh Inglis,Batter,IPL,Discovery,40,8,2,MODERATE_RISK,True,False,True,False,False,False,False,Sample limitation: 40 pressure balls across 8 matches | High boundary reliance: 77.1% runs from boundaries
+8,Mahendra Singh Dhoni,Batter,IPL,Strict,329,33,0,LOW_RISK,False,False,False,False,False,False,False,No significant tactical or sample vulnerabilities detected
+2003,Bhanuka Rajapaksa,Batter,IPL,Discovery,34,6,1,LOW_RISK,True,False,False,False,False,False,False,Sample limitation: 34 pressure balls across 6 matches
+45966,Prashant Veer,Batter,IPL,Discovery,37,4,2,MODERATE_RISK,True,False,True,False,False,False,False,Sample limitation: 37 pressure balls across 4 matches | High boundary reliance: 75.4% runs from boundaries
+6396,Tim David,Batter,T20I,Strict,176,15,2,MODERATE_RISK,False,False,True,False,False,True,False,High boundary reliance: 76.3% runs from boundaries | Measured SR drops from 184.7 to 140.0 when wickets remaining <= 3
+5553,Phil Salt,Batter,T20I,Strict,170,20,0,LOW_RISK,False,False,False,False,False,False,False,No significant tactical or sample vulnerabilities detected
+2101,Quinton de Kock,Batter,T20I,Strict,215,14,0,LOW_RISK,False,False,False,False,False,False,False,No significant tactical or sample vulnerabilities detected
+6273,Tom Banton,Batter,T20I,Discovery,50,4,1,LOW_RISK,True,False,False,False,False,False,False,Sample limitation: 50 pressure balls across 4 matches
+1318,Andre Russell,Batter,T20I,Balanced,73,8,1,LOW_RISK,False,False,False,True,False,False,False,Phase concentration: 84.9% deliveries in a single innings phase
+37052,Naman Dhir,Batter,T20I,Discovery,36,4,2,MODERATE_RISK,True,False,False,True,False,False,False,Sample limitation: 36 pressure balls across 4 matches | Phase concentration: 88.9% deliveries in a single innings phase
+8221,Nitish Reddy,Batter,T20I,Discovery,47,4,1,LOW_RISK,True,False,False,False,False,False,False,Sample limitation: 47 pressure balls across 4 matches
+838,Glenn Maxwell,Batter,T20I,Strict,144,15,0,LOW_RISK,False,False,False,False,False,False,False,No significant tactical or sample vulnerabilities detected
+6281,Abhishek Sharma,Batter,T20I,Strict,157,28,0,LOW_RISK,False,False,False,False,False,False,False,No significant tactical or sample vulnerabilities detected
+768,Reeza Hendricks,Batter,T20I,Strict,376,23,0,LOW_RISK,False,False,False,False,False,False,False,No significant tactical or sample vulnerabilities detected
+8301,Asif Khan,Batter,T20I,Strict,113,11,1,LOW_RISK,False,False,True,False,False,False,False,High boundary reliance: 77.0% runs from boundaries
+796,Matthew Wade,Batter,T20I,Strict,152,12,0,LOW_RISK,False,False,False,False,False,False,False,No significant tactical or sample vulnerabilities detected
+4369,Shai Hope,Batter,T20I,Strict,224,27,0,LOW_RISK,False,False,False,False,False,False,False,No significant tactical or sample vulnerabilities detected
+20702,Tristan Stubbs,Batter,T20I,Strict,187,15,0,LOW_RISK,False,False,False,False,False,False,False,No significant tactical or sample vulnerabilities detected
+4391,Liam Livingstone,Batter,T20I,Strict,108,17,0,LOW_RISK,False,False,False,False,False,False,False,No significant tactical or sample vulnerabilities detected
+6725,Sherfane Rutherford,Batter,T20I,Strict,216,19,0,LOW_RISK,False,False,False,False,False,False,False,No significant tactical or sample vulnerabilities detected
+4847,Finn Allen,Batter,T20I,Balanced,95,20,4,HIGH_RISK,False,True,True,True,True,False,False,High dot-ball rate (45.3%) in pressure deliveries | High boundary reliance: 79.5% runs from boundaries | Phase concentration: 86.3% deliveries in a single innings phase | Match-level pass rate 45.5% (<50% target consistency)
+443,Paul Stirling,Batter,T20I,Strict,108,21,3,HIGH_RISK,False,False,True,True,True,False,False,High boundary reliance: 77.7% runs from boundaries | Phase concentration: 91.7% deliveries in a single innings phase | Match-level pass rate 46.2% (<50% target consistency)
+7808,Marco Jansen,Batter,T20I,Balanced,95,9,2,MODERATE_RISK,False,True,True,False,False,False,False,High dot-ball rate (47.4%) in pressure deliveries | High boundary reliance: 82.6% runs from boundaries
+2258,Sanju Samson,Batter,T20I,Strict,139,24,3,HIGH_RISK,False,True,True,True,False,False,False,High dot-ball rate (45.3%) in pressure deliveries | High boundary reliance: 78.2% runs from boundaries | Phase concentration: 83.5% deliveries in a single innings phase
+4842,Shamar Springer,Batter,T20I,Balanced,69,7,1,LOW_RISK,False,False,False,False,True,False,False,Match-level pass rate 42.9% (<50% target consistency)
+4755,Shivam Dube,Batter,T20I,Strict,111,14,0,LOW_RISK,False,False,False,False,False,False,False,No significant tactical or sample vulnerabilities detected
+6280,Harry Brook,Batter,T20I,Strict,109,14,0,LOW_RISK,False,False,False,False,False,False,False,No significant tactical or sample vulnerabilities detected
+818,Mitchell Marsh,Batter,T20I,Strict,205,23,0,LOW_RISK,False,False,False,False,False,False,False,No significant tactical or sample vulnerabilities detected
+25507,Edson Silva,Batter,T20I,Discovery,38,2,1,LOW_RISK,True,False,False,False,False,False,False,Sample limitation: 38 pressure balls across 2 matches
+772,Rilee Rossouw,Batter,T20I,Discovery,30,5,2,MODERATE_RISK,True,False,True,False,False,False,False,Sample limitation: 30 pressure balls across 5 matches | High boundary reliance: 85.7% runs from boundaries
+4229,George Linde,Batter,T20I,Balanced,71,7,1,LOW_RISK,False,False,True,False,False,False,False,High boundary reliance: 76.8% runs from boundaries
+24779,Ijaz Ahmadzai,Batter,T20I,Discovery,54,4,2,MODERATE_RISK,True,False,False,True,False,False,False,Sample limitation: 54 pressure balls across 4 matches | Phase concentration: 88.9% deliveries in a single innings phase
+6628,Gerald Coetzee,Batter,T20I,Discovery,47,8,1,LOW_RISK,True,False,False,False,False,False,False,Sample limitation: 47 pressure balls across 8 matches
+781,Sunil Narine,Bowler,IPL,Strict,317,41,0,LOW_RISK,False,False,False,False,False,False,False,No significant tactical or sample vulnerabilities detected
+2933,Jasprit Bumrah,Bowler,IPL,Strict,391,41,1,LOW_RISK,False,True,False,False,False,False,False,Low dot-ball rate (32.7%) in pressure deliveries
+39657,Eshan Malinga,Bowler,IPL,Strict,171,18,1,LOW_RISK,False,False,True,False,False,False,False,High boundary concession: 21.1% deliveries conceded as boundaries
+7967,Noor Ahmad,Bowler,IPL,Strict,228,28,0,LOW_RISK,False,False,False,False,False,False,False,No significant tactical or sample vulnerabilities detected
+4641,Lungi Ngidi,Bowler,IPL,Balanced,97,10,0,LOW_RISK,False,False,False,False,False,False,False,No significant tactical or sample vulnerabilities detected
+305,Ravichandran Ashwin,Bowler,IPL,Strict,215,32,1,LOW_RISK,False,True,False,False,False,False,False,Low dot-ball rate (27.0%) in pressure deliveries
+8661,Matheesha Pathirana,Bowler,IPL,Strict,317,31,1,LOW_RISK,False,True,False,False,False,False,False,Low dot-ball rate (33.8%) in pressure deliveries
+4219,Krunal Pandya,Bowler,IPL,Strict,202,27,1,LOW_RISK,False,True,False,False,False,False,False,Low dot-ball rate (26.7%) in pressure deliveries
+4900,Wanindu Hasaranga,Bowler,IPL,Strict,151,23,1,LOW_RISK,False,True,False,False,False,False,False,Low dot-ball rate (28.5%) in pressure deliveries
+838,Glenn Maxwell,Bowler,IPL,Balanced,76,10,1,LOW_RISK,False,True,False,False,False,False,False,Low dot-ball rate (30.3%) in pressure deliveries
+2876,Axar Patel,Bowler,IPL,Strict,220,36,1,LOW_RISK,False,True,False,False,False,False,False,Low dot-ball rate (27.7%) in pressure deliveries
+27960,Mayank Yadav,Bowler,IPL,Discovery,43,5,1,LOW_RISK,True,False,False,False,False,False,False,Sample limitation: 43 pressure balls across 5 matches
+3275,Alzarri Joseph,Bowler,IPL,Strict,115,14,1,LOW_RISK,False,False,False,True,False,False,False,Phase concentration: 84.3% deliveries in a single innings phase
+58134,Digvesh Rathi,Bowler,IPL,Balanced,84,10,1,LOW_RISK,False,True,False,False,False,False,False,Low dot-ball rate (26.2%) in pressure deliveries
+5577,Sai Kishore,Bowler,IPL,Strict,124,16,1,LOW_RISK,False,True,False,False,False,False,False,Low dot-ball rate (27.4%) in pressure deliveries
+19316,Maheesh Theekshana,Bowler,IPL,Strict,237,28,2,MODERATE_RISK,False,True,True,False,False,False,False,Low dot-ball rate (27.0%) in pressure deliveries | High boundary concession: 20.3% deliveries conceded as boundaries
+360,Bhuvneshwar Kumar,Bowler,IPL,Strict,501,58,2,MODERATE_RISK,False,True,True,False,False,False,False,Low dot-ball rate (29.5%) in pressure deliveries | High boundary concession: 22.0% deliveries conceded as boundaries
+161,Dwayne Bravo,Bowler,IPL,Balanced,77,9,1,LOW_RISK,False,True,False,False,False,False,False,Low dot-ball rate (29.9%) in pressure deliveries
+4722,Rashid Khan,Bowler,IPL,Strict,377,49,2,MODERATE_RISK,False,True,True,False,False,False,False,Low dot-ball rate (26.5%) in pressure deliveries | High boundary concession: 20.4% deliveries conceded as boundaries
+41503,Yash Punja,Bowler,IPL,Discovery,41,5,2,MODERATE_RISK,True,False,False,True,False,False,False,Sample limitation: 41 pressure balls across 5 matches | Phase concentration: 85.4% deliveries in a single innings phase
+152,Ravindra Jadeja,Bowler,IPL,Strict,237,37,4,HIGH_RISK,False,True,True,True,False,False,True,Low dot-ball rate (24.9%) in pressure deliveries | High boundary concession: 20.3% deliveries conceded as boundaries | Phase concentration: 84.4% deliveries in a single innings phase | Positive context-adjusted run concession (RCAE +1.11)
+3629,Corbin Bosch,Bowler,IPL,Discovery,38,7,2,MODERATE_RISK,True,False,False,False,False,True,False,Sample limitation: 38 pressure balls across 7 matches | Measured economy rises from 8.68 to 10.80 against top-order batters
+19312,Nuwan Thushara,Bowler,IPL,Discovery,49,7,2,MODERATE_RISK,True,True,False,False,False,False,False,Sample limitation: 49 pressure balls across 7 matches | Low dot-ball rate (24.5%) in pressure deliveries
+7896,Akash Singh,Bowler,IPL,Balanced,71,10,1,LOW_RISK,False,False,True,False,False,False,False,High boundary concession: 26.8% deliveries conceded as boundaries
+2636,Adam Zampa,Bowler,IPL,Discovery,48,5,3,HIGH_RISK,True,True,True,False,False,False,False,Sample limitation: 48 pressure balls across 5 matches | Low dot-ball rate (33.3%) in pressure deliveries | High boundary concession: 22.9% deliveries conceded as boundaries
+7312,Nandre Burger,Bowler,IPL,Balanced,82,12,1,LOW_RISK,False,False,True,False,False,False,False,High boundary concession: 24.4% deliveries conceded as boundaries
+1813,Deepak Chahar,Bowler,IPL,Strict,117,22,2,MODERATE_RISK,False,True,True,False,False,False,False,Low dot-ball rate (29.9%) in pressure deliveries | High boundary concession: 21.4% deliveries conceded as boundaries
+8746,Vaibhav Arora,Bowler,IPL,Strict,223,31,2,MODERATE_RISK,False,True,True,False,False,False,False,Low dot-ball rate (32.7%) in pressure deliveries | High boundary concession: 25.6% deliveries conceded as boundaries
+4837,Obed McCoy,Bowler,IPL,Discovery,46,7,2,MODERATE_RISK,True,False,True,False,False,False,False,Sample limitation: 46 pressure balls across 7 matches | High boundary concession: 21.7% deliveries conceded as boundaries
+6286,Shivam Mavi,Bowler,IPL,Discovery,50,6,3,HIGH_RISK,True,True,False,True,False,False,False,Sample limitation: 50 pressure balls across 6 matches | Low dot-ball rate (34.0%) in pressure deliveries | Phase concentration: 96.0% deliveries in a single innings phase
+2490,Mohammad Nawaz,Bowler,T20I,Balanced,80,15,0,LOW_RISK,False,False,False,False,False,False,False,No significant tactical or sample vulnerabilities detected
+4658,Nasum Ahmed,Bowler,T20I,Balanced,90,15,1,LOW_RISK,False,True,False,False,False,False,False,Low dot-ball rate (33.3%) in pressure deliveries
+5750,Ehsan Khan,Bowler,T20I,Balanced,63,7,2,MODERATE_RISK,False,True,False,True,False,False,False,Low dot-ball rate (33.3%) in pressure deliveries | Phase concentration: 93.7% deliveries in a single innings phase
+3629,Corbin Bosch,Bowler,T20I,Balanced,62,7,0,LOW_RISK,False,False,False,False,False,False,False,No significant tactical or sample vulnerabilities detected
+7503,Ravi Bishnoi,Bowler,T20I,Strict,231,33,0,LOW_RISK,False,False,False,False,False,False,False,No significant tactical or sample vulnerabilities detected
+3578,Imad Wasim,Bowler,T20I,Discovery,43,6,2,MODERATE_RISK,True,True,False,False,False,False,False,Sample limitation: 43 pressure balls across 6 matches | Low dot-ball rate (34.9%) in pressure deliveries
+5944,Mohammed Siraj,Bowler,T20I,Discovery,31,5,1,LOW_RISK,True,False,False,False,False,False,False,Sample limitation: 31 pressure balls across 5 matches
+4856,Benjamin Sears,Bowler,T20I,Strict,101,12,0,LOW_RISK,False,False,False,False,False,False,False,No significant tactical or sample vulnerabilities detected
+19316,Maheesh Theekshana,Bowler,T20I,Strict,242,34,1,LOW_RISK,False,True,False,False,False,False,False,Low dot-ball rate (28.9%) in pressure deliveries
+2984,Sikandar Raza,Bowler,T20I,Strict,116,21,0,LOW_RISK,False,False,False,False,False,False,False,No significant tactical or sample vulnerabilities detected
+6643,Hasan Mahmud,Bowler,T20I,Balanced,83,11,3,HIGH_RISK,False,True,False,True,False,True,False,Low dot-ball rate (33.7%) in pressure deliveries | Phase concentration: 90.4% deliveries in a single innings phase | Measured economy rises from 8.02 to 12.00 against top-order batters
+4840,Odean Smith,Bowler,T20I,Balanced,70,10,1,LOW_RISK,False,True,False,False,False,False,False,Low dot-ball rate (34.3%) in pressure deliveries
+4900,Wanindu Hasaranga,Bowler,T20I,Strict,175,30,1,LOW_RISK,False,True,False,False,False,False,False,Low dot-ball rate (30.3%) in pressure deliveries
+722,Liam Dawson,Bowler,T20I,Strict,122,16,0,LOW_RISK,False,False,False,False,False,False,False,No significant tactical or sample vulnerabilities detected
+4722,Rashid Khan,Bowler,T20I,Strict,165,25,0,LOW_RISK,False,False,False,False,False,False,False,No significant tactical or sample vulnerabilities detected
+2687,Roston Chase,Bowler,T20I,Strict,117,17,0,LOW_RISK,False,False,False,False,False,False,False,No significant tactical or sample vulnerabilities detected
+1612,Yuzvendra Chahal,Bowler,T20I,Balanced,81,15,0,LOW_RISK,False,False,False,False,False,False,False,No significant tactical or sample vulnerabilities detected
+830,Josh Hazlewood,Bowler,T20I,Balanced,89,19,1,LOW_RISK,False,False,True,False,False,False,False,High boundary concession: 20.2% deliveries conceded as boundaries
+5738,Xavier Bartlett,Bowler,T20I,Discovery,56,10,1,LOW_RISK,True,False,False,False,False,False,False,Sample limitation: 56 pressure balls across 10 matches
+4823,Washington Sundar,Bowler,T20I,Balanced,84,13,1,LOW_RISK,False,True,False,False,False,False,False,Low dot-ball rate (32.1%) in pressure deliveries
+4101,Mitchell Santner,Bowler,T20I,Strict,196,29,1,LOW_RISK,False,True,False,False,False,False,False,Low dot-ball rate (29.6%) in pressure deliveries
+3720,Craig Young,Bowler,T20I,Balanced,93,15,1,LOW_RISK,False,True,False,False,False,False,False,Low dot-ball rate (32.3%) in pressure deliveries
+3641,Ben Dwarshuis,Bowler,T20I,Balanced,65,10,0,LOW_RISK,False,False,False,False,False,False,False,No significant tactical or sample vulnerabilities detected
+7690,Saim Ayub,Bowler,T20I,Discovery,48,10,1,LOW_RISK,True,False,False,False,False,False,False,Sample limitation: 48 pressure balls across 10 matches
+305,Ravichandran Ashwin,Bowler,T20I,Discovery,32,4,2,MODERATE_RISK,True,True,False,False,False,False,False,Sample limitation: 32 pressure balls across 4 matches | Low dot-ball rate (34.4%) in pressure deliveries
+2315,Reece Topley,Bowler,T20I,Strict,161,19,0,LOW_RISK,False,False,False,False,False,False,False,No significant tactical or sample vulnerabilities detected
+470,Mohammad Amir,Bowler,T20I,Discovery,41,5,2,MODERATE_RISK,True,False,False,True,False,False,False,Sample limitation: 41 pressure balls across 5 matches | Phase concentration: 90.2% deliveries in a single innings phase
+4779,Pieter Willem Mulder,Bowler,T20I,Discovery,39,5,1,LOW_RISK,True,False,False,False,False,False,False,Sample limitation: 39 pressure balls across 5 matches
+6515,Benjamin Lister,Bowler,T20I,Balanced,60,8,1,LOW_RISK,False,True,False,False,False,False,False,Low dot-ball rate (31.7%) in pressure deliveries
+6503,Zahoor Khan,Bowler,T20I,Discovery,50,5,3,HIGH_RISK,True,True,False,True,False,False,False,Sample limitation: 50 pressure balls across 5 matches | Low dot-ball rate (26.0%) in pressure deliveries | Phase concentration: 96.0% deliveries in a single innings phase
