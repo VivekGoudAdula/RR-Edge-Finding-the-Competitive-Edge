@@ -26,6 +26,22 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
+# Enable CORS for cross-domain requests (e.g. local dev, Vercel preview & production domains)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+
+@app.get("/")
+@app.get("/health")
+def root_health():
+    """Root health check endpoint."""
+    return {"status": "healthy", "service": "RR EDGE API", "version": "1.0.0"}
+
 
 @app.get("/api/health")
 def health_check():

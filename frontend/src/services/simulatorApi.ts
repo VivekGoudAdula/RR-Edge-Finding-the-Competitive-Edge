@@ -2,6 +2,8 @@
  * API client service for the RR EDGE Interactive 2D Cricket Simulator.
  */
 
+import { BASE_URL } from './api';
+
 export interface SimulatorPlayer {
   player_id: number;
   player_name: string;
@@ -224,13 +226,13 @@ export async function fetchSimulatorPlayers(params?: {
   if (params?.search) query.append('search', params.search);
   if (params?.limit) query.append('limit', params.limit.toString());
 
-  const res = await fetch(`/api/simulator/players?${query.toString()}`);
+  const res = await fetch(`${BASE_URL}/simulator/players?${query.toString()}`);
   if (!res.ok) throw new Error('Failed to fetch simulator players');
   return res.json();
 }
 
 export async function fetchSimulatorScenarios(): Promise<PresetScenario[]> {
-  const res = await fetch('/api/simulator/scenarios');
+  const res = await fetch(`${BASE_URL}/simulator/scenarios`);
   if (!res.ok) throw new Error('Failed to fetch simulator scenarios');
   return res.json();
 }
@@ -245,7 +247,7 @@ export async function fetchSimulatorHistoricalSequences(params?: {
   if (params?.scenario_type) query.append('scenario_type', params.scenario_type);
   if (params?.limit) query.append('limit', params.limit.toString());
 
-  const res = await fetch(`/api/simulator/historical/sequences?${query.toString()}`);
+  const res = await fetch(`${BASE_URL}/simulator/historical/sequences?${query.toString()}`);
   if (!res.ok) throw new Error('Failed to fetch historical sequences');
   return res.json();
 }
@@ -259,7 +261,7 @@ export async function fetchSimulatorSequenceDeliveries(
   if (params?.over_start) query.append('over_start', params.over_start.toString());
   if (params?.over_end) query.append('over_end', params.over_end.toString());
 
-  const res = await fetch(`/api/simulator/historical/match/${matchId}/sequence?${query.toString()}`);
+  const res = await fetch(`${BASE_URL}/simulator/historical/match/${matchId}/sequence?${query.toString()}`);
   if (!res.ok) throw new Error('Failed to fetch sequence deliveries');
   return res.json();
 }
@@ -278,7 +280,7 @@ export async function simulateWhatIfDelivery(payload: {
   fielding_preset?: string;
   fielders?: FielderPosition[];
 }): Promise<WhatIfSimulationResult> {
-  const res = await fetch('/api/simulator/simulate/delivery', {
+  const res = await fetch(`${BASE_URL}/simulator/simulate/delivery`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(payload),
@@ -293,14 +295,14 @@ export async function fetchSimulatorHeadToHead(
   format: string = 'ALL'
 ): Promise<HeadToHeadAnalytics> {
   const res = await fetch(
-    `/api/simulator/analytics/head-to-head?batter_id=${batterId}&bowler_id=${bowlerId}&format=${format}`
+    `${BASE_URL}/simulator/analytics/head-to-head?batter_id=${batterId}&bowler_id=${bowlerId}&format=${format}`
   );
   if (!res.ok) throw new Error('Failed to fetch head-to-head analytics');
   return res.json();
 }
 
 export async function fetchSimulatorFieldingPresets(): Promise<FieldingPresets> {
-  const res = await fetch('/api/simulator/fielding/presets');
+  const res = await fetch(`${BASE_URL}/simulator/fielding/presets`);
   if (!res.ok) throw new Error('Failed to fetch fielding presets');
   return res.json();
 }

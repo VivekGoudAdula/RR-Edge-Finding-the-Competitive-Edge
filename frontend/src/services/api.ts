@@ -9,7 +9,22 @@ import {
   Discipline,
 } from '../types';
 
-const BASE_URL = '/api';
+// Dynamically resolve API Base URL from environment variables (VITE_API_BASE_URL or VITE_API_URL)
+// Defaults to relative '/api' for same-domain / proxy / Vercel rewrite deployment
+const getApiBaseUrl = (): string => {
+  const envUrl =
+    (import.meta.env.VITE_API_BASE_URL as string | undefined) ||
+    (import.meta.env.VITE_API_URL as string | undefined) ||
+    (import.meta.env.VITE_BACKEND_URL as string | undefined);
+
+  if (!envUrl) {
+    return '/api';
+  }
+  const trimmed = envUrl.trim().replace(/\/+$/, '');
+  return trimmed.endsWith('/api') ? trimmed : `${trimmed}/api`;
+};
+
+export const BASE_URL = getApiBaseUrl();
 
 export async function fetchOverview(): Promise<OverviewData> {
   const res = await fetch(`${BASE_URL}/overview`);

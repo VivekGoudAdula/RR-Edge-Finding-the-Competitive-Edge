@@ -69,6 +69,7 @@ desktop.ini
 # Temporary & Local Scratch Artifacts
 *.tmp
 *.temp
+~$*
 scratch/
 audit_evidence_tier.py
 bowler_table.png
