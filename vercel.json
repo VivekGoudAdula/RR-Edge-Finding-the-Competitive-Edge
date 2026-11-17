@@ -4,8 +4,7 @@
     "backend": {
       "root": ".",
       "runtime": "python",
-      "entrypoint": "api/index.py",
-      "includeFiles": "data/**"
+      "entrypoint": "api/index.py"
     },
     "frontend": {
       "root": "frontend",
