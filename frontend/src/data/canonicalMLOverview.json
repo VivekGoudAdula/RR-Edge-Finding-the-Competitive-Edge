@@ -1,0 +1,1861 @@
+{
+  "metadata": {
+    "pipeline_name": "RR EDGE Supervised Machine Learning Intelligence Pipeline",
+    "version": "1.0.0",
+    "random_seed": 42,
+    "trained_at": "2026-11-14T19:17:59+0530",
+    "training_duration_seconds": 23.66,
+    "libraries": {
+      "lightgbm": "4.7.0",
+      "xgboost": "2.1.4",
+      "scikit-learn": "1.6.1"
+    },
+    "split_architecture": "Chronological Match-Grouped (Train: 2022-2024, Val: 2025, Test: 2026)",
+    "split_manifest": {
+      "train": {
+        "seasons": [
+          "2022",
+          "2022/23",
+          "2023",
+          "2023/24",
+          "2024",
+          "2024/25"
+        ],
+        "matches": 498,
+        "deliveries": 111806,
+        "ipl_matches": 219,
+        "t20i_matches": 279,
+        "start_date": "2022-01-22",
+        "end_date": "2025-01-02"
+      },
+      "validation": {
+        "seasons": [
+          "2025"
+        ],
+        "matches": 195,
+        "deliveries": 41993,
+        "ipl_matches": 74,
+        "t20i_matches": 121,
+        "start_date": "2025-01-22",
+        "end_date": "2025-12-19"
+      },
+      "test": {
+        "seasons": [
+          "2026"
+        ],
+        "matches": 144,
+        "deliveries": 31165,
+        "ipl_matches": 74,
+        "t20i_matches": 70,
+        "start_date": "2026-01-07",
+        "end_date": "2026-11-01"
+      },
+      "total_matches": 837,
+      "total_deliveries": 184964
+    }
+  },
+  "models": {
+    "batter_expected_runs": {
+      "target": "runs (off-bat runs per faced delivery)",
+      "features": [
+        "competition_type",
+        "innings",
+        "innings_phase",
+        "is_knockout",
+        "over_num",
+        "batting_order",
+        "legal_balls_bowled",
+        "balls_remaining",
+        "current_score",
+        "wickets_lost",
+        "wickets_remaining",
+        "current_run_rate",
+        "target_runs",
+        "required_run_rate",
+        "delta_rrr",
+        "par_deficit",
+        "batter_pressure_tier",
+        "prev_6_runs",
+        "prev_6_dots",
+        "prev_6_wickets"
+      ],
+      "results": {
+        "dummy_mean": {
+          "validation": {
+            "overall": {
+              "mae": 1.3265,
+              "rmse": 1.7575,
+              "r2": -0.0004,
+              "samples": 41993
+            },
+            "ipl": {
+              "mae": 1.3692,
+              "rmse": 1.8307,
+              "r2": -0.0078,
+              "samples": 16396
+            },
+            "t20i": {
+              "mae": 1.2992,
+              "rmse": 1.709,
+              "r2": -0.0007,
+              "samples": 25597
+            }
+          },
+          "test": {
+            "overall": {
+              "mae": 1.3741,
+              "rmse": 1.8274,
+              "r2": -0.0056,
+              "samples": 31165
+            },
+            "ipl": {
+              "mae": 1.4057,
+              "rmse": 1.8742,
+              "r2": -0.0108,
+              "samples": 16551
+            },
+            "t20i": {
+              "mae": 1.3382,
+              "rmse": 1.7728,
+              "r2": -0.0016,
+              "samples": 14614
+            }
+          }
+        },
+        "context_grid": {
+          "validation": {
+            "overall": {
+              "mae": 1.3106,
+              "rmse": 1.75,
+              "r2": 0.0081,
+              "samples": 41993
+            },
+            "ipl": {
+              "mae": 1.381,
+              "rmse": 1.82,
+              "r2": 0.0039,
+              "samples": 16396
+            },
+            "t20i": {
+              "mae": 1.2655,
+              "rmse": 1.7037,
+              "r2": 0.0054,
+              "samples": 25597
+            }
+          },
+          "test": {
+            "overall": {
+              "mae": 1.3655,
+              "rmse": 1.8213,
+              "r2": 0.0011,
+              "samples": 31165
+            },
+            "ipl": {
+              "mae": 1.4172,
+              "rmse": 1.8649,
+              "r2": -0.0008,
+              "samples": 16551
+            },
+            "t20i": {
+              "mae": 1.307,
+              "rmse": 1.7706,
+              "r2": 0.001,
+              "samples": 14614
+            }
+          }
+        },
+        "ridge": {
+          "validation": {
+            "overall": {
+              "mae": 1.3039,
+              "rmse": 1.7347,
+              "r2": 0.0254,
+              "samples": 41993
+            },
+            "ipl": {
+              "mae": 1.3875,
+              "rmse": 1.8065,
+              "r2": 0.0186,
+              "samples": 16396
+            },
+            "t20i": {
+              "mae": 1.2504,
+              "rmse": 1.687,
+              "r2": 0.0248,
+              "samples": 25597
+            }
+          },
+          "test": {
+            "overall": {
+              "mae": 1.3709,
+              "rmse": 1.8017,
+              "r2": 0.0225,
+              "samples": 31165
+            },
+            "ipl": {
+              "mae": 1.4283,
+              "rmse": 1.8466,
+              "r2": 0.0188,
+              "samples": 16551
+            },
+            "t20i": {
+              "mae": 1.3058,
+              "rmse": 1.7496,
+              "r2": 0.0245,
+              "samples": 14614
+            }
+          }
+        },
+        "lightgbm": {
+          "validation": {
+            "overall": {
+              "mae": 1.2984,
+              "rmse": 1.7318,
+              "r2": 0.0287,
+              "samples": 41993
+            },
+            "ipl": {
+              "mae": 1.3748,
+              "rmse": 1.8024,
+              "r2": 0.0232,
+              "samples": 16396
+            },
+            "t20i": {
+              "mae": 1.2495,
+              "rmse": 1.685,
+              "r2": 0.0271,
+              "samples": 25597
+            }
+          },
+          "test": {
+            "overall": {
+              "mae": 1.3679,
+              "rmse": 1.8004,
+              "r2": 0.0239,
+              "samples": 31165
+            },
+            "ipl": {
+              "mae": 1.4191,
+              "rmse": 1.846,
+              "r2": 0.0194,
+              "samples": 16551
+            },
+            "t20i": {
+              "mae": 1.31,
+              "rmse": 1.7473,
+              "r2": 0.0271,
+              "samples": 14614
+            }
+          }
+        },
+        "xgboost": {
+          "validation": {
+            "overall": {
+              "mae": 1.2995,
+              "rmse": 1.7319,
+              "r2": 0.0285,
+              "samples": 41993
+            },
+            "ipl": {
+              "mae": 1.3755,
+              "rmse": 1.8017,
+              "r2": 0.0239,
+              "samples": 16396
+            },
+            "t20i": {
+              "mae": 1.2509,
+              "rmse": 1.6858,
+              "r2": 0.0263,
+              "samples": 25597
+            }
+          },
+          "test": {
+            "overall": {
+              "mae": 1.3687,
+              "rmse": 1.8003,
+              "r2": 0.024,
+              "samples": 31165
+            },
+            "ipl": {
+              "mae": 1.4198,
+              "rmse": 1.8459,
+              "r2": 0.0194,
+              "samples": 16551
+            },
+            "t20i": {
+              "mae": 1.3109,
+              "rmse": 1.7471,
+              "r2": 0.0272,
+              "samples": 14614
+            }
+          }
+        }
+      },
+      "feature_importance": {
+        "current_score": 546,
+        "batting_order": 524,
+        "balls_remaining": 420,
+        "delta_rrr": 377,
+        "current_run_rate": 369,
+        "required_run_rate": 365,
+        "prev_6_runs": 302,
+        "legal_balls_bowled": 300,
+        "target_runs": 281,
+        "par_deficit": 204,
+        "prev_6_wickets": 184,
+        "wickets_lost": 158,
+        "prev_6_dots": 100,
+        "over_num": 89,
+        "batter_pressure_tier": 69,
+        "innings_phase": 56,
+        "competition_type": 43,
+        "wickets_remaining": 42,
+        "is_knockout": 8,
+        "innings": 1
+      },
+      "champion_model": "lightgbm"
+    },
+    "bowler_expected_runs": {
+      "target": "bowler_runs_conceded (runs conceded per delivery)",
+      "features": [
+        "competition_type",
+        "innings",
+        "innings_phase",
+        "is_knockout",
+        "over_num",
+        "legal_balls_bowled",
+        "balls_remaining",
+        "current_score",
+        "wickets_lost",
+        "wickets_remaining",
+        "current_run_rate",
+        "runs_to_defend",
+        "required_run_rate",
+        "expected_scoring_rate",
+        "par_deficit",
+        "bowler_pressure_tier",
+        "bowler_resource_context",
+        "prev_6_runs",
+        "prev_6_dots",
+        "prev_6_wickets"
+      ],
+      "results": {
+        "dummy_mean": {
+          "validation": {
+            "overall": {
+              "mae": 1.2944,
+              "rmse": 1.7326,
+              "r2": -0.0004,
+              "samples": 43633
+            },
+            "ipl": {
+              "mae": 1.3324,
+              "rmse": 1.8015,
+              "r2": -0.0073,
+              "samples": 17087
+            },
+            "t20i": {
+              "mae": 1.2699,
+              "rmse": 1.6867,
+              "r2": -0.0006,
+              "samples": 26546
+            }
+          },
+          "test": {
+            "overall": {
+              "mae": 1.3362,
+              "rmse": 1.7973,
+              "r2": -0.0051,
+              "samples": 32529
+            },
+            "ipl": {
+              "mae": 1.3626,
+              "rmse": 1.8392,
+              "r2": -0.0097,
+              "samples": 17333
+            },
+            "t20i": {
+              "mae": 1.3061,
+              "rmse": 1.7483,
+              "r2": -0.0016,
+              "samples": 15196
+            }
+          }
+        },
+        "context_grid": {
+          "validation": {
+            "overall": {
+              "mae": 1.2799,
+              "rmse": 1.7257,
+              "r2": 0.0075,
+              "samples": 43633
+            },
+            "ipl": {
+              "mae": 1.3457,
+              "rmse": 1.7917,
+              "r2": 0.0037,
+              "samples": 17087
+            },
+            "t20i": {
+              "mae": 1.2376,
+              "rmse": 1.6819,
+              "r2": 0.005,
+              "samples": 26546
+            }
+          },
+          "test": {
+            "overall": {
+              "mae": 1.3289,
+              "rmse": 1.7918,
+              "r2": 0.001,
+              "samples": 32529
+            },
+            "ipl": {
+              "mae": 1.3754,
+              "rmse": 1.8307,
+              "r2": -0.0005,
+              "samples": 17333
+            },
+            "t20i": {
+              "mae": 1.2758,
+              "rmse": 1.7463,
+              "r2": 0.0007,
+              "samples": 15196
+            }
+          }
+        },
+        "ridge": {
+          "validation": {
+            "overall": {
+              "mae": 1.2758,
+              "rmse": 1.7134,
+              "r2": 0.0216,
+              "samples": 43633
+            },
+            "ipl": {
+              "mae": 1.3559,
+              "rmse": 1.781,
+              "r2": 0.0155,
+              "samples": 17087
+            },
+            "t20i": {
+              "mae": 1.2243,
+              "rmse": 1.6684,
+              "r2": 0.0209,
+              "samples": 26546
+            }
+          },
+          "test": {
+            "overall": {
+              "mae": 1.3377,
+              "rmse": 1.7758,
+              "r2": 0.0188,
+              "samples": 32529
+            },
+            "ipl": {
+              "mae": 1.3904,
+              "rmse": 1.8171,
+              "r2": 0.0143,
+              "samples": 17333
+            },
+            "t20i": {
+              "mae": 1.2776,
+              "rmse": 1.7274,
+              "r2": 0.0223,
+              "samples": 15196
+            }
+          }
+        },
+        "lightgbm": {
+          "validation": {
+            "overall": {
+              "mae": 1.2728,
+              "rmse": 1.7126,
+              "r2": 0.0225,
+              "samples": 43633
+            },
+            "ipl": {
+              "mae": 1.3446,
+              "rmse": 1.7795,
+              "r2": 0.0172,
+              "samples": 17087
+            },
+            "t20i": {
+              "mae": 1.2265,
+              "rmse": 1.6682,
+              "r2": 0.0212,
+              "samples": 26546
+            }
+          },
+          "test": {
+            "overall": {
+              "mae": 1.3352,
+              "rmse": 1.7751,
+              "r2": 0.0195,
+              "samples": 32529
+            },
+            "ipl": {
+              "mae": 1.3815,
+              "rmse": 1.8164,
+              "r2": 0.0151,
+              "samples": 17333
+            },
+            "t20i": {
+              "mae": 1.2823,
+              "rmse": 1.7267,
+              "r2": 0.023,
+              "samples": 15196
+            }
+          }
+        },
+        "xgboost": {
+          "validation": {
+            "overall": {
+              "mae": 1.2732,
+              "rmse": 1.7124,
+              "r2": 0.0227,
+              "samples": 43633
+            },
+            "ipl": {
+              "mae": 1.346,
+              "rmse": 1.7788,
+              "r2": 0.0179,
+              "samples": 17087
+            },
+            "t20i": {
+              "mae": 1.2263,
+              "rmse": 1.6683,
+              "r2": 0.0211,
+              "samples": 26546
+            }
+          },
+          "test": {
+            "overall": {
+              "mae": 1.3361,
+              "rmse": 1.7749,
+              "r2": 0.0198,
+              "samples": 32529
+            },
+            "ipl": {
+              "mae": 1.3827,
+              "rmse": 1.8158,
+              "r2": 0.0157,
+              "samples": 17333
+            },
+            "t20i": {
+              "mae": 1.283,
+              "rmse": 1.727,
+              "r2": 0.0227,
+              "samples": 15196
+            }
+          }
+        }
+      },
+      "feature_importance": {
+        "competition_type": 24,
+        "innings": 0,
+        "innings_phase": 48,
+        "is_knockout": 0,
+        "over_num": 87,
+        "legal_balls_bowled": 228,
+        "balls_remaining": 249,
+        "current_score": 423,
+        "wickets_lost": 230,
+        "wickets_remaining": 87,
+        "current_run_rate": 333,
+        "runs_to_defend": 126,
+        "required_run_rate": 129,
+        "expected_scoring_rate": 430,
+        "par_deficit": 177,
+        "bowler_pressure_tier": 51,
+        "bowler_resource_context": 8,
+        "prev_6_runs": 260,
+        "prev_6_dots": 87,
+        "prev_6_wickets": 203
+      },
+      "champion_model": "lightgbm"
+    },
+    "bowler_wicket_probability": {
+      "target": "is_bowler_wkt (binary bowler-credited wicket)",
+      "features": [
+        "competition_type",
+        "innings",
+        "innings_phase",
+        "is_knockout",
+        "over_num",
+        "legal_balls_bowled",
+        "balls_remaining",
+        "current_score",
+        "wickets_lost",
+        "wickets_remaining",
+        "current_run_rate",
+        "runs_to_defend",
+        "required_run_rate",
+        "expected_scoring_rate",
+        "par_deficit",
+        "bowler_pressure_tier",
+        "bowler_resource_context",
+        "prev_6_runs",
+        "prev_6_dots",
+        "prev_6_wickets"
+      ],
+      "results": {
+        "dummy_prior": {
+          "validation": {
+            "overall": {
+              "roc_auc": 0.5,
+              "pr_auc": 0.0521,
+              "log_loss": 0.2048,
+              "brier_score": 0.0494,
+              "positive_rate": 0.0521,
+              "samples": 43633
+            },
+            "ipl": {
+              "roc_auc": 0.5,
+              "pr_auc": 0.0479,
+              "log_loss": 0.1923,
+              "brier_score": 0.0456,
+              "positive_rate": 0.0479,
+              "samples": 17087
+            },
+            "t20i": {
+              "roc_auc": 0.5,
+              "pr_auc": 0.0549,
+              "log_loss": 0.2129,
+              "brier_score": 0.0519,
+              "positive_rate": 0.0549,
+              "samples": 26546
+            }
+          },
+          "test": {
+            "overall": {
+              "roc_auc": 0.5,
+              "pr_auc": 0.0509,
+              "log_loss": 0.2012,
+              "brier_score": 0.0483,
+              "positive_rate": 0.0509,
+              "samples": 32529
+            },
+            "ipl": {
+              "roc_auc": 0.5,
+              "pr_auc": 0.0475,
+              "log_loss": 0.1911,
+              "brier_score": 0.0452,
+              "positive_rate": 0.0475,
+              "samples": 17333
+            },
+            "t20i": {
+              "roc_auc": 0.5,
+              "pr_auc": 0.0548,
+              "log_loss": 0.2127,
+              "brier_score": 0.0518,
+              "positive_rate": 0.0548,
+              "samples": 15196
+            }
+          }
+        },
+        "context_grid": {
+          "validation": {
+            "overall": {
+              "roc_auc": 0.5695,
+              "pr_auc": 0.067,
+              "log_loss": 0.2029,
+              "brier_score": 0.0492,
+              "positive_rate": 0.0521,
+              "samples": 43633
+            },
+            "ipl": {
+              "roc_auc": 0.5755,
+              "pr_auc": 0.0626,
+              "log_loss": 0.1902,
+              "brier_score": 0.0454,
+              "positive_rate": 0.0479,
+              "samples": 17087
+            },
+            "t20i": {
+              "roc_auc": 0.5491,
+              "pr_auc": 0.0668,
+              "log_loss": 0.2111,
+              "brier_score": 0.0517,
+              "positive_rate": 0.0549,
+              "samples": 26546
+            }
+          },
+          "test": {
+            "overall": {
+              "roc_auc": 0.5664,
+              "pr_auc": 0.0648,
+              "log_loss": 0.1996,
+              "brier_score": 0.0481,
+              "positive_rate": 0.0509,
+              "samples": 32529
+            },
+            "ipl": {
+              "roc_auc": 0.5555,
+              "pr_auc": 0.0579,
+              "log_loss": 0.1899,
+              "brier_score": 0.0451,
+              "positive_rate": 0.0475,
+              "samples": 17333
+            },
+            "t20i": {
+              "roc_auc": 0.5634,
+              "pr_auc": 0.0677,
+              "log_loss": 0.2107,
+              "brier_score": 0.0516,
+              "positive_rate": 0.0548,
+              "samples": 15196
+            }
+          }
+        },
+        "logistic_regression": {
+          "validation": {
+            "overall": {
+              "roc_auc": 0.5883,
+              "pr_auc": 0.0724,
+              "log_loss": 0.6846,
+              "brier_score": 0.2455,
+              "positive_rate": 0.0521,
+              "samples": 43633
+            },
+            "ipl": {
+              "roc_auc": 0.5862,
+              "pr_auc": 0.0703,
+              "log_loss": 0.6624,
+              "brier_score": 0.2347,
+              "positive_rate": 0.0479,
+              "samples": 17087
+            },
+            "t20i": {
+              "roc_auc": 0.5866,
+              "pr_auc": 0.0743,
+              "log_loss": 0.6989,
+              "brier_score": 0.2524,
+              "positive_rate": 0.0549,
+              "samples": 26546
+            }
+          },
+          "test": {
+            "overall": {
+              "roc_auc": 0.5778,
+              "pr_auc": 0.0704,
+              "log_loss": 0.6846,
+              "brier_score": 0.2455,
+              "positive_rate": 0.0509,
+              "samples": 32529
+            },
+            "ipl": {
+              "roc_auc": 0.5679,
+              "pr_auc": 0.0651,
+              "log_loss": 0.6666,
+              "brier_score": 0.2367,
+              "positive_rate": 0.0475,
+              "samples": 17333
+            },
+            "t20i": {
+              "roc_auc": 0.5834,
+              "pr_auc": 0.0761,
+              "log_loss": 0.7052,
+              "brier_score": 0.2555,
+              "positive_rate": 0.0548,
+              "samples": 15196
+            }
+          }
+        },
+        "lightgbm": {
+          "validation": {
+            "overall": {
+              "roc_auc": 0.5881,
+              "pr_auc": 0.0725,
+              "log_loss": 0.2022,
+              "brier_score": 0.0492,
+              "positive_rate": 0.0521,
+              "samples": 43633
+            },
+            "ipl": {
+              "roc_auc": 0.5973,
+              "pr_auc": 0.0701,
+              "log_loss": 0.1894,
+              "brier_score": 0.0453,
+              "positive_rate": 0.0479,
+              "samples": 17087
+            },
+            "t20i": {
+              "roc_auc": 0.5816,
+              "pr_auc": 0.0743,
+              "log_loss": 0.2105,
+              "brier_score": 0.0516,
+              "positive_rate": 0.0549,
+              "samples": 26546
+            }
+          },
+          "test": {
+            "overall": {
+              "roc_auc": 0.5902,
+              "pr_auc": 0.0715,
+              "log_loss": 0.1987,
+              "brier_score": 0.0481,
+              "positive_rate": 0.0509,
+              "samples": 32529
+            },
+            "ipl": {
+              "roc_auc": 0.5809,
+              "pr_auc": 0.0643,
+              "log_loss": 0.1893,
+              "brier_score": 0.0451,
+              "positive_rate": 0.0475,
+              "samples": 17333
+            },
+            "t20i": {
+              "roc_auc": 0.5964,
+              "pr_auc": 0.0791,
+              "log_loss": 0.2095,
+              "brier_score": 0.0515,
+              "positive_rate": 0.0548,
+              "samples": 15196
+            }
+          }
+        },
+        "xgboost": {
+          "validation": {
+            "overall": {
+              "roc_auc": 0.5891,
+              "pr_auc": 0.073,
+              "log_loss": 0.2021,
+              "brier_score": 0.0491,
+              "positive_rate": 0.0521,
+              "samples": 43633
+            },
+            "ipl": {
+              "roc_auc": 0.5942,
+              "pr_auc": 0.0695,
+              "log_loss": 0.1895,
+              "brier_score": 0.0453,
+              "positive_rate": 0.0479,
+              "samples": 17087
+            },
+            "t20i": {
+              "roc_auc": 0.5845,
+              "pr_auc": 0.0753,
+              "log_loss": 0.2102,
+              "brier_score": 0.0516,
+              "positive_rate": 0.0549,
+              "samples": 26546
+            }
+          },
+          "test": {
+            "overall": {
+              "roc_auc": 0.5941,
+              "pr_auc": 0.0724,
+              "log_loss": 0.1985,
+              "brier_score": 0.048,
+              "positive_rate": 0.0509,
+              "samples": 32529
+            },
+            "ipl": {
+              "roc_auc": 0.5872,
+              "pr_auc": 0.0665,
+              "log_loss": 0.189,
+              "brier_score": 0.045,
+              "positive_rate": 0.0475,
+              "samples": 17333
+            },
+            "t20i": {
+              "roc_auc": 0.5978,
+              "pr_auc": 0.0787,
+              "log_loss": 0.2093,
+              "brier_score": 0.0515,
+              "positive_rate": 0.0548,
+              "samples": 15196
+            }
+          }
+        }
+      },
+      "feature_importance": {
+        "competition_type": 59,
+        "innings": 4,
+        "innings_phase": 3,
+        "is_knockout": 3,
+        "over_num": 28,
+        "legal_balls_bowled": 159,
+        "balls_remaining": 201,
+        "current_score": 247,
+        "wickets_lost": 87,
+        "wickets_remaining": 61,
+        "current_run_rate": 308,
+        "runs_to_defend": 114,
+        "required_run_rate": 175,
+        "expected_scoring_rate": 266,
+        "par_deficit": 147,
+        "bowler_pressure_tier": 11,
+        "bowler_resource_context": 10,
+        "prev_6_runs": 139,
+        "prev_6_dots": 68,
+        "prev_6_wickets": 100
+      },
+      "calibration": {
+        "prob_true": [
+          0.0509,
+          0.25
+        ],
+        "prob_pred": [
+          0.0508,
+          0.2242
+        ]
+      },
+      "champion_model": "lightgbm"
+    }
+  },
+  "sample_predictions": [
+    {
+      "match_id": 41849,
+      "season": "2026",
+      "match_date": "2026-01-27",
+      "competition_type": "T20I",
+      "striker_id": 3639,
+      "striker_name": "Brandon King",
+      "bowler_id": 3628,
+      "bowler_name": "Kagiso Rabada",
+      "innings_phase": "Powerplay",
+      "batter_pressure_tier": "MODERATE",
+      "actual_runs": 4.0,
+      "pred_dummy": 1.368,
+      "pred_context_grid": 1.27,
+      "pred_ridge": 1.182,
+      "pred_lightgbm": 0.895,
+      "pred_xgboost": 0.8830000162124634,
+      "residual_lightgbm": 3.105
+    },
+    {
+      "match_id": 41849,
+      "season": "2026",
+      "match_date": "2026-01-27",
+      "competition_type": "T20I",
+      "striker_id": 3639,
+      "striker_name": "Brandon King",
+      "bowler_id": 3628,
+      "bowler_name": "Kagiso Rabada",
+      "innings_phase": "Powerplay",
+      "batter_pressure_tier": "MODERATE",
+      "actual_runs": 4.0,
+      "pred_dummy": 1.368,
+      "pred_context_grid": 1.27,
+      "pred_ridge": 1.452,
+      "pred_lightgbm": 0.967,
+      "pred_xgboost": 0.878000020980835,
+      "residual_lightgbm": 3.033
+    },
+    {
+      "match_id": 41849,
+      "season": "2026",
+      "match_date": "2026-01-27",
+      "competition_type": "T20I",
+      "striker_id": 3639,
+      "striker_name": "Brandon King",
+      "bowler_id": 3628,
+      "bowler_name": "Kagiso Rabada",
+      "innings_phase": "Powerplay",
+      "batter_pressure_tier": "MODERATE",
+      "actual_runs": 0.0,
+      "pred_dummy": 1.368,
+      "pred_context_grid": 1.27,
+      "pred_ridge": 1.466,
+      "pred_lightgbm": 1.084,
+      "pred_xgboost": 1.0,
+      "residual_lightgbm": -1.084
+    },
+    {
+      "match_id": 41849,
+      "season": "2026",
+      "match_date": "2026-01-27",
+      "competition_type": "T20I",
+      "striker_id": 3639,
+      "striker_name": "Brandon King",
+      "bowler_id": 3628,
+      "bowler_name": "Kagiso Rabada",
+      "innings_phase": "Powerplay",
+      "batter_pressure_tier": "MODERATE",
+      "actual_runs": 1.0,
+      "pred_dummy": 1.368,
+      "pred_context_grid": 1.27,
+      "pred_ridge": 1.368,
+      "pred_lightgbm": 1.091,
+      "pred_xgboost": 1.093999981880188,
+      "residual_lightgbm": -0.091
+    },
+    {
+      "match_id": 41849,
+      "season": "2026",
+      "match_date": "2026-01-27",
+      "competition_type": "T20I",
+      "striker_id": 1327,
+      "striker_name": "Johnson Charles",
+      "bowler_id": 3628,
+      "bowler_name": "Kagiso Rabada",
+      "innings_phase": "Powerplay",
+      "batter_pressure_tier": "MODERATE",
+      "actual_runs": 1.0,
+      "pred_dummy": 1.368,
+      "pred_context_grid": 1.27,
+      "pred_ridge": 1.269,
+      "pred_lightgbm": 1.102,
+      "pred_xgboost": 1.0720000267028809,
+      "residual_lightgbm": -0.102
+    },
+    {
+      "match_id": 41849,
+      "season": "2026",
+      "match_date": "2026-01-27",
+      "competition_type": "T20I",
+      "striker_id": 3639,
+      "striker_name": "Brandon King",
+      "bowler_id": 3628,
+      "bowler_name": "Kagiso Rabada",
+      "innings_phase": "Powerplay",
+      "batter_pressure_tier": "MODERATE",
+      "actual_runs": 0.0,
+      "pred_dummy": 1.368,
+      "pred_context_grid": 1.27,
+      "pred_ridge": 1.307,
+      "pred_lightgbm": 1.133,
+      "pred_xgboost": 1.1260000467300415,
+      "residual_lightgbm": -1.133
+    },
+    {
+      "match_id": 41849,
+      "season": "2026",
+      "match_date": "2026-01-27",
+      "competition_type": "T20I",
+      "striker_id": 1327,
+      "striker_name": "Johnson Charles",
+      "bowler_id": 4229,
+      "bowler_name": "George Linde",
+      "innings_phase": "Powerplay",
+      "batter_pressure_tier": "MODERATE",
+      "actual_runs": 0.0,
+      "pred_dummy": 1.368,
+      "pred_context_grid": 1.27,
+      "pred_ridge": 1.292,
+      "pred_lightgbm": 1.073,
+      "pred_xgboost": 1.0789999961853027,
+      "residual_lightgbm": -1.073
+    },
+    {
+      "match_id": 41849,
+      "season": "2026",
+      "match_date": "2026-01-27",
+      "competition_type": "T20I",
+      "striker_id": 3639,
+      "striker_name": "Brandon King",
+      "bowler_id": 4229,
+      "bowler_name": "George Linde",
+      "innings_phase": "Powerplay",
+      "batter_pressure_tier": "MODERATE",
+      "actual_runs": 0.0,
+      "pred_dummy": 1.368,
+      "pred_context_grid": 1.27,
+      "pred_ridge": 1.325,
+      "pred_lightgbm": 1.2,
+      "pred_xgboost": 1.2109999656677246,
+      "residual_lightgbm": -1.2
+    },
+    {
+      "match_id": 41849,
+      "season": "2026",
+      "match_date": "2026-01-27",
+      "competition_type": "T20I",
+      "striker_id": 3639,
+      "striker_name": "Brandon King",
+      "bowler_id": 4229,
+      "bowler_name": "George Linde",
+      "innings_phase": "Powerplay",
+      "batter_pressure_tier": "MODERATE",
+      "actual_runs": 0.0,
+      "pred_dummy": 1.368,
+      "pred_context_grid": 1.27,
+      "pred_ridge": 1.29,
+      "pred_lightgbm": 1.22,
+      "pred_xgboost": 1.2369999885559082,
+      "residual_lightgbm": -1.22
+    },
+    {
+      "match_id": 41849,
+      "season": "2026",
+      "match_date": "2026-01-27",
+      "competition_type": "T20I",
+      "striker_id": 3639,
+      "striker_name": "Brandon King",
+      "bowler_id": 4229,
+      "bowler_name": "George Linde",
+      "innings_phase": "Powerplay",
+      "batter_pressure_tier": "MODERATE",
+      "actual_runs": 0.0,
+      "pred_dummy": 1.368,
+      "pred_context_grid": 1.27,
+      "pred_ridge": 1.282,
+      "pred_lightgbm": 1.327,
+      "pred_xgboost": 1.3350000381469727,
+      "residual_lightgbm": -1.327
+    },
+    {
+      "match_id": 41849,
+      "season": "2026",
+      "match_date": "2026-01-27",
+      "competition_type": "T20I",
+      "striker_id": 3639,
+      "striker_name": "Brandon King",
+      "bowler_id": 4229,
+      "bowler_name": "George Linde",
+      "innings_phase": "Powerplay",
+      "batter_pressure_tier": "MODERATE",
+      "actual_runs": 4.0,
+      "pred_dummy": 1.368,
+      "pred_context_grid": 1.27,
+      "pred_ridge": 1.274,
+      "pred_lightgbm": 1.352,
+      "pred_xgboost": 1.3650000095367432,
+      "residual_lightgbm": 2.648
+    },
+    {
+      "match_id": 41849,
+      "season": "2026",
+      "match_date": "2026-01-27",
+      "competition_type": "T20I",
+      "striker_id": 3639,
+      "striker_name": "Brandon King",
+      "bowler_id": 4229,
+      "bowler_name": "George Linde",
+      "innings_phase": "Powerplay",
+      "batter_pressure_tier": "MODERATE",
+      "actual_runs": 0.0,
+      "pred_dummy": 1.368,
+      "pred_context_grid": 1.27,
+      "pred_ridge": 1.323,
+      "pred_lightgbm": 1.319,
+      "pred_xgboost": 1.3220000267028809,
+      "residual_lightgbm": -1.319
+    },
+    {
+      "match_id": 41849,
+      "season": "2026",
+      "match_date": "2026-01-27",
+      "competition_type": "T20I",
+      "striker_id": 1327,
+      "striker_name": "Johnson Charles",
+      "bowler_id": 3628,
+      "bowler_name": "Kagiso Rabada",
+      "innings_phase": "Powerplay",
+      "batter_pressure_tier": "MODERATE",
+      "actual_runs": 1.0,
+      "pred_dummy": 1.368,
+      "pred_context_grid": 1.27,
+      "pred_ridge": 1.316,
+      "pred_lightgbm": 1.398,
+      "pred_xgboost": 1.371999979019165,
+      "residual_lightgbm": -0.398
+    },
+    {
+      "match_id": 41849,
+      "season": "2026",
+      "match_date": "2026-01-27",
+      "competition_type": "T20I",
+      "striker_id": 3639,
+      "striker_name": "Brandon King",
+      "bowler_id": 3628,
+      "bowler_name": "Kagiso Rabada",
+      "innings_phase": "Powerplay",
+      "batter_pressure_tier": "MODERATE",
+      "actual_runs": 0.0,
+      "pred_dummy": 1.368,
+      "pred_context_grid": 1.27,
+      "pred_ridge": 1.377,
+      "pred_lightgbm": 1.448,
+      "pred_xgboost": 1.4390000104904175,
+      "residual_lightgbm": -1.448
+    },
+    {
+      "match_id": 41849,
+      "season": "2026",
+      "match_date": "2026-01-27",
+      "competition_type": "T20I",
+      "striker_id": 1327,
+      "striker_name": "Johnson Charles",
+      "bowler_id": 3628,
+      "bowler_name": "Kagiso Rabada",
+      "innings_phase": "Powerplay",
+      "batter_pressure_tier": "MODERATE",
+      "actual_runs": 1.0,
+      "pred_dummy": 1.368,
+      "pred_context_grid": 1.27,
+      "pred_ridge": 1.323,
+      "pred_lightgbm": 1.419,
+      "pred_xgboost": 1.406999945640564,
+      "residual_lightgbm": -0.419
+    },
+    {
+      "match_id": 41849,
+      "season": "2026",
+      "match_date": "2026-01-27",
+      "competition_type": "T20I",
+      "striker_id": 3639,
+      "striker_name": "Brandon King",
+      "bowler_id": 3628,
+      "bowler_name": "Kagiso Rabada",
+      "innings_phase": "Powerplay",
+      "batter_pressure_tier": "MODERATE",
+      "actual_runs": 0.0,
+      "pred_dummy": 1.368,
+      "pred_context_grid": 1.27,
+      "pred_ridge": 1.384,
+      "pred_lightgbm": 1.433,
+      "pred_xgboost": 1.4210000038146973,
+      "residual_lightgbm": -1.433
+    },
+    {
+      "match_id": 41849,
+      "season": "2026",
+      "match_date": "2026-01-27",
+      "competition_type": "T20I",
+      "striker_id": 3639,
+      "striker_name": "Brandon King",
+      "bowler_id": 3628,
+      "bowler_name": "Kagiso Rabada",
+      "innings_phase": "Powerplay",
+      "batter_pressure_tier": "MODERATE",
+      "actual_runs": 6.0,
+      "pred_dummy": 1.368,
+      "pred_context_grid": 1.27,
+      "pred_ridge": 1.378,
+      "pred_lightgbm": 1.432,
+      "pred_xgboost": 1.4199999570846558,
+      "residual_lightgbm": 4.568
+    },
+    {
+      "match_id": 41849,
+      "season": "2026",
+      "match_date": "2026-01-27",
+      "competition_type": "T20I",
+      "striker_id": 3639,
+      "striker_name": "Brandon King",
+      "bowler_id": 3628,
+      "bowler_name": "Kagiso Rabada",
+      "innings_phase": "Powerplay",
+      "batter_pressure_tier": "LOW",
+      "actual_runs": 4.0,
+      "pred_dummy": 1.368,
+      "pred_context_grid": 1.27,
+      "pred_ridge": 1.414,
+      "pred_lightgbm": 1.423,
+      "pred_xgboost": 1.4270000457763672,
+      "residual_lightgbm": 2.577
+    },
+    {
+      "match_id": 41849,
+      "season": "2026",
+      "match_date": "2026-01-27",
+      "competition_type": "T20I",
+      "striker_id": 1327,
+      "striker_name": "Johnson Charles",
+      "bowler_id": 1944,
+      "bowler_name": "Keshav Maharaj",
+      "innings_phase": "Powerplay",
+      "batter_pressure_tier": "MODERATE",
+      "actual_runs": 0.0,
+      "pred_dummy": 1.368,
+      "pred_context_grid": 1.27,
+      "pred_ridge": 1.463,
+      "pred_lightgbm": 1.444,
+      "pred_xgboost": 1.4509999752044678,
+      "residual_lightgbm": -1.444
+    },
+    {
+      "match_id": 41849,
+      "season": "2026",
+      "match_date": "2026-01-27",
+      "competition_type": "T20I",
+      "striker_id": 1327,
+      "striker_name": "Johnson Charles",
+      "bowler_id": 1944,
+      "bowler_name": "Keshav Maharaj",
+      "innings_phase": "Powerplay",
+      "batter_pressure_tier": "MODERATE",
+      "actual_runs": 6.0,
+      "pred_dummy": 1.368,
+      "pred_context_grid": 1.27,
+      "pred_ridge": 1.456,
+      "pred_lightgbm": 1.46,
+      "pred_xgboost": 1.4539999961853027,
+      "residual_lightgbm": 4.54
+    },
+    {
+      "match_id": 41849,
+      "season": "2026",
+      "match_date": "2026-01-27",
+      "competition_type": "T20I",
+      "striker_id": 1327,
+      "striker_name": "Johnson Charles",
+      "bowler_id": 1944,
+      "bowler_name": "Keshav Maharaj",
+      "innings_phase": "Powerplay",
+      "batter_pressure_tier": "LOW",
+      "actual_runs": 4.0,
+      "pred_dummy": 1.368,
+      "pred_context_grid": 1.27,
+      "pred_ridge": 1.516,
+      "pred_lightgbm": 1.522,
+      "pred_xgboost": 1.565000057220459,
+      "residual_lightgbm": 2.478
+    },
+    {
+      "match_id": 41849,
+      "season": "2026",
+      "match_date": "2026-01-27",
+      "competition_type": "T20I",
+      "striker_id": 1327,
+      "striker_name": "Johnson Charles",
+      "bowler_id": 1944,
+      "bowler_name": "Keshav Maharaj",
+      "innings_phase": "Powerplay",
+      "batter_pressure_tier": "LOW",
+      "actual_runs": 0.0,
+      "pred_dummy": 1.368,
+      "pred_context_grid": 1.27,
+      "pred_ridge": 1.559,
+      "pred_lightgbm": 1.628,
+      "pred_xgboost": 1.7009999752044678,
+      "residual_lightgbm": -1.628
+    },
+    {
+      "match_id": 41849,
+      "season": "2026",
+      "match_date": "2026-01-27",
+      "competition_type": "T20I",
+      "striker_id": 1327,
+      "striker_name": "Johnson Charles",
+      "bowler_id": 1944,
+      "bowler_name": "Keshav Maharaj",
+      "innings_phase": "Powerplay",
+      "batter_pressure_tier": "LOW",
+      "actual_runs": 0.0,
+      "pred_dummy": 1.368,
+      "pred_context_grid": 1.27,
+      "pred_ridge": 1.553,
+      "pred_lightgbm": 1.576,
+      "pred_xgboost": 1.6410000324249268,
+      "residual_lightgbm": -1.576
+    },
+    {
+      "match_id": 41849,
+      "season": "2026",
+      "match_date": "2026-01-27",
+      "competition_type": "T20I",
+      "striker_id": 8295,
+      "striker_name": "Matthew Forde",
+      "bowler_id": 1944,
+      "bowler_name": "Keshav Maharaj",
+      "innings_phase": "Powerplay",
+      "batter_pressure_tier": "LOW",
+      "actual_runs": 0.0,
+      "pred_dummy": 1.368,
+      "pred_context_grid": 1.27,
+      "pred_ridge": 1.187,
+      "pred_lightgbm": 1.091,
+      "pred_xgboost": 1.0829999446868896,
+      "residual_lightgbm": -1.091
+    },
+    {
+      "match_id": 41849,
+      "season": "2026",
+      "match_date": "2026-01-27",
+      "competition_type": "T20I",
+      "striker_id": 3639,
+      "striker_name": "Brandon King",
+      "bowler_id": 3629,
+      "bowler_name": "Corbin Bosch",
+      "innings_phase": "Powerplay",
+      "batter_pressure_tier": "MODERATE",
+      "actual_runs": 4.0,
+      "pred_dummy": 1.368,
+      "pred_context_grid": 1.27,
+      "pred_ridge": 1.341,
+      "pred_lightgbm": 1.176,
+      "pred_xgboost": 1.184000015258789,
+      "residual_lightgbm": 2.824
+    },
+    {
+      "match_id": 41849,
+      "season": "2026",
+      "match_date": "2026-01-27",
+      "competition_type": "T20I",
+      "striker_id": 3639,
+      "striker_name": "Brandon King",
+      "bowler_id": 3629,
+      "bowler_name": "Corbin Bosch",
+      "innings_phase": "Powerplay",
+      "batter_pressure_tier": "MODERATE",
+      "actual_runs": 0.0,
+      "pred_dummy": 1.368,
+      "pred_context_grid": 1.27,
+      "pred_ridge": 1.383,
+      "pred_lightgbm": 1.191,
+      "pred_xgboost": 1.2050000429153442,
+      "residual_lightgbm": -1.191
+    },
+    {
+      "match_id": 41849,
+      "season": "2026",
+      "match_date": "2026-01-27",
+      "competition_type": "T20I",
+      "striker_id": 6725,
+      "striker_name": "Sherfane Rutherford",
+      "bowler_id": 3629,
+      "bowler_name": "Corbin Bosch",
+      "innings_phase": "Powerplay",
+      "batter_pressure_tier": "MODERATE",
+      "actual_runs": 0.0,
+      "pred_dummy": 1.368,
+      "pred_context_grid": 1.27,
+      "pred_ridge": 0.88,
+      "pred_lightgbm": 0.951,
+      "pred_xgboost": 0.9739999771118164,
+      "residual_lightgbm": -0.951
+    },
+    {
+      "match_id": 41849,
+      "season": "2026",
+      "match_date": "2026-01-27",
+      "competition_type": "T20I",
+      "striker_id": 6725,
+      "striker_name": "Sherfane Rutherford",
+      "bowler_id": 3629,
+      "bowler_name": "Corbin Bosch",
+      "innings_phase": "Powerplay",
+      "batter_pressure_tier": "MODERATE",
+      "actual_runs": 4.0,
+      "pred_dummy": 1.368,
+      "pred_context_grid": 1.27,
+      "pred_ridge": 0.849,
+      "pred_lightgbm": 0.93,
+      "pred_xgboost": 0.9860000014305115,
+      "residual_lightgbm": 3.07
+    },
+    {
+      "match_id": 41849,
+      "season": "2026",
+      "match_date": "2026-01-27",
+      "competition_type": "T20I",
+      "striker_id": 6725,
+      "striker_name": "Sherfane Rutherford",
+      "bowler_id": 3629,
+      "bowler_name": "Corbin Bosch",
+      "innings_phase": "Powerplay",
+      "batter_pressure_tier": "MODERATE",
+      "actual_runs": 1.0,
+      "pred_dummy": 1.368,
+      "pred_context_grid": 1.27,
+      "pred_ridge": 0.892,
+      "pred_lightgbm": 0.956,
+      "pred_xgboost": 0.9919999837875366,
+      "residual_lightgbm": 0.044
+    },
+    {
+      "match_id": 41849,
+      "season": "2026",
+      "match_date": "2026-01-27",
+      "competition_type": "T20I",
+      "striker_id": 8295,
+      "striker_name": "Matthew Forde",
+      "bowler_id": 3629,
+      "bowler_name": "Corbin Bosch",
+      "innings_phase": "Powerplay",
+      "batter_pressure_tier": "MODERATE",
+      "actual_runs": 0.0,
+      "pred_dummy": 1.368,
+      "pred_context_grid": 1.27,
+      "pred_ridge": 1.175,
+      "pred_lightgbm": 1.062,
+      "pred_xgboost": 1.0740000009536743,
+      "residual_lightgbm": -1.062
+    },
+    {
+      "match_id": 41849,
+      "season": "2026",
+      "match_date": "2026-01-27",
+      "competition_type": "T20I",
+      "striker_id": 6725,
+      "striker_name": "Sherfane Rutherford",
+      "bowler_id": 1944,
+      "bowler_name": "Keshav Maharaj",
+      "innings_phase": "Powerplay",
+      "batter_pressure_tier": "MODERATE",
+      "actual_runs": 0.0,
+      "pred_dummy": 1.368,
+      "pred_context_grid": 1.27,
+      "pred_ridge": 1.169,
+      "pred_lightgbm": 1.004,
+      "pred_xgboost": 1.024999976158142,
+      "residual_lightgbm": -1.004
+    },
+    {
+      "match_id": 41849,
+      "season": "2026",
+      "match_date": "2026-01-27",
+      "competition_type": "T20I",
+      "striker_id": 6725,
+      "striker_name": "Sherfane Rutherford",
+      "bowler_id": 1944,
+      "bowler_name": "Keshav Maharaj",
+      "innings_phase": "Powerplay",
+      "batter_pressure_tier": "MODERATE",
+      "actual_runs": 1.0,
+      "pred_dummy": 1.368,
+      "pred_context_grid": 1.27,
+      "pred_ridge": 1.138,
+      "pred_lightgbm": 1.023,
+      "pred_xgboost": 1.034999966621399,
+      "residual_lightgbm": -0.023
+    },
+    {
+      "match_id": 41849,
+      "season": "2026",
+      "match_date": "2026-01-27",
+      "competition_type": "T20I",
+      "striker_id": 8295,
+      "striker_name": "Matthew Forde",
+      "bowler_id": 1944,
+      "bowler_name": "Keshav Maharaj",
+      "innings_phase": "Powerplay",
+      "batter_pressure_tier": "MODERATE",
+      "actual_runs": 1.0,
+      "pred_dummy": 1.368,
+      "pred_context_grid": 1.27,
+      "pred_ridge": 1.422,
+      "pred_lightgbm": 1.471,
+      "pred_xgboost": 1.4670000076293945,
+      "residual_lightgbm": -0.471
+    },
+    {
+      "match_id": 41849,
+      "season": "2026",
+      "match_date": "2026-01-27",
+      "competition_type": "T20I",
+      "striker_id": 6725,
+      "striker_name": "Sherfane Rutherford",
+      "bowler_id": 1944,
+      "bowler_name": "Keshav Maharaj",
+      "innings_phase": "Powerplay",
+      "batter_pressure_tier": "MODERATE",
+      "actual_runs": 0.0,
+      "pred_dummy": 1.368,
+      "pred_context_grid": 1.27,
+      "pred_ridge": 1.361,
+      "pred_lightgbm": 1.445,
+      "pred_xgboost": 1.4450000524520874,
+      "residual_lightgbm": -1.445
+    },
+    {
+      "match_id": 41849,
+      "season": "2026",
+      "match_date": "2026-01-27",
+      "competition_type": "T20I",
+      "striker_id": 2687,
+      "striker_name": "Roston Chase",
+      "bowler_id": 1944,
+      "bowler_name": "Keshav Maharaj",
+      "innings_phase": "Powerplay",
+      "batter_pressure_tier": "MODERATE",
+      "actual_runs": 1.0,
+      "pred_dummy": 1.368,
+      "pred_context_grid": 1.048,
+      "pred_ridge": 0.985,
+      "pred_lightgbm": 0.884,
+      "pred_xgboost": 0.8859999775886536,
+      "residual_lightgbm": 0.116
+    },
+    {
+      "match_id": 41849,
+      "season": "2026",
+      "match_date": "2026-01-27",
+      "competition_type": "T20I",
+      "striker_id": 8295,
+      "striker_name": "Matthew Forde",
+      "bowler_id": 1944,
+      "bowler_name": "Keshav Maharaj",
+      "innings_phase": "Powerplay",
+      "batter_pressure_tier": "MODERATE",
+      "actual_runs": 6.0,
+      "pred_dummy": 1.368,
+      "pred_context_grid": 1.048,
+      "pred_ridge": 1.106,
+      "pred_lightgbm": 1.031,
+      "pred_xgboost": 1.0449999570846558,
+      "residual_lightgbm": 4.969
+    },
+    {
+      "match_id": 41849,
+      "season": "2026",
+      "match_date": "2026-01-27",
+      "competition_type": "T20I",
+      "striker_id": 2687,
+      "striker_name": "Roston Chase",
+      "bowler_id": 26663,
+      "bowler_name": "Kwena Maphaka",
+      "innings_phase": "Middle",
+      "batter_pressure_tier": "MODERATE",
+      "actual_runs": 4.0,
+      "pred_dummy": 1.368,
+      "pred_context_grid": 1.215,
+      "pred_ridge": 0.764,
+      "pred_lightgbm": 0.864,
+      "pred_xgboost": 0.8460000157356262,
+      "residual_lightgbm": 3.136
+    },
+    {
+      "match_id": 41849,
+      "season": "2026",
+      "match_date": "2026-01-27",
+      "competition_type": "T20I",
+      "striker_id": 2687,
+      "striker_name": "Roston Chase",
+      "bowler_id": 26663,
+      "bowler_name": "Kwena Maphaka",
+      "innings_phase": "Middle",
+      "batter_pressure_tier": "MODERATE",
+      "actual_runs": 1.0,
+      "pred_dummy": 1.368,
+      "pred_context_grid": 1.215,
+      "pred_ridge": 0.806,
+      "pred_lightgbm": 0.919,
+      "pred_xgboost": 0.8830000162124634,
+      "residual_lightgbm": 0.081
+    },
+    {
+      "match_id": 41849,
+      "season": "2026",
+      "match_date": "2026-01-27",
+      "competition_type": "T20I",
+      "striker_id": 8295,
+      "striker_name": "Matthew Forde",
+      "bowler_id": 26663,
+      "bowler_name": "Kwena Maphaka",
+      "innings_phase": "Middle",
+      "batter_pressure_tier": "MODERATE",
+      "actual_runs": 0.0,
+      "pred_dummy": 1.368,
+      "pred_context_grid": 1.215,
+      "pred_ridge": 0.927,
+      "pred_lightgbm": 1.02,
+      "pred_xgboost": 0.9940000176429749,
+      "residual_lightgbm": -1.02
+    },
+    {
+      "match_id": 41849,
+      "season": "2026",
+      "match_date": "2026-01-27",
+      "competition_type": "T20I",
+      "striker_id": 8295,
+      "striker_name": "Matthew Forde",
+      "bowler_id": 26663,
+      "bowler_name": "Kwena Maphaka",
+      "innings_phase": "Middle",
+      "batter_pressure_tier": "MODERATE",
+      "actual_runs": 0.0,
+      "pred_dummy": 1.368,
+      "pred_context_grid": 1.215,
+      "pred_ridge": 0.922,
+      "pred_lightgbm": 0.962,
+      "pred_xgboost": 0.9860000014305115,
+      "residual_lightgbm": -0.962
+    },
+    {
+      "match_id": 41849,
+      "season": "2026",
+      "match_date": "2026-01-27",
+      "competition_type": "T20I",
+      "striker_id": 8295,
+      "striker_name": "Matthew Forde",
+      "bowler_id": 26663,
+      "bowler_name": "Kwena Maphaka",
+      "innings_phase": "Middle",
+      "batter_pressure_tier": "MODERATE",
+      "actual_runs": 1.0,
+      "pred_dummy": 1.368,
+      "pred_context_grid": 1.215,
+      "pred_ridge": 1.14,
+      "pred_lightgbm": 1.225,
+      "pred_xgboost": 1.246000051498413,
+      "residual_lightgbm": -0.225
+    },
+    {
+      "match_id": 41849,
+      "season": "2026",
+      "match_date": "2026-01-27",
+      "competition_type": "T20I",
+      "striker_id": 2687,
+      "striker_name": "Roston Chase",
+      "bowler_id": 26663,
+      "bowler_name": "Kwena Maphaka",
+      "innings_phase": "Middle",
+      "batter_pressure_tier": "MODERATE",
+      "actual_runs": 0.0,
+      "pred_dummy": 1.368,
+      "pred_context_grid": 1.215,
+      "pred_ridge": 1.02,
+      "pred_lightgbm": 1.211,
+      "pred_xgboost": 1.1979999542236328,
+      "residual_lightgbm": -1.211
+    },
+    {
+      "match_id": 41849,
+      "season": "2026",
+      "match_date": "2026-01-27",
+      "competition_type": "T20I",
+      "striker_id": 8295,
+      "striker_name": "Matthew Forde",
+      "bowler_id": 4229,
+      "bowler_name": "George Linde",
+      "innings_phase": "Middle",
+      "batter_pressure_tier": "MODERATE",
+      "actual_runs": 1.0,
+      "pred_dummy": 1.368,
+      "pred_context_grid": 1.215,
+      "pred_ridge": 1.163,
+      "pred_lightgbm": 1.255,
+      "pred_xgboost": 1.2730000019073486,
+      "residual_lightgbm": -0.255
+    },
+    {
+      "match_id": 41849,
+      "season": "2026",
+      "match_date": "2026-01-27",
+      "competition_type": "T20I",
+      "striker_id": 2687,
+      "striker_name": "Roston Chase",
+      "bowler_id": 4229,
+      "bowler_name": "George Linde",
+      "innings_phase": "Middle",
+      "batter_pressure_tier": "MODERATE",
+      "actual_runs": 0.0,
+      "pred_dummy": 1.368,
+      "pred_context_grid": 1.215,
+      "pred_ridge": 1.017,
+      "pred_lightgbm": 1.192,
+      "pred_xgboost": 1.187000036239624,
+      "residual_lightgbm": -1.192
+    },
+    {
+      "match_id": 41849,
+      "season": "2026",
+      "match_date": "2026-01-27",
+      "competition_type": "T20I",
+      "striker_id": 2687,
+      "striker_name": "Roston Chase",
+      "bowler_id": 4229,
+      "bowler_name": "George Linde",
+      "innings_phase": "Middle",
+      "batter_pressure_tier": "MODERATE",
+      "actual_runs": 1.0,
+      "pred_dummy": 1.368,
+      "pred_context_grid": 1.215,
+      "pred_ridge": 1.012,
+      "pred_lightgbm": 1.197,
+      "pred_xgboost": 1.1979999542236328,
+      "residual_lightgbm": -0.197
+    },
+    {
+      "match_id": 41849,
+      "season": "2026",
+      "match_date": "2026-01-27",
+      "competition_type": "T20I",
+      "striker_id": 8295,
+      "striker_name": "Matthew Forde",
+      "bowler_id": 4229,
+      "bowler_name": "George Linde",
+      "innings_phase": "Middle",
+      "batter_pressure_tier": "MODERATE",
+      "actual_runs": 1.0,
+      "pred_dummy": 1.368,
+      "pred_context_grid": 1.215,
+      "pred_ridge": 1.134,
+      "pred_lightgbm": 1.292,
+      "pred_xgboost": 1.3079999685287476,
+      "residual_lightgbm": -0.292
+    },
+    {
+      "match_id": 41849,
+      "season": "2026",
+      "match_date": "2026-01-27",
+      "competition_type": "T20I",
+      "striker_id": 2687,
+      "striker_name": "Roston Chase",
+      "bowler_id": 4229,
+      "bowler_name": "George Linde",
+      "innings_phase": "Middle",
+      "batter_pressure_tier": "MODERATE",
+      "actual_runs": 1.0,
+      "pred_dummy": 1.368,
+      "pred_context_grid": 1.215,
+      "pred_ridge": 1.013,
+      "pred_lightgbm": 1.224,
+      "pred_xgboost": 1.2369999885559082,
+      "residual_lightgbm": -0.224
+    },
+    {
+      "match_id": 41849,
+      "season": "2026",
+      "match_date": "2026-01-27",
+      "competition_type": "T20I",
+      "striker_id": 8295,
+      "striker_name": "Matthew Forde",
+      "bowler_id": 4229,
+      "bowler_name": "George Linde",
+      "innings_phase": "Middle",
+      "batter_pressure_tier": "MODERATE",
+      "actual_runs": 6.0,
+      "pred_dummy": 1.368,
+      "pred_context_grid": 1.215,
+      "pred_ridge": 1.135,
+      "pred_lightgbm": 1.29,
+      "pred_xgboost": 1.315999984741211,
+      "residual_lightgbm": 4.71
+    },
+    {
+      "match_id": 41849,
+      "season": "2026",
+      "match_date": "2026-01-27",
+      "competition_type": "T20I",
+      "striker_id": 2687,
+      "striker_name": "Roston Chase",
+      "bowler_id": 3629,
+      "bowler_name": "Corbin Bosch",
+      "innings_phase": "Middle",
+      "batter_pressure_tier": "MODERATE",
+      "actual_runs": 4.0,
+      "pred_dummy": 1.368,
+      "pred_context_grid": 1.215,
+      "pred_ridge": 1.159,
+      "pred_lightgbm": 1.33,
+      "pred_xgboost": 1.312999963760376,
+      "residual_lightgbm": 2.67
+    },
+    {
+      "match_id": 41849,
+      "season": "2026",
+      "match_date": "2026-01-27",
+      "competition_type": "T20I",
+      "striker_id": 2687,
+      "striker_name": "Roston Chase",
+      "bowler_id": 3629,
+      "bowler_name": "Corbin Bosch",
+      "innings_phase": "Middle",
+      "batter_pressure_tier": "MODERATE",
+      "actual_runs": 1.0,
+      "pred_dummy": 1.368,
+      "pred_context_grid": 1.215,
+      "pred_ridge": 1.2,
+      "pred_lightgbm": 1.344,
+      "pred_xgboost": 1.3420000076293945,
+      "residual_lightgbm": -0.344
+    }
+  ]
+}

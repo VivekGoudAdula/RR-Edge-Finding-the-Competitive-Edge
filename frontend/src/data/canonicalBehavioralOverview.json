@@ -1,0 +1,171 @@
+{
+  "dataset_version": "v1.0-production",
+  "total_deliveries_analyzed": 194014,
+  "total_matches_analyzed": 837,
+  "batters": {
+    "total_evaluated": 824,
+    "confident_sample_count": 185,
+    "provisional_sample_count": 94,
+    "insufficient_evidence_count": 545,
+    "top_resilience_batters": [
+      {
+        "striker_id": 3644,
+        "striker_name": "Kuldeep Yadav",
+        "scoring_resilience_index": 46.25,
+        "post_dot_strike_rate": 90.91,
+        "delta_sr_post_dot": 12.8
+      },
+      {
+        "striker_id": 443,
+        "striker_name": "Paul Stirling",
+        "scoring_resilience_index": 35.81,
+        "post_dot_strike_rate": 174.16,
+        "delta_sr_post_dot": 33.74
+      },
+      {
+        "striker_id": 6272,
+        "striker_name": "William Jacks",
+        "scoring_resilience_index": 29.18,
+        "post_dot_strike_rate": 201.61,
+        "delta_sr_post_dot": 52.41
+      },
+      {
+        "striker_id": 6819,
+        "striker_name": "Yashasvi Jaiswal",
+        "scoring_resilience_index": 27.78,
+        "post_dot_strike_rate": 181.66,
+        "delta_sr_post_dot": 26.13
+      },
+      {
+        "striker_id": 6423,
+        "striker_name": "Riyan Parag",
+        "scoring_resilience_index": 26.91,
+        "post_dot_strike_rate": 198.78,
+        "delta_sr_post_dot": 47.02
+      },
+      {
+        "striker_id": 8654,
+        "striker_name": "Cooper Connolly",
+        "scoring_resilience_index": 24.1,
+        "post_dot_strike_rate": 181.08,
+        "delta_sr_post_dot": 24.85
+      },
+      {
+        "striker_id": 796,
+        "striker_name": "Matthew Wade",
+        "scoring_resilience_index": 22.14,
+        "post_dot_strike_rate": 154.55,
+        "delta_sr_post_dot": 16.66
+      },
+      {
+        "striker_id": 2523,
+        "striker_name": "Will Young",
+        "scoring_resilience_index": 22.06,
+        "post_dot_strike_rate": 147.06,
+        "delta_sr_post_dot": 45.92
+      },
+      {
+        "striker_id": 167,
+        "striker_name": "Ajinkya Rahane",
+        "scoring_resilience_index": 19.19,
+        "post_dot_strike_rate": 173.53,
+        "delta_sr_post_dot": 34.41
+      },
+      {
+        "striker_id": 3954,
+        "striker_name": "Andrew Balbirnie",
+        "scoring_resilience_index": 19.05,
+        "post_dot_strike_rate": 133.33,
+        "delta_sr_post_dot": 14.25
+      }
+    ]
+  },
+  "bowlers": {
+    "total_evaluated": 596,
+    "confident_sample_count": 229,
+    "provisional_sample_count": 90,
+    "insufficient_evidence_count": 277,
+    "top_bounceback_bowlers": [
+      {
+        "bowler_id": 56685,
+        "bowler_name": "Abdullah Ahmadzai",
+        "bounceback_index": 3.29,
+        "post_boundary_economy": 5.8,
+        "overall_economy": 9.09,
+        "post_boundary_dot_pct": 50.0
+      },
+      {
+        "bowler_id": 7699,
+        "bowler_name": "Abbas Afridi",
+        "bounceback_index": 2.07,
+        "post_boundary_economy": 6.2,
+        "overall_economy": 8.27,
+        "post_boundary_dot_pct": 41.67
+      },
+      {
+        "bowler_id": 3664,
+        "bowler_name": "Binura Fernando",
+        "bounceback_index": 2.05,
+        "post_boundary_economy": 6.48,
+        "overall_economy": 8.53,
+        "post_boundary_dot_pct": 32.0
+      },
+      {
+        "bowler_id": 6423,
+        "bowler_name": "Riyan Parag",
+        "bounceback_index": 1.93,
+        "post_boundary_economy": 6.47,
+        "overall_economy": 8.4,
+        "post_boundary_dot_pct": 39.47
+      },
+      {
+        "bowler_id": 5892,
+        "bowler_name": "Blair Tickner",
+        "bounceback_index": 1.81,
+        "post_boundary_economy": 7.43,
+        "overall_economy": 9.24,
+        "post_boundary_dot_pct": 40.48
+      },
+      {
+        "bowler_id": 27964,
+        "bowler_name": "Anshul Kamboj",
+        "bounceback_index": 1.61,
+        "post_boundary_economy": 8.08,
+        "overall_economy": 9.69,
+        "post_boundary_dot_pct": 38.46
+      },
+      {
+        "bowler_id": 4824,
+        "bowler_name": "Zeeshan Ansari",
+        "bounceback_index": 1.51,
+        "post_boundary_economy": 8.18,
+        "overall_economy": 9.69,
+        "post_boundary_dot_pct": 30.3
+      },
+      {
+        "bowler_id": 3629,
+        "bowler_name": "Corbin Bosch",
+        "bounceback_index": 1.47,
+        "post_boundary_economy": 7.0,
+        "overall_economy": 8.47,
+        "post_boundary_dot_pct": 43.33
+      },
+      {
+        "bowler_id": 24475,
+        "bowler_name": "Rehan Ahmed",
+        "bounceback_index": 1.38,
+        "post_boundary_economy": 8.11,
+        "overall_economy": 9.49,
+        "post_boundary_dot_pct": 27.03
+      },
+      {
+        "bowler_id": 161,
+        "bowler_name": "Dwayne Bravo",
+        "bounceback_index": 1.19,
+        "post_boundary_economy": 6.94,
+        "overall_economy": 8.13,
+        "post_boundary_dot_pct": 31.25
+      }
+    ]
+  }
+}

@@ -1,0 +1,2157 @@
+[
+  {
+    "player_id": 1699,
+    "player_name": "Suryakumar Yadav",
+    "discipline": "BATTER",
+    "role": "Specialist Batter",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 139,
+    "bat_balls": 2850,
+    "bowl_balls": 6,
+    "strike_rate": 161.2,
+    "economy_rate": 5.0,
+    "is_top_10": true,
+    "top_10_rank": 2,
+    "teams": [
+      "India",
+      "Mumbai Indians"
+    ]
+  },
+  {
+    "player_id": 6281,
+    "player_name": "Abhishek Sharma",
+    "discipline": "ALL_ROUNDER",
+    "role": "Dual-Discipline Contributor",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 130,
+    "bat_balls": 2370,
+    "bowl_balls": 427,
+    "strike_rate": 177.1,
+    "economy_rate": 9.3,
+    "is_top_10": true,
+    "top_10_rank": 6,
+    "teams": [
+      "Sunrisers Hyderabad",
+      "India",
+      "India A"
+    ]
+  },
+  {
+    "player_id": 3125,
+    "player_name": "Nicholas Pooran",
+    "discipline": "BATTER",
+    "role": "Specialist Batter",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 115,
+    "bat_balls": 2092,
+    "bowl_balls": 0,
+    "strike_rate": 148.1,
+    "economy_rate": null,
+    "is_top_10": true,
+    "top_10_rank": 4,
+    "teams": [
+      "West Indies",
+      "Sunrisers Hyderabad",
+      "Lucknow Super Giants"
+    ]
+  },
+  {
+    "player_id": 6396,
+    "player_name": "Tim David",
+    "discipline": "BATTER",
+    "role": "Specialist Batter",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 98,
+    "bat_balls": 1293,
+    "bowl_balls": 6,
+    "strike_rate": 168.4,
+    "economy_rate": 18.0,
+    "is_top_10": true,
+    "top_10_rank": 1,
+    "teams": [
+      "Mumbai Indians",
+      "Australia",
+      "Royal Challengers Bengaluru"
+    ]
+  },
+  {
+    "player_id": 4900,
+    "player_name": "Wanindu Hasaranga",
+    "discipline": "ALL_ROUNDER",
+    "role": "Dual-Discipline Contributor",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 91,
+    "bat_balls": 482,
+    "bowl_balls": 2035,
+    "strike_rate": 121.2,
+    "economy_rate": 8.06,
+    "is_top_10": true,
+    "top_10_rank": 8,
+    "teams": [
+      "Sri Lanka",
+      "Royal Challengers Bengaluru",
+      "Sunrisers Hyderabad",
+      "Rajasthan Royals",
+      "Lucknow Super Giants"
+    ]
+  },
+  {
+    "player_id": 6819,
+    "player_name": "Yashasvi Jaiswal",
+    "discipline": "BATTER",
+    "role": "Specialist Batter",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 89,
+    "bat_balls": 1936,
+    "bowl_balls": 7,
+    "strike_rate": 151.2,
+    "economy_rate": 14.57,
+    "is_top_10": true,
+    "top_10_rank": 3,
+    "teams": [
+      "Rajasthan Royals",
+      "India"
+    ]
+  },
+  {
+    "player_id": 5553,
+    "player_name": "Phil Salt",
+    "discipline": "BATTER",
+    "role": "Specialist Batter",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 84,
+    "bat_balls": 1700,
+    "bowl_balls": 0,
+    "strike_rate": 163.6,
+    "economy_rate": null,
+    "is_top_10": true,
+    "top_10_rank": 7,
+    "teams": [
+      "England",
+      "Delhi Capitals",
+      "Kolkata Knight Riders",
+      "Royal Challengers Bengaluru"
+    ]
+  },
+  {
+    "player_id": 2933,
+    "player_name": "Jasprit Bumrah",
+    "discipline": "BOWLER",
+    "role": "Specialist Bowler",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 75,
+    "bat_balls": 33,
+    "bowl_balls": 1708,
+    "strike_rate": 69.7,
+    "economy_rate": 7.46,
+    "is_top_10": true,
+    "top_10_rank": 2,
+    "teams": [
+      "Mumbai Indians",
+      "India"
+    ]
+  },
+  {
+    "player_id": 838,
+    "player_name": "Glenn Maxwell",
+    "discipline": "ALL_ROUNDER",
+    "role": "Dual-Discipline Contributor",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 75,
+    "bat_balls": 1004,
+    "bowl_balls": 638,
+    "strike_rate": 153.6,
+    "economy_rate": 8.88,
+    "is_top_10": true,
+    "top_10_rank": 9,
+    "teams": [
+      "Australia",
+      "Royal Challengers Bengaluru",
+      "Punjab Kings"
+    ]
+  },
+  {
+    "player_id": 4260,
+    "player_name": "Heinrich Klaasen",
+    "discipline": "BATTER",
+    "role": "Specialist Batter",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 72,
+    "bat_balls": 1480,
+    "bowl_balls": 0,
+    "strike_rate": 159.7,
+    "economy_rate": null,
+    "is_top_10": true,
+    "top_10_rank": 8,
+    "teams": [
+      "South Africa",
+      "Sunrisers Hyderabad"
+    ]
+  },
+  {
+    "player_id": 7967,
+    "player_name": "Noor Ahmad",
+    "discipline": "ALL_ROUNDER",
+    "role": "Dual-Discipline Contributor",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 70,
+    "bat_balls": 115,
+    "bowl_balls": 1467,
+    "strike_rate": 80.0,
+    "economy_rate": 8.21,
+    "is_top_10": true,
+    "top_10_rank": 6,
+    "teams": [
+      "Gujarat Titans",
+      "Afghanistan",
+      "Chennai Super Kings"
+    ]
+  },
+  {
+    "player_id": 781,
+    "player_name": "Sunil Narine",
+    "discipline": "ALL_ROUNDER",
+    "role": "Dual-Discipline Contributor",
+    "formats": [
+      "IPL"
+    ],
+    "matches": 67,
+    "bat_balls": 554,
+    "bowl_balls": 1533,
+    "strike_rate": 156.3,
+    "economy_rate": 7.01,
+    "is_top_10": true,
+    "top_10_rank": 1,
+    "teams": [
+      "Kolkata Knight Riders"
+    ]
+  },
+  {
+    "player_id": 305,
+    "player_name": "Ravichandran Ashwin",
+    "discipline": "ALL_ROUNDER",
+    "role": "Dual-Discipline Contributor",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 61,
+    "bat_balls": 329,
+    "bowl_balls": 1404,
+    "strike_rate": 126.7,
+    "economy_rate": 7.91,
+    "is_top_10": true,
+    "top_10_rank": 7,
+    "teams": [
+      "Rajasthan Royals",
+      "India",
+      "Chennai Super Kings"
+    ]
+  },
+  {
+    "player_id": 143,
+    "player_name": "Dinesh Karthik",
+    "discipline": "BATTER",
+    "role": "Specialist Batter",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 61,
+    "bat_balls": 683,
+    "bowl_balls": 6,
+    "strike_rate": 156.5,
+    "economy_rate": 18.0,
+    "is_top_10": true,
+    "top_10_rank": 5,
+    "teams": [
+      "Royal Challengers Bengaluru",
+      "India"
+    ]
+  },
+  {
+    "player_id": 8661,
+    "player_name": "Matheesha Pathirana",
+    "discipline": "BOWLER",
+    "role": "Specialist Bowler",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 54,
+    "bat_balls": 32,
+    "bowl_balls": 1132,
+    "strike_rate": 59.4,
+    "economy_rate": 9.13,
+    "is_top_10": true,
+    "top_10_rank": 3,
+    "teams": [
+      "Chennai Super Kings",
+      "Sri Lanka",
+      "Kolkata Knight Riders"
+    ]
+  },
+  {
+    "player_id": 2490,
+    "player_name": "Mohammad Nawaz",
+    "discipline": "ALL_ROUNDER",
+    "role": "Dual-Discipline Contributor",
+    "formats": [
+      "T20I"
+    ],
+    "matches": 52,
+    "bat_balls": 523,
+    "bowl_balls": 1004,
+    "strike_rate": 134.8,
+    "economy_rate": 7.17,
+    "is_top_10": true,
+    "top_10_rank": 4,
+    "teams": [
+      "Pakistan"
+    ]
+  },
+  {
+    "player_id": 39657,
+    "player_name": "Eshan Malinga",
+    "discipline": "BOWLER",
+    "role": "Specialist Bowler",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 39,
+    "bat_balls": 40,
+    "bowl_balls": 807,
+    "strike_rate": 65.0,
+    "economy_rate": 9.61,
+    "is_top_10": true,
+    "top_10_rank": 5,
+    "teams": [
+      "Sri Lanka A",
+      "Sunrisers Hyderabad",
+      "Sri Lanka"
+    ]
+  },
+  {
+    "player_id": 50284,
+    "player_name": "Vaibhav Sooryavanshi",
+    "discipline": "BATTER",
+    "role": "Specialist Batter",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 31,
+    "bat_balls": 612,
+    "bowl_balls": 0,
+    "strike_rate": 207.5,
+    "economy_rate": null,
+    "is_top_10": true,
+    "top_10_rank": 10,
+    "teams": [
+      "Rajasthan Royals",
+      "India",
+      "India A"
+    ]
+  },
+  {
+    "player_id": 27960,
+    "player_name": "Mayank Yadav",
+    "discipline": "BOWLER",
+    "role": "Specialist Bowler",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 22,
+    "bat_balls": 13,
+    "bowl_balls": 493,
+    "strike_rate": 69.2,
+    "economy_rate": 9.7,
+    "is_top_10": true,
+    "top_10_rank": 10,
+    "teams": [
+      "Lucknow Super Giants",
+      "India"
+    ]
+  },
+  {
+    "player_id": 4856,
+    "player_name": "Benjamin Sears",
+    "discipline": "BOWLER",
+    "role": "Specialist Bowler",
+    "formats": [
+      "T20I"
+    ],
+    "matches": 22,
+    "bat_balls": 37,
+    "bowl_balls": 453,
+    "strike_rate": 62.2,
+    "economy_rate": 8.38,
+    "is_top_10": true,
+    "top_10_rank": 9,
+    "teams": [
+      "New Zealand"
+    ]
+  },
+  {
+    "player_id": 6464,
+    "player_name": "Arshdeep Singh",
+    "discipline": "ALL_ROUNDER",
+    "role": "Dual-Discipline Contributor",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 147,
+    "bat_balls": 141,
+    "bowl_balls": 3207,
+    "strike_rate": 91.5,
+    "economy_rate": 9.31,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "Punjab Kings",
+      "India"
+    ]
+  },
+  {
+    "player_id": 2876,
+    "player_name": "Axar Patel",
+    "discipline": "ALL_ROUNDER",
+    "role": "Dual-Discipline Contributor",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 136,
+    "bat_balls": 1347,
+    "bowl_balls": 2670,
+    "strike_rate": 130.7,
+    "economy_rate": 7.99,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "India",
+      "Delhi Capitals"
+    ]
+  },
+  {
+    "player_id": 2258,
+    "player_name": "Sanju Samson",
+    "discipline": "BATTER",
+    "role": "Specialist Batter",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 124,
+    "bat_balls": 2305,
+    "bowl_balls": 0,
+    "strike_rate": 149.7,
+    "economy_rate": null,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "Rajasthan Royals",
+      "India",
+      "Chennai Super Kings"
+    ]
+  },
+  {
+    "player_id": 7897,
+    "player_name": "Namboori Tilak Varma",
+    "discipline": "BATTER",
+    "role": "Specialist Batter",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 123,
+    "bat_balls": 2529,
+    "bowl_balls": 61,
+    "strike_rate": 137.6,
+    "economy_rate": 7.48,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "Mumbai Indians",
+      "India",
+      "India A"
+    ]
+  },
+  {
+    "player_id": 4722,
+    "player_name": "Rashid Khan",
+    "discipline": "ALL_ROUNDER",
+    "role": "Dual-Discipline Contributor",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 122,
+    "bat_balls": 540,
+    "bowl_balls": 2747,
+    "strike_rate": 146.5,
+    "economy_rate": 7.57,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "Gujarat Titans",
+      "Afghanistan"
+    ]
+  },
+  {
+    "player_id": 4117,
+    "player_name": "Ishan Kishan",
+    "discipline": "BATTER",
+    "role": "Specialist Batter",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 122,
+    "bat_balls": 2506,
+    "bowl_balls": 1,
+    "strike_rate": 140.8,
+    "economy_rate": 24.0,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "India",
+      "Mumbai Indians",
+      "Sunrisers Hyderabad"
+    ]
+  },
+  {
+    "player_id": 813,
+    "player_name": "Jos Buttler",
+    "discipline": "BATTER",
+    "role": "Specialist Batter",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 121,
+    "bat_balls": 2920,
+    "bowl_balls": 0,
+    "strike_rate": 150.5,
+    "economy_rate": null,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "Rajasthan Royals",
+      "England",
+      "Gujarat Titans"
+    ]
+  },
+  {
+    "player_id": 3330,
+    "player_name": "Hardik Pandya",
+    "discipline": "ALL_ROUNDER",
+    "role": "Dual-Discipline Contributor",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 118,
+    "bat_balls": 1993,
+    "bowl_balls": 1825,
+    "strike_rate": 136.7,
+    "economy_rate": 9.2,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "Gujarat Titans",
+      "India",
+      "Mumbai Indians"
+    ]
+  },
+  {
+    "player_id": 6288,
+    "player_name": "Shubman Gill",
+    "discipline": "BATTER",
+    "role": "Specialist Batter",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 112,
+    "bat_balls": 2804,
+    "bowl_balls": 0,
+    "strike_rate": 144.4,
+    "economy_rate": null,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "Gujarat Titans",
+      "India"
+    ]
+  },
+  {
+    "player_id": 7503,
+    "player_name": "Ravi Bishnoi",
+    "discipline": "ALL_ROUNDER",
+    "role": "Dual-Discipline Contributor",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 109,
+    "bat_balls": 108,
+    "bowl_balls": 2327,
+    "strike_rate": 94.4,
+    "economy_rate": 8.46,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "India",
+      "Lucknow Super Giants",
+      "Rajasthan Royals"
+    ]
+  },
+  {
+    "player_id": 360,
+    "player_name": "Bhuvneshwar Kumar",
+    "discipline": "ALL_ROUNDER",
+    "role": "Dual-Discipline Contributor",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 101,
+    "bat_balls": 177,
+    "bowl_balls": 2221,
+    "strike_rate": 84.2,
+    "economy_rate": 8.46,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "India",
+      "Sunrisers Hyderabad",
+      "Royal Challengers Bengaluru"
+    ]
+  },
+  {
+    "player_id": 4986,
+    "player_name": "Rovman Powell",
+    "discipline": "BATTER",
+    "role": "Specialist Batter",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 100,
+    "bat_balls": 1651,
+    "bowl_balls": 73,
+    "strike_rate": 138.6,
+    "economy_rate": 11.92,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "West Indies",
+      "Delhi Capitals",
+      "Rajasthan Royals",
+      "Kolkata Knight Riders"
+    ]
+  },
+  {
+    "player_id": 19316,
+    "player_name": "Maheesh Theekshana",
+    "discipline": "ALL_ROUNDER",
+    "role": "Dual-Discipline Contributor",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 99,
+    "bat_balls": 205,
+    "bowl_balls": 2265,
+    "strike_rate": 62.4,
+    "economy_rate": 7.95,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "Sri Lanka",
+      "Chennai Super Kings",
+      "Rajasthan Royals"
+    ]
+  },
+  {
+    "player_id": 1612,
+    "player_name": "Yuzvendra Chahal",
+    "discipline": "BOWLER",
+    "role": "Specialist Bowler",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 98,
+    "bat_balls": 10,
+    "bowl_balls": 2138,
+    "strike_rate": 60.0,
+    "economy_rate": 8.68,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "India",
+      "Rajasthan Royals",
+      "Punjab Kings"
+    ]
+  },
+  {
+    "player_id": 4755,
+    "player_name": "Shivam Dube",
+    "discipline": "ALL_ROUNDER",
+    "role": "Dual-Discipline Contributor",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 98,
+    "bat_balls": 1638,
+    "bowl_balls": 469,
+    "strike_rate": 145.3,
+    "economy_rate": 10.02,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "Chennai Super Kings",
+      "India"
+    ]
+  },
+  {
+    "player_id": 3647,
+    "player_name": "Shreyas Iyer",
+    "discipline": "BATTER",
+    "role": "Specialist Batter",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 98,
+    "bat_balls": 1935,
+    "bowl_balls": 8,
+    "strike_rate": 147.6,
+    "economy_rate": 6.75,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "India",
+      "Kolkata Knight Riders",
+      "Punjab Kings"
+    ]
+  },
+  {
+    "player_id": 6256,
+    "player_name": "Varun Chakravarthy",
+    "discipline": "BOWLER",
+    "role": "Specialist Bowler",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 95,
+    "bat_balls": 51,
+    "bowl_balls": 2128,
+    "strike_rate": 51.0,
+    "economy_rate": 8.14,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "Kolkata Knight Riders",
+      "India"
+    ]
+  },
+  {
+    "player_id": 3605,
+    "player_name": "Aiden Markram",
+    "discipline": "ALL_ROUNDER",
+    "role": "Dual-Discipline Contributor",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 94,
+    "bat_balls": 1719,
+    "bowl_balls": 397,
+    "strike_rate": 139.3,
+    "economy_rate": 10.14,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "Sunrisers Hyderabad",
+      "South Africa",
+      "Lucknow Super Giants"
+    ]
+  },
+  {
+    "player_id": 3297,
+    "player_name": "Shimron Hetmyer",
+    "discipline": "BATTER",
+    "role": "Specialist Batter",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 94,
+    "bat_balls": 1310,
+    "bowl_balls": 0,
+    "strike_rate": 144.6,
+    "economy_rate": null,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "Rajasthan Royals",
+      "West Indies"
+    ]
+  },
+  {
+    "player_id": 47,
+    "player_name": "Virat Kohli",
+    "discipline": "BATTER",
+    "role": "Specialist Batter",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 92,
+    "bat_balls": 2545,
+    "bowl_balls": 6,
+    "strike_rate": 140.2,
+    "economy_rate": 6.0,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "India",
+      "Royal Challengers Bengaluru"
+    ]
+  },
+  {
+    "player_id": 6726,
+    "player_name": "Romario Shepherd",
+    "discipline": "ALL_ROUNDER",
+    "role": "Dual-Discipline Contributor",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 92,
+    "bat_balls": 727,
+    "bowl_balls": 1539,
+    "strike_rate": 145.7,
+    "economy_rate": 10.63,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "West Indies",
+      "Sunrisers Hyderabad",
+      "Lucknow Super Giants",
+      "Mumbai Indians",
+      "Royal Challengers Bengaluru"
+    ]
+  },
+  {
+    "player_id": 126,
+    "player_name": "Rohit Sharma",
+    "discipline": "BATTER",
+    "role": "Specialist Batter",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 91,
+    "bat_balls": 1685,
+    "bowl_balls": 0,
+    "strike_rate": 138.2,
+    "economy_rate": null,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "India",
+      "Mumbai Indians"
+    ]
+  },
+  {
+    "player_id": 3644,
+    "player_name": "Kuldeep Yadav",
+    "discipline": "ALL_ROUNDER",
+    "role": "Dual-Discipline Contributor",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 89,
+    "bat_balls": 210,
+    "bowl_balls": 1914,
+    "strike_rate": 74.8,
+    "economy_rate": 8.08,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "India",
+      "Delhi Capitals"
+    ]
+  },
+  {
+    "player_id": 2639,
+    "player_name": "Marcus Stoinis",
+    "discipline": "ALL_ROUNDER",
+    "role": "Dual-Discipline Contributor",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 89,
+    "bat_balls": 1300,
+    "bowl_balls": 747,
+    "strike_rate": 147.3,
+    "economy_rate": 9.81,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "Australia",
+      "Lucknow Super Giants",
+      "Punjab Kings"
+    ]
+  },
+  {
+    "player_id": 2633,
+    "player_name": "Jason Holder",
+    "discipline": "ALL_ROUNDER",
+    "role": "Dual-Discipline Contributor",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 88,
+    "bat_balls": 465,
+    "bowl_balls": 1928,
+    "strike_rate": 136.8,
+    "economy_rate": 9.15,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "West Indies",
+      "Lucknow Super Giants",
+      "Rajasthan Royals",
+      "Gujarat Titans"
+    ]
+  },
+  {
+    "player_id": 4101,
+    "player_name": "Mitchell Santner",
+    "discipline": "ALL_ROUNDER",
+    "role": "Dual-Discipline Contributor",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 83,
+    "bat_balls": 560,
+    "bowl_balls": 1737,
+    "strike_rate": 121.6,
+    "economy_rate": 7.53,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "Chennai Super Kings",
+      "New Zealand",
+      "Mumbai Indians"
+    ]
+  },
+  {
+    "player_id": 5944,
+    "player_name": "Mohammed Siraj",
+    "discipline": "BOWLER",
+    "role": "Specialist Bowler",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 83,
+    "bat_balls": 75,
+    "bowl_balls": 1806,
+    "strike_rate": 77.3,
+    "economy_rate": 9.07,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "India",
+      "Royal Challengers Bengaluru",
+      "Gujarat Titans"
+    ]
+  },
+  {
+    "player_id": 4708,
+    "player_name": "Rinku Singh",
+    "discipline": "BATTER",
+    "role": "Specialist Batter",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 83,
+    "bat_balls": 1351,
+    "bowl_balls": 10,
+    "strike_rate": 145.2,
+    "economy_rate": 6.0,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "Kolkata Knight Riders",
+      "India"
+    ]
+  },
+  {
+    "player_id": 818,
+    "player_name": "Mitchell Marsh",
+    "discipline": "ALL_ROUNDER",
+    "role": "Dual-Discipline Contributor",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 82,
+    "bat_balls": 1792,
+    "bowl_balls": 295,
+    "strike_rate": 151.2,
+    "economy_rate": 9.05,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "Delhi Capitals",
+      "Australia",
+      "Lucknow Super Giants"
+    ]
+  },
+  {
+    "player_id": 1077,
+    "player_name": "David Miller",
+    "discipline": "BATTER",
+    "role": "Specialist Batter",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 81,
+    "bat_balls": 1338,
+    "bowl_balls": 0,
+    "strike_rate": 142.8,
+    "economy_rate": null,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "Gujarat Titans",
+      "South Africa",
+      "Lucknow Super Giants",
+      "Delhi Capitals"
+    ]
+  },
+  {
+    "player_id": 2417,
+    "player_name": "Akeal Hosein",
+    "discipline": "ALL_ROUNDER",
+    "role": "Dual-Discipline Contributor",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 79,
+    "bat_balls": 230,
+    "bowl_balls": 1692,
+    "strike_rate": 124.3,
+    "economy_rate": 7.79,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "West Indies",
+      "Sunrisers Hyderabad",
+      "Chennai Super Kings"
+    ]
+  },
+  {
+    "player_id": 2261,
+    "player_name": "Harshal Patel",
+    "discipline": "ALL_ROUNDER",
+    "role": "Dual-Discipline Contributor",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 79,
+    "bat_balls": 151,
+    "bowl_balls": 1643,
+    "strike_rate": 100.7,
+    "economy_rate": 9.49,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "India",
+      "Royal Challengers Bengaluru",
+      "Punjab Kings",
+      "Sunrisers Hyderabad"
+    ]
+  },
+  {
+    "player_id": 3653,
+    "player_name": "Avesh Khan",
+    "discipline": "BOWLER",
+    "role": "Specialist Bowler",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 79,
+    "bat_balls": 60,
+    "bowl_balls": 1672,
+    "strike_rate": 143.3,
+    "economy_rate": 9.76,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "India",
+      "Lucknow Super Giants",
+      "Rajasthan Royals"
+    ]
+  },
+  {
+    "player_id": 6059,
+    "player_name": "Ruturaj Gaikwad",
+    "discipline": "BATTER",
+    "role": "Specialist Batter",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 77,
+    "bat_balls": 1889,
+    "bowl_balls": 0,
+    "strike_rate": 134.1,
+    "economy_rate": null,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "India",
+      "Chennai Super Kings"
+    ]
+  },
+  {
+    "player_id": 6931,
+    "player_name": "Pathum Nissanka",
+    "discipline": "BATTER",
+    "role": "Specialist Batter",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 75,
+    "bat_balls": 1690,
+    "bowl_balls": 0,
+    "strike_rate": 130.7,
+    "economy_rate": null,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "Sri Lanka",
+      "Delhi Capitals"
+    ]
+  },
+  {
+    "player_id": 152,
+    "player_name": "Ravindra Jadeja",
+    "discipline": "ALL_ROUNDER",
+    "role": "Dual-Discipline Contributor",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 74,
+    "bat_balls": 1002,
+    "bowl_balls": 1396,
+    "strike_rate": 129.1,
+    "economy_rate": 7.97,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "Chennai Super Kings",
+      "India",
+      "Rajasthan Royals"
+    ]
+  },
+  {
+    "player_id": 953,
+    "player_name": "Lokesh Rahul",
+    "discipline": "BATTER",
+    "role": "Specialist Batter",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 74,
+    "bat_balls": 2086,
+    "bowl_balls": 0,
+    "strike_rate": 136.8,
+    "economy_rate": null,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "India",
+      "Lucknow Super Giants",
+      "Delhi Capitals"
+    ]
+  },
+  {
+    "player_id": 4409,
+    "player_name": "Sam Curran",
+    "discipline": "ALL_ROUNDER",
+    "role": "Dual-Discipline Contributor",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 73,
+    "bat_balls": 894,
+    "bowl_balls": 1350,
+    "strike_rate": 125.5,
+    "economy_rate": 9.82,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "England",
+      "Punjab Kings",
+      "Chennai Super Kings",
+      "Rajasthan Royals"
+    ]
+  },
+  {
+    "player_id": 4703,
+    "player_name": "Rishabh Pant",
+    "discipline": "BATTER",
+    "role": "Specialist Batter",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 73,
+    "bat_balls": 1295,
+    "bowl_balls": 0,
+    "strike_rate": 137.0,
+    "economy_rate": null,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "India",
+      "Delhi Capitals",
+      "Lucknow Super Giants"
+    ]
+  },
+  {
+    "player_id": 4373,
+    "player_name": "Mustafizur Rahman",
+    "discipline": "BOWLER",
+    "role": "Specialist Bowler",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 71,
+    "bat_balls": 62,
+    "bowl_balls": 1576,
+    "strike_rate": 82.3,
+    "economy_rate": 7.96,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "Delhi Capitals",
+      "Bangladesh",
+      "Chennai Super Kings",
+      "Kolkata Knight Riders"
+    ]
+  },
+  {
+    "player_id": 2320,
+    "player_name": "Trent Boult",
+    "discipline": "BOWLER",
+    "role": "Specialist Bowler",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 70,
+    "bat_balls": 84,
+    "bowl_balls": 1543,
+    "strike_rate": 116.7,
+    "economy_rate": 8.59,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "Rajasthan Royals",
+      "New Zealand",
+      "Mumbai Indians"
+    ]
+  },
+  {
+    "player_id": 3628,
+    "player_name": "Kagiso Rabada",
+    "discipline": "ALL_ROUNDER",
+    "role": "Dual-Discipline Contributor",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 69,
+    "bat_balls": 153,
+    "bowl_balls": 1533,
+    "strike_rate": 109.8,
+    "economy_rate": 9.45,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "Punjab Kings",
+      "South Africa",
+      "Gujarat Titans"
+    ]
+  },
+  {
+    "player_id": 6423,
+    "player_name": "Riyan Parag",
+    "discipline": "ALL_ROUNDER",
+    "role": "Dual-Discipline Contributor",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 69,
+    "bat_balls": 1133,
+    "bowl_balls": 260,
+    "strike_rate": 145.3,
+    "economy_rate": 8.72,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "Rajasthan Royals",
+      "India"
+    ]
+  },
+  {
+    "player_id": 4106,
+    "player_name": "Daryl Mitchell",
+    "discipline": "BATTER",
+    "role": "Specialist Batter",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 69,
+    "bat_balls": 1181,
+    "bowl_balls": 80,
+    "strike_rate": 141.2,
+    "economy_rate": 11.48,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "Rajasthan Royals",
+      "New Zealand",
+      "Chennai Super Kings"
+    ]
+  },
+  {
+    "player_id": 6674,
+    "player_name": "Rahmanullah Gurbaz",
+    "discipline": "BATTER",
+    "role": "Specialist Batter",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 69,
+    "bat_balls": 1175,
+    "bowl_balls": 0,
+    "strike_rate": 124.9,
+    "economy_rate": null,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "Gujarat Titans",
+      "Afghanistan",
+      "Kolkata Knight Riders"
+    ]
+  },
+  {
+    "player_id": 20702,
+    "player_name": "Tristan Stubbs",
+    "discipline": "BATTER",
+    "role": "Specialist Batter",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 69,
+    "bat_balls": 1114,
+    "bowl_balls": 48,
+    "strike_rate": 145.6,
+    "economy_rate": 13.75,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "Mumbai Indians",
+      "South Africa",
+      "Delhi Capitals"
+    ]
+  },
+  {
+    "player_id": 3916,
+    "player_name": "Jitesh Sharma",
+    "discipline": "BATTER",
+    "role": "Specialist Batter",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 69,
+    "bat_balls": 859,
+    "bowl_balls": 0,
+    "strike_rate": 147.1,
+    "economy_rate": null,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "Punjab Kings",
+      "India",
+      "Royal Challengers Bengaluru",
+      "India A"
+    ]
+  },
+  {
+    "player_id": 4391,
+    "player_name": "Liam Livingstone",
+    "discipline": "ALL_ROUNDER",
+    "role": "Dual-Discipline Contributor",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 68,
+    "bat_balls": 1057,
+    "bowl_balls": 594,
+    "strike_rate": 144.7,
+    "economy_rate": 9.76,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "England",
+      "Punjab Kings",
+      "Royal Challengers Bengaluru",
+      "Sunrisers Hyderabad"
+    ]
+  },
+  {
+    "player_id": 3672,
+    "player_name": "Kusal Mendis",
+    "discipline": "BATTER",
+    "role": "Specialist Batter",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 67,
+    "bat_balls": 1378,
+    "bowl_balls": 0,
+    "strike_rate": 129.1,
+    "economy_rate": null,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "Sri Lanka",
+      "Gujarat Titans"
+    ]
+  },
+  {
+    "player_id": 4219,
+    "player_name": "Krunal Pandya",
+    "discipline": "ALL_ROUNDER",
+    "role": "Dual-Discipline Contributor",
+    "formats": [
+      "IPL"
+    ],
+    "matches": 66,
+    "bat_balls": 686,
+    "bowl_balls": 1257,
+    "strike_rate": 122.3,
+    "economy_rate": 7.89,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "Lucknow Super Giants",
+      "Royal Challengers Bengaluru"
+    ]
+  },
+  {
+    "player_id": 2101,
+    "player_name": "Quinton de Kock",
+    "discipline": "BATTER",
+    "role": "Specialist Batter",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 66,
+    "bat_balls": 1326,
+    "bowl_balls": 0,
+    "strike_rate": 143.6,
+    "economy_rate": null,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "Lucknow Super Giants",
+      "South Africa",
+      "Kolkata Knight Riders",
+      "Mumbai Indians"
+    ]
+  },
+  {
+    "player_id": 2367,
+    "player_name": "Travis Head",
+    "discipline": "BATTER",
+    "role": "Specialist Batter",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 66,
+    "bat_balls": 1182,
+    "bowl_balls": 16,
+    "strike_rate": 167.1,
+    "economy_rate": 15.0,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "Australia",
+      "Sunrisers Hyderabad"
+    ]
+  },
+  {
+    "player_id": 6676,
+    "player_name": "Azmatullah Omarzai",
+    "discipline": "ALL_ROUNDER",
+    "role": "Dual-Discipline Contributor",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 65,
+    "bat_balls": 688,
+    "bowl_balls": 1067,
+    "strike_rate": 132.7,
+    "economy_rate": 8.9,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "Afghanistan",
+      "Gujarat Titans",
+      "Punjab Kings"
+    ]
+  },
+  {
+    "player_id": 830,
+    "player_name": "Josh Hazlewood",
+    "discipline": "BOWLER",
+    "role": "Specialist Bowler",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 65,
+    "bat_balls": 40,
+    "bowl_balls": 1476,
+    "strike_rate": 57.5,
+    "economy_rate": 8.46,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "Australia",
+      "Royal Challengers Bengaluru"
+    ]
+  },
+  {
+    "player_id": 5939,
+    "player_name": "Cameron Green",
+    "discipline": "ALL_ROUNDER",
+    "role": "Dual-Discipline Contributor",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 63,
+    "bat_balls": 1114,
+    "bowl_balls": 753,
+    "strike_rate": 147.0,
+    "economy_rate": 9.74,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "Australia",
+      "Mumbai Indians",
+      "Royal Challengers Bengaluru",
+      "Kolkata Knight Riders"
+    ]
+  },
+  {
+    "player_id": 1941,
+    "player_name": "Devon Conway",
+    "discipline": "BATTER",
+    "role": "Specialist Batter",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 61,
+    "bat_balls": 1529,
+    "bowl_balls": 0,
+    "strike_rate": 128.7,
+    "economy_rate": null,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "Chennai Super Kings",
+      "New Zealand"
+    ]
+  },
+  {
+    "player_id": 479,
+    "player_name": "Adil Rashid",
+    "discipline": "ALL_ROUNDER",
+    "role": "Dual-Discipline Contributor",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 61,
+    "bat_balls": 126,
+    "bowl_balls": 1324,
+    "strike_rate": 96.8,
+    "economy_rate": 8.11,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "England",
+      "Sunrisers Hyderabad"
+    ]
+  },
+  {
+    "player_id": 2436,
+    "player_name": "Dasun Shanaka",
+    "discipline": "ALL_ROUNDER",
+    "role": "Dual-Discipline Contributor",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 61,
+    "bat_balls": 806,
+    "bowl_balls": 529,
+    "strike_rate": 134.0,
+    "economy_rate": 8.94,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "Sri Lanka",
+      "Gujarat Titans",
+      "Rajasthan Royals"
+    ]
+  },
+  {
+    "player_id": 2671,
+    "player_name": "Liton Das",
+    "discipline": "BATTER",
+    "role": "Specialist Batter",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 61,
+    "bat_balls": 1175,
+    "bowl_balls": 0,
+    "strike_rate": 128.5,
+    "economy_rate": null,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "Bangladesh",
+      "Kolkata Knight Riders"
+    ]
+  },
+  {
+    "player_id": 7808,
+    "player_name": "Marco Jansen",
+    "discipline": "ALL_ROUNDER",
+    "role": "Dual-Discipline Contributor",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 60,
+    "bat_balls": 289,
+    "bowl_balls": 1317,
+    "strike_rate": 122.8,
+    "economy_rate": 9.91,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "Sunrisers Hyderabad",
+      "South Africa",
+      "Punjab Kings"
+    ]
+  },
+  {
+    "player_id": 7216,
+    "player_name": "Prabhsimran Singh",
+    "discipline": "BATTER",
+    "role": "Specialist Batter",
+    "formats": [
+      "IPL"
+    ],
+    "matches": 60,
+    "bat_balls": 1164,
+    "bowl_balls": 0,
+    "strike_rate": 155.9,
+    "economy_rate": null,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "Punjab Kings",
+      "India A",
+      "India"
+    ]
+  },
+  {
+    "player_id": 6314,
+    "player_name": "Devdutt Padikkal",
+    "discipline": "BATTER",
+    "role": "Specialist Batter",
+    "formats": [
+      "IPL"
+    ],
+    "matches": 60,
+    "bat_balls": 1039,
+    "bowl_balls": 0,
+    "strike_rate": 133.4,
+    "economy_rate": null,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "Rajasthan Royals",
+      "Lucknow Super Giants",
+      "Royal Challengers Bengaluru"
+    ]
+  },
+  {
+    "player_id": 2526,
+    "player_name": "Ish Sodhi",
+    "discipline": "ALL_ROUNDER",
+    "role": "Dual-Discipline Contributor",
+    "formats": [
+      "T20I"
+    ],
+    "matches": 59,
+    "bat_balls": 137,
+    "bowl_balls": 1175,
+    "strike_rate": 108.8,
+    "economy_rate": 8.72,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "New Zealand"
+    ]
+  },
+  {
+    "player_id": 5041,
+    "player_name": "Mukesh Kumar",
+    "discipline": "BOWLER",
+    "role": "Specialist Bowler",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 59,
+    "bat_balls": 25,
+    "bowl_balls": 1148,
+    "strike_rate": 60.0,
+    "economy_rate": 10.28,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "India",
+      "Delhi Capitals"
+    ]
+  },
+  {
+    "player_id": 3639,
+    "player_name": "Brandon King",
+    "discipline": "BATTER",
+    "role": "Specialist Batter",
+    "formats": [
+      "T20I"
+    ],
+    "matches": 59,
+    "bat_balls": 1164,
+    "bowl_balls": 0,
+    "strike_rate": 129.5,
+    "economy_rate": null,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "West Indies"
+    ]
+  },
+  {
+    "player_id": 1596,
+    "player_name": "Moeen Ali",
+    "discipline": "ALL_ROUNDER",
+    "role": "Dual-Discipline Contributor",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 58,
+    "bat_balls": 801,
+    "bowl_balls": 805,
+    "strike_rate": 134.0,
+    "economy_rate": 8.26,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "England",
+      "Chennai Super Kings",
+      "Kolkata Knight Riders"
+    ]
+  },
+  {
+    "player_id": 7690,
+    "player_name": "Saim Ayub",
+    "discipline": "ALL_ROUNDER",
+    "role": "Dual-Discipline Contributor",
+    "formats": [
+      "T20I"
+    ],
+    "matches": 58,
+    "bat_balls": 921,
+    "bowl_balls": 510,
+    "strike_rate": 131.7,
+    "economy_rate": 7.2,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "Pakistan"
+    ]
+  },
+  {
+    "player_id": 4369,
+    "player_name": "Shai Hope",
+    "discipline": "BATTER",
+    "role": "Specialist Batter",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 58,
+    "bat_balls": 1128,
+    "bowl_balls": 0,
+    "strike_rate": 141.2,
+    "economy_rate": null,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "West Indies",
+      "Delhi Capitals"
+    ]
+  },
+  {
+    "player_id": 2984,
+    "player_name": "Sikandar Raza",
+    "discipline": "ALL_ROUNDER",
+    "role": "Dual-Discipline Contributor",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 57,
+    "bat_balls": 1047,
+    "bowl_balls": 1091,
+    "strike_rate": 129.7,
+    "economy_rate": 7.26,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "Zimbabwe",
+      "Punjab Kings"
+    ]
+  },
+  {
+    "player_id": 23450,
+    "player_name": "Sai Sudharsan",
+    "discipline": "BATTER",
+    "role": "Specialist Batter",
+    "formats": [
+      "IPL"
+    ],
+    "matches": 57,
+    "bat_balls": 1760,
+    "bowl_balls": 0,
+    "strike_rate": 142.9,
+    "economy_rate": null,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "Gujarat Titans",
+      "India"
+    ]
+  },
+  {
+    "player_id": 1318,
+    "player_name": "Andre Russell",
+    "discipline": "ALL_ROUNDER",
+    "role": "Dual-Discipline Contributor",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 57,
+    "bat_balls": 785,
+    "bowl_balls": 754,
+    "strike_rate": 159.7,
+    "economy_rate": 11.08,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "Kolkata Knight Riders",
+      "West Indies"
+    ]
+  },
+  {
+    "player_id": 1566,
+    "player_name": "Mohammed Shami",
+    "discipline": "BOWLER",
+    "role": "Specialist Bowler",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 57,
+    "bat_balls": 51,
+    "bowl_balls": 1275,
+    "strike_rate": 103.9,
+    "economy_rate": 8.9,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "Gujarat Titans",
+      "India",
+      "Sunrisers Hyderabad",
+      "Lucknow Super Giants"
+    ]
+  },
+  {
+    "player_id": 3926,
+    "player_name": "Rahul Tewatia",
+    "discipline": "BATTER",
+    "role": "Specialist Batter",
+    "formats": [
+      "IPL"
+    ],
+    "matches": 57,
+    "bat_balls": 562,
+    "bowl_balls": 49,
+    "strike_rate": 139.0,
+    "economy_rate": 11.14,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "Gujarat Titans"
+    ]
+  },
+  {
+    "player_id": 3298,
+    "player_name": "Jofra Archer",
+    "discipline": "ALL_ROUNDER",
+    "role": "Dual-Discipline Contributor",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 56,
+    "bat_balls": 151,
+    "bowl_balls": 1259,
+    "strike_rate": 123.8,
+    "economy_rate": 9.25,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "Mumbai Indians",
+      "England",
+      "Rajasthan Royals"
+    ]
+  },
+  {
+    "player_id": 4853,
+    "player_name": "Glenn Phillips",
+    "discipline": "ALL_ROUNDER",
+    "role": "Dual-Discipline Contributor",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 56,
+    "bat_balls": 1121,
+    "bowl_balls": 113,
+    "strike_rate": 145.0,
+    "economy_rate": 8.12,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "Sunrisers Hyderabad",
+      "New Zealand",
+      "Gujarat Titans"
+    ]
+  },
+  {
+    "player_id": 4816,
+    "player_name": "Khaleel Ahmed",
+    "discipline": "BOWLER",
+    "role": "Specialist Bowler",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 56,
+    "bat_balls": 5,
+    "bowl_balls": 1198,
+    "strike_rate": 20.0,
+    "economy_rate": 9.17,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "Delhi Capitals",
+      "India",
+      "Chennai Super Kings"
+    ]
+  },
+  {
+    "player_id": 167,
+    "player_name": "Ajinkya Rahane",
+    "discipline": "BATTER",
+    "role": "Specialist Batter",
+    "formats": [
+      "IPL"
+    ],
+    "matches": 56,
+    "bat_balls": 1057,
+    "bowl_balls": 0,
+    "strike_rate": 134.9,
+    "economy_rate": null,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "Kolkata Knight Riders",
+      "Chennai Super Kings"
+    ]
+  },
+  {
+    "player_id": 4736,
+    "player_name": "Josh Inglis",
+    "discipline": "BATTER",
+    "role": "Specialist Batter",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 56,
+    "bat_balls": 940,
+    "bowl_balls": 0,
+    "strike_rate": 156.3,
+    "economy_rate": null,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "Australia",
+      "Punjab Kings",
+      "Lucknow Super Giants"
+    ]
+  },
+  {
+    "player_id": 6280,
+    "player_name": "Harry Brook",
+    "discipline": "BATTER",
+    "role": "Specialist Batter",
+    "formats": [
+      "IPL",
+      "T20I"
+    ],
+    "matches": 56,
+    "bat_balls": 938,
+    "bowl_balls": 0,
+    "strike_rate": 155.2,
+    "economy_rate": null,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "England",
+      "Sunrisers Hyderabad",
+      "Delhi Capitals"
+    ]
+  },
+  {
+    "player_id": 6460,
+    "player_name": "Ayush Badoni",
+    "discipline": "BATTER",
+    "role": "Specialist Batter",
+    "formats": [
+      "IPL"
+    ],
+    "matches": 56,
+    "bat_balls": 885,
+    "bowl_balls": 41,
+    "strike_rate": 133.1,
+    "economy_rate": 9.37,
+    "is_top_10": false,
+    "top_10_rank": null,
+    "teams": [
+      "Lucknow Super Giants",
+      "India A"
+    ]
+  }
+]

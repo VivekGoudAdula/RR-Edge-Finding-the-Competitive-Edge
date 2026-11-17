@@ -1,0 +1,593 @@
+{
+  "total_players": 888,
+  "page": 1,
+  "page_size": 24,
+  "total_pages": 37,
+  "players": [
+    {
+      "player_id": 1699,
+      "player_name": "Suryakumar Yadav",
+      "role": "Middle-Order Batter",
+      "discipline": "BATTER",
+      "formats": [
+        "IPL",
+        "T20I"
+      ],
+      "matches": 136,
+      "deliveries": 2751,
+      "is_top_10": true,
+      "top_10_rank": 2,
+      "primary_rate": 166.2,
+      "rate_label": "Strike Rate",
+      "pressure_indicator": "RAE +18.1",
+      "evidence_tier": "CONFIDENT",
+      "verified_teams": [
+        "India",
+        "Mumbai Indians"
+      ],
+      "has_dual_records": true,
+      "dual_records_detail": "Batting (2745b) & Bowling (6b)"
+    },
+    {
+      "player_id": 6281,
+      "player_name": "Abhishek Sharma",
+      "role": "Dual-Discipline Contributor (Bat & Bowl)",
+      "discipline": "ALL_ROUNDER",
+      "formats": [
+        "IPL",
+        "T20I"
+      ],
+      "matches": 130,
+      "deliveries": 2684,
+      "is_top_10": true,
+      "top_10_rank": 6,
+      "primary_rate": 186.5,
+      "rate_label": "Strike Rate",
+      "pressure_indicator": "RAE +21.1",
+      "evidence_tier": "CONFIDENT",
+      "verified_teams": [
+        "Sunrisers Hyderabad",
+        "India",
+        "India A"
+      ],
+      "has_dual_records": true,
+      "dual_records_detail": "Batting (2251b) & Bowling (427b)"
+    },
+    {
+      "player_id": 4900,
+      "player_name": "Wanindu Hasaranga",
+      "role": "Dual-Discipline Contributor (Bat & Bowl)",
+      "discipline": "ALL_ROUNDER",
+      "formats": [
+        "IPL",
+        "T20I"
+      ],
+      "matches": 88,
+      "deliveries": 2449,
+      "is_top_10": true,
+      "top_10_rank": 8,
+      "primary_rate": 124.9,
+      "rate_label": "Strike Rate",
+      "pressure_indicator": "RCAE -0.61",
+      "evidence_tier": "CONFIDENT",
+      "verified_teams": [
+        "Sri Lanka",
+        "Royal Challengers Bengaluru",
+        "Sunrisers Hyderabad",
+        "Rajasthan Royals",
+        "Lucknow Super Giants"
+      ],
+      "has_dual_records": true,
+      "dual_records_detail": "Batting (457b) & Bowling (1975b)"
+    },
+    {
+      "player_id": 781,
+      "player_name": "Sunil Narine",
+      "role": "Dual-Discipline Contributor (Bat & Bowl)",
+      "discipline": "ALL_ROUNDER",
+      "formats": [
+        "IPL"
+      ],
+      "matches": 67,
+      "deliveries": 2067,
+      "is_top_10": true,
+      "top_10_rank": 1,
+      "primary_rate": 169.5,
+      "rate_label": "Strike Rate",
+      "pressure_indicator": "RCAE -3.07",
+      "evidence_tier": "CONFIDENT",
+      "verified_teams": [
+        "Kolkata Knight Riders"
+      ],
+      "has_dual_records": true,
+      "dual_records_detail": "Batting (511b) & Bowling (1533b)"
+    },
+    {
+      "player_id": 3125,
+      "player_name": "Nicholas Pooran",
+      "role": "Wicketkeeper Batter",
+      "discipline": "BATTER",
+      "formats": [
+        "IPL",
+        "T20I"
+      ],
+      "matches": 114,
+      "deliveries": 1960,
+      "is_top_10": true,
+      "top_10_rank": 4,
+      "primary_rate": 156.3,
+      "rate_label": "Strike Rate",
+      "pressure_indicator": "RAE +18.8",
+      "evidence_tier": "CONFIDENT",
+      "verified_teams": [
+        "West Indies",
+        "Sunrisers Hyderabad",
+        "Lucknow Super Giants"
+      ],
+      "has_dual_records": false,
+      "dual_records_detail": null
+    },
+    {
+      "player_id": 6819,
+      "player_name": "Yashasvi Jaiswal",
+      "role": "Top-Order Batter",
+      "discipline": "BATTER",
+      "formats": [
+        "IPL",
+        "T20I"
+      ],
+      "matches": 88,
+      "deliveries": 1864,
+      "is_top_10": true,
+      "top_10_rank": 3,
+      "primary_rate": 156.0,
+      "rate_label": "Strike Rate",
+      "pressure_indicator": "RAE +30.6",
+      "evidence_tier": "CONFIDENT",
+      "verified_teams": [
+        "Rajasthan Royals",
+        "India"
+      ],
+      "has_dual_records": true,
+      "dual_records_detail": "Batting (1857b) & Bowling (7b)"
+    },
+    {
+      "player_id": 2933,
+      "player_name": "Jasprit Bumrah",
+      "role": "All-Phases Bowler",
+      "discipline": "BOWLER",
+      "formats": [
+        "IPL",
+        "T20I"
+      ],
+      "matches": 74,
+      "deliveries": 1784,
+      "is_top_10": true,
+      "top_10_rank": 2,
+      "primary_rate": 7.3,
+      "rate_label": "Economy Rate",
+      "pressure_indicator": "RCAE -2.58",
+      "evidence_tier": "CONFIDENT",
+      "verified_teams": [
+        "Mumbai Indians",
+        "India"
+      ],
+      "has_dual_records": true,
+      "dual_records_detail": "Batting (29b) & Bowling (1684b)"
+    },
+    {
+      "player_id": 305,
+      "player_name": "Ravichandran Ashwin",
+      "role": "Dual-Discipline Contributor (Bat & Bowl)",
+      "discipline": "ALL_ROUNDER",
+      "formats": [
+        "IPL",
+        "T20I"
+      ],
+      "matches": 61,
+      "deliveries": 1779,
+      "is_top_10": true,
+      "top_10_rank": 7,
+      "primary_rate": 131.5,
+      "rate_label": "Strike Rate",
+      "pressure_indicator": "RCAE -0.65",
+      "evidence_tier": "CONFIDENT",
+      "verified_teams": [
+        "Rajasthan Royals",
+        "India",
+        "Chennai Super Kings"
+      ],
+      "has_dual_records": true,
+      "dual_records_detail": "Batting (317b) & Bowling (1404b)"
+    },
+    {
+      "player_id": 7967,
+      "player_name": "Noor Ahmad",
+      "role": "Dual-Discipline Contributor (Bat & Bowl)",
+      "discipline": "ALL_ROUNDER",
+      "formats": [
+        "IPL",
+        "T20I"
+      ],
+      "matches": 69,
+      "deliveries": 1630,
+      "is_top_10": true,
+      "top_10_rank": 6,
+      "primary_rate": 80.7,
+      "rate_label": "Strike Rate",
+      "pressure_indicator": "RCAE -0.84",
+      "evidence_tier": "CONFIDENT",
+      "verified_teams": [
+        "Gujarat Titans",
+        "Afghanistan",
+        "Chennai Super Kings"
+      ],
+      "has_dual_records": true,
+      "dual_records_detail": "Batting (114b) & Bowling (1449b)"
+    },
+    {
+      "player_id": 838,
+      "player_name": "Glenn Maxwell",
+      "role": "Wicketkeeper Batter",
+      "discipline": "BATTER",
+      "formats": [
+        "IPL",
+        "T20I"
+      ],
+      "matches": 74,
+      "deliveries": 1606,
+      "is_top_10": true,
+      "top_10_rank": 9,
+      "primary_rate": 161.6,
+      "rate_label": "Strike Rate",
+      "pressure_indicator": "RAE +30.9",
+      "evidence_tier": "CONFIDENT",
+      "verified_teams": [
+        "Australia",
+        "Royal Challengers Bengaluru",
+        "Punjab Kings"
+      ],
+      "has_dual_records": true,
+      "dual_records_detail": "Batting (949b) & Bowling (638b)"
+    },
+    {
+      "player_id": 5553,
+      "player_name": "Phil Salt",
+      "role": "Wicketkeeper Batter",
+      "discipline": "BATTER",
+      "formats": [
+        "IPL",
+        "T20I"
+      ],
+      "matches": 81,
+      "deliveries": 1605,
+      "is_top_10": true,
+      "top_10_rank": 7,
+      "primary_rate": 170.4,
+      "rate_label": "Strike Rate",
+      "pressure_indicator": "RAE +20.0",
+      "evidence_tier": "CONFIDENT",
+      "verified_teams": [
+        "England",
+        "Delhi Capitals",
+        "Kolkata Knight Riders",
+        "Royal Challengers Bengaluru"
+      ],
+      "has_dual_records": false,
+      "dual_records_detail": null
+    },
+    {
+      "player_id": 2490,
+      "player_name": "Mohammad Nawaz",
+      "role": "Dual-Discipline Contributor (Bat & Bowl)",
+      "discipline": "ALL_ROUNDER",
+      "formats": [
+        "T20I"
+      ],
+      "matches": 52,
+      "deliveries": 1514,
+      "is_top_10": true,
+      "top_10_rank": 4,
+      "primary_rate": 141.9,
+      "rate_label": "Strike Rate",
+      "pressure_indicator": null,
+      "evidence_tier": "CONFIDENT",
+      "verified_teams": [
+        "Pakistan"
+      ],
+      "has_dual_records": true,
+      "dual_records_detail": "Batting (497b) & Bowling (1004b)"
+    },
+    {
+      "player_id": 4260,
+      "player_name": "Heinrich Klaasen",
+      "role": "Wicketkeeper Batter",
+      "discipline": "BATTER",
+      "formats": [
+        "IPL",
+        "T20I"
+      ],
+      "matches": 71,
+      "deliveries": 1412,
+      "is_top_10": true,
+      "top_10_rank": 8,
+      "primary_rate": 166.9,
+      "rate_label": "Strike Rate",
+      "pressure_indicator": "RAE +23.9",
+      "evidence_tier": "CONFIDENT",
+      "verified_teams": [
+        "South Africa",
+        "Sunrisers Hyderabad"
+      ],
+      "has_dual_records": false,
+      "dual_records_detail": null
+    },
+    {
+      "player_id": 8661,
+      "player_name": "Matheesha Pathirana",
+      "role": "All-Phases Bowler",
+      "discipline": "BOWLER",
+      "formats": [
+        "IPL",
+        "T20I"
+      ],
+      "matches": 51,
+      "deliveries": 1248,
+      "is_top_10": true,
+      "top_10_rank": 3,
+      "primary_rate": 8.86,
+      "rate_label": "Economy Rate",
+      "pressure_indicator": "RCAE -1.24",
+      "evidence_tier": "CONFIDENT",
+      "verified_teams": [
+        "Chennai Super Kings",
+        "Sri Lanka",
+        "Kolkata Knight Riders"
+      ],
+      "has_dual_records": true,
+      "dual_records_detail": "Batting (32b) & Bowling (1075b)"
+    },
+    {
+      "player_id": 6396,
+      "player_name": "Tim David",
+      "role": "Middle-Order Batter",
+      "discipline": "BATTER",
+      "formats": [
+        "IPL",
+        "T20I"
+      ],
+      "matches": 97,
+      "deliveries": 1215,
+      "is_top_10": true,
+      "top_10_rank": 1,
+      "primary_rate": 176.8,
+      "rate_label": "Strike Rate",
+      "pressure_indicator": "RAE +24.9",
+      "evidence_tier": "CONFIDENT",
+      "verified_teams": [
+        "Mumbai Indians",
+        "Australia",
+        "Royal Challengers Bengaluru"
+      ],
+      "has_dual_records": true,
+      "dual_records_detail": "Batting (1209b) & Bowling (6b)"
+    },
+    {
+      "player_id": 39657,
+      "player_name": "Eshan Malinga",
+      "role": "All-Phases Bowler",
+      "discipline": "BOWLER",
+      "formats": [
+        "IPL",
+        "T20I"
+      ],
+      "matches": 37,
+      "deliveries": 885,
+      "is_top_10": true,
+      "top_10_rank": 5,
+      "primary_rate": 9.46,
+      "rate_label": "Economy Rate",
+      "pressure_indicator": "RCAE -1.43",
+      "evidence_tier": "CONFIDENT",
+      "verified_teams": [
+        "Sri Lanka A",
+        "Sunrisers Hyderabad",
+        "Sri Lanka"
+      ],
+      "has_dual_records": true,
+      "dual_records_detail": "Batting (38b) & Bowling (787b)"
+    },
+    {
+      "player_id": 143,
+      "player_name": "Dinesh Karthik",
+      "role": "Wicketkeeper Batter",
+      "discipline": "BATTER",
+      "formats": [
+        "IPL",
+        "T20I"
+      ],
+      "matches": 60,
+      "deliveries": 643,
+      "is_top_10": true,
+      "top_10_rank": 5,
+      "primary_rate": 166.2,
+      "rate_label": "Strike Rate",
+      "pressure_indicator": "RAE +39.3",
+      "evidence_tier": "CONFIDENT",
+      "verified_teams": [
+        "Royal Challengers Bengaluru",
+        "India"
+      ],
+      "has_dual_records": true,
+      "dual_records_detail": "Batting (637b) & Bowling (6b)"
+    },
+    {
+      "player_id": 50284,
+      "player_name": "Vaibhav Sooryavanshi",
+      "role": "Top-Order Batter",
+      "discipline": "BATTER",
+      "formats": [
+        "IPL",
+        "T20I"
+      ],
+      "matches": 31,
+      "deliveries": 578,
+      "is_top_10": true,
+      "top_10_rank": 10,
+      "primary_rate": 219.7,
+      "rate_label": "Strike Rate",
+      "pressure_indicator": "RAE +86.8",
+      "evidence_tier": "CONFIDENT",
+      "verified_teams": [
+        "Rajasthan Royals",
+        "India",
+        "India A"
+      ],
+      "has_dual_records": false,
+      "dual_records_detail": null
+    },
+    {
+      "player_id": 27960,
+      "player_name": "Mayank Yadav",
+      "role": "All-Phases Bowler",
+      "discipline": "BOWLER",
+      "formats": [
+        "IPL",
+        "T20I"
+      ],
+      "matches": 21,
+      "deliveries": 513,
+      "is_top_10": true,
+      "top_10_rank": 10,
+      "primary_rate": 9.24,
+      "rate_label": "Economy Rate",
+      "pressure_indicator": "RCAE -2.43",
+      "evidence_tier": "CONFIDENT",
+      "verified_teams": [
+        "Lucknow Super Giants",
+        "India"
+      ],
+      "has_dual_records": true,
+      "dual_records_detail": "Batting (12b) & Bowling (469b)"
+    },
+    {
+      "player_id": 4856,
+      "player_name": "Benjamin Sears",
+      "role": "All-Phases Bowler",
+      "discipline": "BOWLER",
+      "formats": [
+        "T20I"
+      ],
+      "matches": 22,
+      "deliveries": 496,
+      "is_top_10": true,
+      "top_10_rank": 9,
+      "primary_rate": 8.12,
+      "rate_label": "Economy Rate",
+      "pressure_indicator": null,
+      "evidence_tier": "CONFIDENT",
+      "verified_teams": [
+        "New Zealand"
+      ],
+      "has_dual_records": true,
+      "dual_records_detail": "Batting (33b) & Bowling (453b)"
+    },
+    {
+      "player_id": 2876,
+      "player_name": "Axar Patel",
+      "role": "Dual-Discipline Contributor (Bat & Bowl)",
+      "discipline": "ALL_ROUNDER",
+      "formats": [
+        "IPL",
+        "T20I"
+      ],
+      "matches": 135,
+      "deliveries": 3973,
+      "is_top_10": false,
+      "top_10_rank": null,
+      "primary_rate": 137.7,
+      "rate_label": "Strike Rate",
+      "pressure_indicator": null,
+      "evidence_tier": "CONFIDENT",
+      "verified_teams": [
+        "India",
+        "Delhi Capitals"
+      ],
+      "has_dual_records": true,
+      "dual_records_detail": "Batting (1279b) & Bowling (2658b)"
+    },
+    {
+      "player_id": 3330,
+      "player_name": "Hardik Pandya",
+      "role": "Dual-Discipline Contributor (Bat & Bowl)",
+      "discipline": "ALL_ROUNDER",
+      "formats": [
+        "IPL",
+        "T20I"
+      ],
+      "matches": 115,
+      "deliveries": 3812,
+      "is_top_10": false,
+      "top_10_rank": null,
+      "primary_rate": 141.3,
+      "rate_label": "Strike Rate",
+      "pressure_indicator": null,
+      "evidence_tier": "CONFIDENT",
+      "verified_teams": [
+        "Gujarat Titans",
+        "India",
+        "Mumbai Indians"
+      ],
+      "has_dual_records": true,
+      "dual_records_detail": "Batting (1900b) & Bowling (1813b)"
+    },
+    {
+      "player_id": 6464,
+      "player_name": "Arshdeep Singh",
+      "role": "Dual-Discipline Contributor (Bat & Bowl)",
+      "discipline": "ALL_ROUNDER",
+      "formats": [
+        "IPL",
+        "T20I"
+      ],
+      "matches": 146,
+      "deliveries": 3551,
+      "is_top_10": false,
+      "top_10_rank": null,
+      "primary_rate": 97.7,
+      "rate_label": "Strike Rate",
+      "pressure_indicator": null,
+      "evidence_tier": "CONFIDENT",
+      "verified_teams": [
+        "Punjab Kings",
+        "India"
+      ],
+      "has_dual_records": true,
+      "dual_records_detail": "Batting (132b) & Bowling (3195b)"
+    },
+    {
+      "player_id": 4722,
+      "player_name": "Rashid Khan",
+      "role": "Dual-Discipline Contributor (Bat & Bowl)",
+      "discipline": "ALL_ROUNDER",
+      "formats": [
+        "IPL",
+        "T20I"
+      ],
+      "matches": 120,
+      "deliveries": 3254,
+      "is_top_10": false,
+      "top_10_rank": null,
+      "primary_rate": 156.5,
+      "rate_label": "Strike Rate",
+      "pressure_indicator": null,
+      "evidence_tier": "CONFIDENT",
+      "verified_teams": [
+        "Gujarat Titans",
+        "Afghanistan"
+      ],
+      "has_dual_records": true,
+      "dual_records_detail": "Batting (504b) & Bowling (2717b)"
+    }
+  ]
+}

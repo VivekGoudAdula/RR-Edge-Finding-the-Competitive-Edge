@@ -1,0 +1,86 @@
+{
+  "title": "RR EDGE Explainable Cricket Intelligence Architecture",
+  "framework_steps": [
+    {
+      "step": 1,
+      "name": "Event Attribution & Match-State Reconstruction",
+      "description": "Pre-delivery state calculation (balls remaining, score, required run rate, phase, wickets down) avoiding any outcome leakage."
+    },
+    {
+      "step": 2,
+      "name": "Asymmetric Pressure Framework & First-Innings Resource Model",
+      "description": "Independent batter and bowler pressure classifications into EXTREME, HIGH, MODERATE, and LOW tiers. In innings 1, par deficit is derived from FirstInningsResourceModel conditioned on Competition, Over bucket, and Wickets lost (no innings-phase conditioning)."
+    },
+    {
+      "step": 3,
+      "name": "Context Adjustment (RAE & RCAE)",
+      "description": "Rate-normalized delivery performance relative to contextual expectations: Batter RAE (\u0394SR) in strike-rate points ((Runs_obs - Runs_exp) / Balls * 100), Primary Bowler All-Runs RCAE (\u0394Economy) in runs per over ((All_Runs_obs - All_Runs_exp) / Legal Balls * 6) including wide and no-ball extras against legal exposure, and Secondary Diagnostic Legal-Ball RCAE (\u0394Legal Economy) ((Legal_Runs_obs - Legal_Runs_exp) / Legal Balls * 6), conditioned on Competition type, Innings phase, and Wickets bucket."
+    },
+    {
+      "step": 4,
+      "name": "Empirical Bayes Shrinkage & Uncertainty Bounds",
+      "description": "Format-specific shrinkage across M=25, 45, 60, and 90, alongside 10,000-resample match-cluster bootstrap testing."
+    }
+  ],
+  "model_conditioning_variables": {
+    "first_innings_resource_model": [
+      "Competition",
+      "Over bucket",
+      "Wickets lost"
+    ],
+    "context_adjusted_performance_models": [
+      "Competition type",
+      "Innings phase",
+      "Wickets bucket"
+    ],
+    "distinction_note": "The first-innings resource grid conditions strictly on Competition, Over bucket, and Wickets lost; it does not use innings-phase conditioning."
+  },
+  "shrinkage_grid": [
+    {
+      "m": 25,
+      "weight_76b": "75.2%",
+      "weight_334b": "93.0%",
+      "use_case": "Conservative shrinkage preserving discovery ceiling for breakout talents"
+    },
+    {
+      "m": 45,
+      "weight_76b": "62.8%",
+      "weight_334b": "88.1%",
+      "use_case": "Primary recommended evaluation benchmark balancing upside and reliability"
+    },
+    {
+      "m": 60,
+      "weight_76b": "55.9%",
+      "weight_334b": "84.8%",
+      "use_case": "Holdout RMSE minimum empirically validated in holdout testing"
+    },
+    {
+      "m": 90,
+      "weight_76b": "45.8%",
+      "weight_334b": "78.8%",
+      "use_case": "Heavy shrinkage pulling small-sample performers towards cohort mean"
+    }
+  ],
+  "evidence_tiers": [
+    {
+      "tier": "CONFIDENT_EVIDENCE",
+      "criteria": ">= 60 pressure balls across >= 8 matches and >= 2 competitions",
+      "reliability": "High parameter stability; eligible for primary squad anchor roles"
+    },
+    {
+      "tier": "MODERATE_EVIDENCE",
+      "criteria": ">= 24 pressure balls across >= 4 matches",
+      "reliability": "Moderate stability; suitable for role-specific rotational evaluation"
+    },
+    {
+      "tier": "PROVISIONAL_EVIDENCE",
+      "criteria": "12 to 23 pressure balls across >= 2 matches",
+      "reliability": "High parameter uncertainty; exploratory scouting flag"
+    },
+    {
+      "tier": "INSUFFICIENT_EVIDENCE",
+      "criteria": "< 12 pressure balls",
+      "reliability": "Excluded from statistical ranking models"
+    }
+  ]
+}

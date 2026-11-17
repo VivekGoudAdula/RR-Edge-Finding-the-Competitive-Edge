@@ -1,0 +1,121 @@
+{
+  "tiers": [
+    {
+      "tier": "EXTREME",
+      "batter_pct": 8.4,
+      "bowler_pct": 9.1,
+      "description": "High required rate (RRR >= 12.0) or death overs crunch with multiple wickets down"
+    },
+    {
+      "tier": "HIGH",
+      "batter_pct": 14.0,
+      "bowler_pct": 13.3,
+      "description": "Accelerating chase demand (RRR >= 9.5) or middle overs resource scarcity"
+    },
+    {
+      "tier": "MODERATE",
+      "batter_pct": 28.5,
+      "bowler_pct": 27.2,
+      "description": "Standard match tension; balanced resource states"
+    },
+    {
+      "tier": "LOW",
+      "batter_pct": 49.1,
+      "bowler_pct": 50.4,
+      "description": "Base match baseline with ample balls remaining and comfortable required rates"
+    }
+  ],
+  "pressure_vs_normal": {
+    "batters": [
+      {
+        "metric": "Strike Rate",
+        "normal": 128.27,
+        "pressure": 135.53,
+        "unit": "SR points",
+        "delta": "+7.26"
+      },
+      {
+        "metric": "Dot Ball %",
+        "normal": 32.14,
+        "pressure": 34.78,
+        "unit": "%",
+        "delta": "+2.64%"
+      },
+      {
+        "metric": "Boundary %",
+        "normal": 23.79,
+        "pressure": 25.06,
+        "unit": "%",
+        "delta": "+1.27%"
+      },
+      {
+        "metric": "Dismissal Rate",
+        "normal": 4.82,
+        "pressure": 7.15,
+        "unit": "%",
+        "delta": "+2.33%"
+      }
+    ],
+    "bowlers": [
+      {
+        "metric": "Economy Rate",
+        "normal": 8.41,
+        "pressure": 9.82,
+        "unit": "runs/over",
+        "delta": "+1.41"
+      },
+      {
+        "metric": "Dot Ball %",
+        "normal": 38.52,
+        "pressure": 32.84,
+        "unit": "%",
+        "delta": "-5.68%"
+      },
+      {
+        "metric": "Wickets / Over",
+        "normal": 0.28,
+        "pressure": 0.42,
+        "unit": "wkts/over",
+        "delta": "+0.14"
+      },
+      {
+        "metric": "Boundary Concession %",
+        "normal": 14.21,
+        "pressure": 18.65,
+        "unit": "%",
+        "delta": "+4.44%"
+      }
+    ]
+  },
+  "phase_breakdown": [
+    {
+      "phase": "Powerplay (Overs 1-6)",
+      "pressure_deliveries_pct": 18.5,
+      "normal_deliveries_pct": 33.2
+    },
+    {
+      "phase": "Middle (Overs 7-15)",
+      "pressure_deliveries_pct": 43.8,
+      "normal_deliveries_pct": 45.6
+    },
+    {
+      "phase": "Death (Overs 16-20)",
+      "pressure_deliveries_pct": 37.7,
+      "normal_deliveries_pct": 21.2
+    }
+  ],
+  "asymmetry_principles": [
+    {
+      "title": "Chasing Run-Rate Pressure vs Tail Closure",
+      "explanation": "Batters face severe pressure when the required run rate climbs above 10.0 rpo regardless of wickets lost, whereas bowlers experience pressure when defending narrow margins or facing top-order power hitters."
+    },
+    {
+      "title": "First-Innings Resource Modeling",
+      "explanation": "Because chasing targets do not exist in the first innings, pressure leverage is modeled via FirstInningsResourceModel estimating E[Remaining Runs | Competition, Over Bucket, Wickets Lost] against competition-level empirical resource grids (IPL benchmark: 183.0, Senior T20I: 165.2). The first-innings resource grid does not use innings-phase conditioning."
+    },
+    {
+      "title": "DLS Uncertainty Isolation",
+      "explanation": "Deliveries bowled during rain-interrupted chases prior to revised target confirmation are strictly flagged and excluded from primary player ranking models to prevent artificial rate distortion."
+    }
+  ]
+}

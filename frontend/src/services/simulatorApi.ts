@@ -3,6 +3,26 @@
  */
 
 import { BASE_URL } from './api';
+import canonicalSimulatorPlayers from '../data/canonicalSimulatorPlayers.json';
+import canonicalSimulatorScenarios from '../data/canonicalSimulatorScenarios.json';
+import canonicalSimulatorPresets from '../data/canonicalSimulatorPresets.json';
+import canonicalSimulatorSequences from '../data/canonicalSimulatorSequences.json';
+
+async function safeFetchSim<T>(url: string, fallback: T): Promise<T> {
+  try {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 6000);
+    const res = await fetch(url, { signal: controller.signal });
+    clearTimeout(timer);
+    if (!res.ok) return fallback;
+    const ct = res.headers.get('content-type') || '';
+    if (!ct.includes('application/json')) return fallback;
+    const data = await res.json();
+    return data || fallback;
+  } catch {
+    return fallback;
+  }
+}
 
 export interface SimulatorPlayer {
   player_id: number;
@@ -226,15 +246,22 @@ export async function fetchSimulatorPlayers(params?: {
   if (params?.search) query.append('search', params.search);
   if (params?.limit) query.append('limit', params.limit.toString());
 
-  const res = await fetch(`${BASE_URL}/simulator/players?${query.toString()}`);
-  if (!res.ok) throw new Error('Failed to fetch simulator players');
-  return res.json();
+  let fallback = canonicalSimulatorPlayers as unknown as SimulatorPlayer[];
+  if (params?.discipline) {
+    fallback = fallback.filter((p) => p.discipline === params.discipline);
+  }
+  if (params?.search) {
+    const s = params.search.toLowerCase();
+    fallback = fallback.filter((p) => p.player_name.toLowerCase().includes(s));
+  }
+  return safeFetchSim<SimulatorPlayer[]>(`${BASE_URL}/simulator/players?${query.toString()}`, fallback);
 }
 
 export async function fetchSimulatorScenarios(): Promise<PresetScenario[]> {
-  const res = await fetch(`${BASE_URL}/simulator/scenarios`);
-  if (!res.ok) throw new Error('Failed to fetch simulator scenarios');
-  return res.json();
+  return safeFetchSim<PresetScenario[]>(
+    `${BASE_URL}/simulator/scenarios`,
+    canonicalSimulatorScenarios as unknown as PresetScenario[]
+  );
 }
 
 export async function fetchSimulatorHistoricalSequences(params?: {
@@ -247,9 +274,10 @@ export async function fetchSimulatorHistoricalSequences(params?: {
   if (params?.scenario_type) query.append('scenario_type', params.scenario_type);
   if (params?.limit) query.append('limit', params.limit.toString());
 
-  const res = await fetch(`${BASE_URL}/simulator/historical/sequences?${query.toString()}`);
-  if (!res.ok) throw new Error('Failed to fetch historical sequences');
-  return res.json();
+  return safeFetchSim<HistoricalSequenceMeta[]>(
+    `${BASE_URL}/simulator/historical/sequences?${query.toString()}`,
+    canonicalSimulatorSequences as unknown as HistoricalSequenceMeta[]
+  );
 }
 
 export async function fetchSimulatorSequenceDeliveries(
@@ -302,8 +330,9 @@ export async function fetchSimulatorHeadToHead(
 }
 
 export async function fetchSimulatorFieldingPresets(): Promise<FieldingPresets> {
-  const res = await fetch(`${BASE_URL}/simulator/fielding/presets`);
-  if (!res.ok) throw new Error('Failed to fetch fielding presets');
-  return res.json();
+  return safeFetchSim<FieldingPresets>(
+    `${BASE_URL}/simulator/fielding/presets`,
+    canonicalSimulatorPresets as unknown as FieldingPresets
+  );
 }
 

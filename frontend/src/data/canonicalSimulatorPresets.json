@@ -1,0 +1,262 @@
+{
+  "death_protection": [
+    {
+      "id": 1,
+      "name": "Deep Point",
+      "x": 120.0,
+      "y": 335.0,
+      "role": "boundary_rider"
+    },
+    {
+      "id": 2,
+      "name": "Deep Extra Cover",
+      "x": 140.0,
+      "y": 220.0,
+      "role": "boundary_rider"
+    },
+    {
+      "id": 3,
+      "name": "Long Off",
+      "x": 230.0,
+      "y": 65.0,
+      "role": "boundary_rider"
+    },
+    {
+      "id": 4,
+      "name": "Long On",
+      "x": 370.0,
+      "y": 65.0,
+      "role": "boundary_rider"
+    },
+    {
+      "id": 5,
+      "name": "Deep Midwicket",
+      "x": 460.0,
+      "y": 220.0,
+      "role": "boundary_rider"
+    },
+    {
+      "id": 6,
+      "name": "Point",
+      "x": 200.0,
+      "y": 335.0,
+      "role": "ring"
+    },
+    {
+      "id": 7,
+      "name": "Cover",
+      "x": 220.0,
+      "y": 260.0,
+      "role": "ring"
+    },
+    {
+      "id": 8,
+      "name": "Midwicket",
+      "x": 380.0,
+      "y": 260.0,
+      "role": "ring"
+    },
+    {
+      "id": 9,
+      "name": "Short Fine Leg",
+      "x": 370.0,
+      "y": 390.0,
+      "role": "ring"
+    }
+  ],
+  "powerplay": [
+    {
+      "id": 1,
+      "name": "Third Man",
+      "x": 160.0,
+      "y": 480.0,
+      "role": "boundary_rider"
+    },
+    {
+      "id": 2,
+      "name": "Deep Square Leg",
+      "x": 480.0,
+      "y": 335.0,
+      "role": "boundary_rider"
+    },
+    {
+      "id": 3,
+      "name": "Slip 1",
+      "x": 265.0,
+      "y": 375.0,
+      "role": "catcher"
+    },
+    {
+      "id": 4,
+      "name": "Slip 2",
+      "x": 245.0,
+      "y": 385.0,
+      "role": "catcher"
+    },
+    {
+      "id": 5,
+      "name": "Gully",
+      "x": 210.0,
+      "y": 355.0,
+      "role": "ring"
+    },
+    {
+      "id": 6,
+      "name": "Cover",
+      "x": 210.0,
+      "y": 270.0,
+      "role": "ring"
+    },
+    {
+      "id": 7,
+      "name": "Mid Off",
+      "x": 260.0,
+      "y": 190.0,
+      "role": "ring"
+    },
+    {
+      "id": 8,
+      "name": "Mid On",
+      "x": 340.0,
+      "y": 190.0,
+      "role": "ring"
+    },
+    {
+      "id": 9,
+      "name": "Mid Wicket",
+      "x": 390.0,
+      "y": 270.0,
+      "role": "ring"
+    }
+  ],
+  "attacking": [
+    {
+      "id": 1,
+      "name": "Slip 1",
+      "x": 265.0,
+      "y": 375.0,
+      "role": "catcher"
+    },
+    {
+      "id": 2,
+      "name": "Slip 2",
+      "x": 245.0,
+      "y": 385.0,
+      "role": "catcher"
+    },
+    {
+      "id": 3,
+      "name": "Gully",
+      "x": 210.0,
+      "y": 360.0,
+      "role": "catcher"
+    },
+    {
+      "id": 4,
+      "name": "Silly Point",
+      "x": 260.0,
+      "y": 320.0,
+      "role": "catcher"
+    },
+    {
+      "id": 5,
+      "name": "Short Leg",
+      "x": 340.0,
+      "y": 320.0,
+      "role": "catcher"
+    },
+    {
+      "id": 6,
+      "name": "Cover",
+      "x": 210.0,
+      "y": 260.0,
+      "role": "ring"
+    },
+    {
+      "id": 7,
+      "name": "Mid Off",
+      "x": 260.0,
+      "y": 180.0,
+      "role": "ring"
+    },
+    {
+      "id": 8,
+      "name": "Mid On",
+      "x": 340.0,
+      "y": 180.0,
+      "role": "ring"
+    },
+    {
+      "id": 9,
+      "name": "Deep Midwicket",
+      "x": 460.0,
+      "y": 200.0,
+      "role": "boundary_rider"
+    }
+  ],
+  "defensive_spread": [
+    {
+      "id": 1,
+      "name": "Deep Cover",
+      "x": 130.0,
+      "y": 220.0,
+      "role": "boundary_rider"
+    },
+    {
+      "id": 2,
+      "name": "Deep Midwicket",
+      "x": 470.0,
+      "y": 220.0,
+      "role": "boundary_rider"
+    },
+    {
+      "id": 3,
+      "name": "Third Man",
+      "x": 160.0,
+      "y": 480.0,
+      "role": "boundary_rider"
+    },
+    {
+      "id": 4,
+      "name": "Deep Fine Leg",
+      "x": 440.0,
+      "y": 480.0,
+      "role": "boundary_rider"
+    },
+    {
+      "id": 5,
+      "name": "Point",
+      "x": 200.0,
+      "y": 335.0,
+      "role": "ring"
+    },
+    {
+      "id": 6,
+      "name": "Extra Cover",
+      "x": 220.0,
+      "y": 240.0,
+      "role": "ring"
+    },
+    {
+      "id": 7,
+      "name": "Mid Off",
+      "x": 270.0,
+      "y": 190.0,
+      "role": "ring"
+    },
+    {
+      "id": 8,
+      "name": "Mid On",
+      "x": 330.0,
+      "y": 190.0,
+      "role": "ring"
+    },
+    {
+      "id": 9,
+      "name": "Square Leg",
+      "x": 400.0,
+      "y": 335.0,
+      "role": "ring"
+    }
+  ]
+}

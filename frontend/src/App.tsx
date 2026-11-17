@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Analytics } from '@vercel/analytics/react';
 import { Sidebar, PageId } from './components/layout/Sidebar';
 import { Header } from './components/layout/Header';
+import { ErrorBoundary } from './components/common/ErrorBoundary';
 import { ExecutiveOverview } from './pages/ExecutiveOverview';
 import { PressureIntelligence } from './pages/PressureIntelligence';
 import { BatterIntelligence } from './pages/BatterIntelligence';
@@ -46,48 +47,50 @@ export const App: React.FC = () => {
 
         {/* Dynamic Page Views */}
         <main className="flex-1 px-3 sm:px-5 lg:px-6 py-5 max-w-[1600px] mx-auto w-full">
-          {currentPage === 'overview' && (
-            <ExecutiveOverview onNavigate={handleNavigate} />
-          )}
-          {currentPage === 'pressure' && (
-            <PressureIntelligence />
-          )}
-          {currentPage === 'batters' && (
-            <BatterIntelligence initialPlayerId={selectedPlayerId} />
-          )}
-          {currentPage === 'bowlers' && (
-            <BowlerIntelligence initialPlayerId={selectedPlayerId} />
-          )}
-          {currentPage === 'scenarios' && (
-            <ScenarioLab
-              onNavigateToGallery={(playerId) => handleNavigate('gallery', playerId)}
-            />
-          )}
-          {currentPage === 'simulator' && (
-            <CricketSimulator />
-          )}
-          {currentPage === 'gallery' && (
-            <PlayerGallery
-              initialPlayerId={selectedPlayerId}
-              onNavigateToScenarios={(scenarioId, playerId) => handleNavigate('scenarios', playerId)}
-              onNavigateToComparison={(playerId) => handleNavigate('comparison', playerId)}
-            />
-          )}
-          {currentPage === 'comparison' && (
-            <PlayerComparisonLab />
-          )}
-          {currentPage === 'behavioral' && (
-            <BehavioralIntelligence />
-          )}
-          {currentPage === 'ml_lab' && (
-            <ModelLab />
-          )}
-          {currentPage === 'methodology' && (
-            <MethodologyLab />
-          )}
-          {currentPage === 'explorer' && (
-            <DataExplorer />
-          )}
+          <ErrorBoundary>
+            {currentPage === 'overview' && (
+              <ExecutiveOverview onNavigate={handleNavigate} />
+            )}
+            {currentPage === 'pressure' && (
+              <PressureIntelligence />
+            )}
+            {currentPage === 'batters' && (
+              <BatterIntelligence initialPlayerId={selectedPlayerId} />
+            )}
+            {currentPage === 'bowlers' && (
+              <BowlerIntelligence initialPlayerId={selectedPlayerId} />
+            )}
+            {currentPage === 'scenarios' && (
+              <ScenarioLab
+                onNavigateToGallery={(playerId) => handleNavigate('gallery', playerId)}
+              />
+            )}
+            {currentPage === 'simulator' && (
+              <CricketSimulator />
+            )}
+            {currentPage === 'gallery' && (
+              <PlayerGallery
+                initialPlayerId={selectedPlayerId}
+                onNavigateToScenarios={(scenarioId, playerId) => handleNavigate('scenarios', playerId)}
+                onNavigateToComparison={(playerId) => handleNavigate('comparison', playerId)}
+              />
+            )}
+            {currentPage === 'comparison' && (
+              <PlayerComparisonLab />
+            )}
+            {currentPage === 'behavioral' && (
+              <BehavioralIntelligence />
+            )}
+            {currentPage === 'ml_lab' && (
+              <ModelLab />
+            )}
+            {currentPage === 'methodology' && (
+              <MethodologyLab />
+            )}
+            {currentPage === 'explorer' && (
+              <DataExplorer />
+            )}
+          </ErrorBoundary>
         </main>
       </div>
       <Analytics />

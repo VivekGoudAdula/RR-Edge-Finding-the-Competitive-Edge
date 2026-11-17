@@ -1,0 +1,411 @@
+{
+  "total_scenarios": 16,
+  "bowling_scenarios": [
+    {
+      "id": "defend_12_in_2",
+      "name": "Defend 12 Runs in Final 2 Balls",
+      "discipline": "BOWLER",
+      "category": "Extreme Death Defense",
+      "description": "Bowler defending 12 or fewer runs with at most 2 legal balls remaining in the 2nd innings.",
+      "tactical_intent": "Identifies elite boundary-prevention execution where a single six or four swings the match outcome.",
+      "metric_focus": [
+        "economy",
+        "dot_pct",
+        "boundary_pct",
+        "defence_success_rate"
+      ],
+      "exact_rules": {
+        "innings": 2,
+        "balls_remaining_max": 2,
+        "runs_to_defend_max": 12,
+        "runs_to_defend_min": 1
+      },
+      "relaxed_rules": {
+        "innings": 2,
+        "balls_remaining_max": 3,
+        "runs_to_defend_max": 15,
+        "runs_to_defend_min": 1
+      },
+      "relaxation_explanation": "Expanded observation window to final 3 balls and runs to defend up to 15."
+    },
+    {
+      "id": "defend_18_in_6",
+      "name": "Defend 18 Runs in Final 6 Balls",
+      "discipline": "BOWLER",
+      "category": "Over 20 Defense",
+      "description": "Bowler bowling the final over (Over 20) defending 18 or fewer runs in a 2nd-innings chase.",
+      "tactical_intent": "The canonical 20th-over franchise test: can the bowler defend 3 boundaries when the opposition is in full assault?",
+      "metric_focus": [
+        "economy",
+        "dot_pct",
+        "boundary_pct",
+        "defence_success_rate",
+        "wickets_per_over"
+      ],
+      "exact_rules": {
+        "innings": 2,
+        "balls_remaining_max": 6,
+        "runs_to_defend_max": 18,
+        "runs_to_defend_min": 1
+      },
+      "relaxed_rules": {
+        "innings": 2,
+        "balls_remaining_max": 8,
+        "runs_to_defend_max": 22,
+        "runs_to_defend_min": 1
+      },
+      "relaxation_explanation": "Relaxed window to 8 balls remaining and up to 22 runs to defend."
+    },
+    {
+      "id": "defend_10_in_3",
+      "name": "Defend 10 Runs in Final 3 Balls",
+      "discipline": "BOWLER",
+      "category": "Extreme Death Defense",
+      "description": "High-leverage micro-window: defending 10 or fewer runs with 3 or fewer legal balls remaining.",
+      "tactical_intent": "Measures clutch dot-ball generation and yorker execution with no margin for error.",
+      "metric_focus": [
+        "economy",
+        "dot_pct",
+        "boundary_pct",
+        "defence_success_rate"
+      ],
+      "exact_rules": {
+        "innings": 2,
+        "balls_remaining_max": 3,
+        "runs_to_defend_max": 10,
+        "runs_to_defend_min": 1
+      },
+      "relaxed_rules": {
+        "innings": 2,
+        "balls_remaining_max": 4,
+        "runs_to_defend_max": 13,
+        "runs_to_defend_min": 1
+      },
+      "relaxation_explanation": "Relaxed window to 4 balls remaining and up to 13 runs to defend."
+    },
+    {
+      "id": "post_boundary_response",
+      "name": "Respond to Boundary Conceded (t+1 Legal Ball)",
+      "discipline": "BOWLER",
+      "category": "Shock Response",
+      "description": "Next legal delivery bowled within the same over immediately after conceding a 4 or 6.",
+      "tactical_intent": "Isolates mental discipline and damage-containment: does the bowler compound errors or restore pressure?",
+      "metric_focus": [
+        "economy",
+        "dot_pct",
+        "boundary_pct",
+        "wicket_pct"
+      ],
+      "exact_rules": {
+        "previous_context": "boundary_conceded_same_over"
+      },
+      "relaxed_rules": {
+        "previous_context": "boundary_conceded_recent_2_balls"
+      },
+      "relaxation_explanation": "Extended previous boundary trigger to either of the prior 2 balls bowled."
+    },
+    {
+      "id": "post_cluster_response",
+      "name": "Respond After 8+ Runs in 3 Legal Balls",
+      "discipline": "BOWLER",
+      "category": "Shock Response",
+      "description": "Deliveries bowled immediately following a mini-collapse where the bowler conceded >= 8 runs in rolling 3 balls.",
+      "tactical_intent": "Measures resilience under acute momentum shifts in high-scoring match phases.",
+      "metric_focus": [
+        "economy",
+        "dot_pct",
+        "boundary_pct"
+      ],
+      "exact_rules": {
+        "previous_context": "cluster_8_runs_in_3_balls"
+      },
+      "relaxed_rules": {
+        "previous_context": "cluster_7_runs_in_3_balls"
+      },
+      "relaxation_explanation": "Lowered cluster concession threshold from 8 to 7 runs in 3 balls."
+    },
+    {
+      "id": "defend_small_target_tail",
+      "name": "Defend Small Target vs Lower Order (2\u20133 Wickets Left)",
+      "discipline": "BOWLER",
+      "category": "Target Defense",
+      "description": "Defending a tight margin (<= 40 runs to win) when the batting team has only 2\u20133 wickets in hand.",
+      "tactical_intent": "Evaluates closing efficiency against the opposition tail without leaking loose boundaries.",
+      "metric_focus": [
+        "economy",
+        "dot_pct",
+        "wickets_per_over",
+        "defence_success_rate"
+      ],
+      "exact_rules": {
+        "innings": 2,
+        "wickets_remaining_max": 3,
+        "wickets_remaining_min": 1,
+        "runs_to_defend_max": 40,
+        "runs_to_defend_min": 1
+      },
+      "relaxed_rules": {
+        "innings": 2,
+        "wickets_remaining_max": 4,
+        "wickets_remaining_min": 1,
+        "runs_to_defend_max": 50,
+        "runs_to_defend_min": 1
+      },
+      "relaxation_explanation": "Expanded batting wickets in hand to 4 and runs to defend up to 50."
+    },
+    {
+      "id": "defend_high_rrr_wickets_in_hand",
+      "name": "Defend vs High RRR with 6+ Wickets Remaining",
+      "discipline": "BOWLER",
+      "category": "Target Defense",
+      "description": "2nd innings defense where Required Run Rate is >= 11.0 RPO, but the chasing side still has 6+ wickets in hand.",
+      "tactical_intent": "Measures defensive suppression against deep batting lineups ready to hit indiscriminately.",
+      "metric_focus": [
+        "economy",
+        "dot_pct",
+        "boundary_pct",
+        "wicket_pct",
+        "defence_success_rate"
+      ],
+      "exact_rules": {
+        "innings": 2,
+        "required_run_rate_min": 11.0,
+        "wickets_remaining_min": 6
+      },
+      "relaxed_rules": {
+        "innings": 2,
+        "required_run_rate_min": 10.0,
+        "wickets_remaining_min": 5
+      },
+      "relaxation_explanation": "Lowered RRR threshold to 10.0 and wickets in hand threshold to 5."
+    },
+    {
+      "id": "death_extreme_containment",
+      "name": "Death-Over Extreme Pressure Containment",
+      "discipline": "BOWLER",
+      "category": "Phase & Leverage",
+      "description": "All deliveries bowled in the Death Phase (Overs 16\u201320) classified as EXTREME pressure by the RR EDGE engine.",
+      "tactical_intent": "Comprehensive benchmark for franchise death bowlers facing acute resource or scoreboard pressure.",
+      "metric_focus": [
+        "economy",
+        "dot_pct",
+        "boundary_pct",
+        "wickets_per_over"
+      ],
+      "exact_rules": {
+        "innings_phase": "Death",
+        "pressure_tier": "EXTREME"
+      },
+      "relaxed_rules": {
+        "innings_phase": "Death",
+        "pressure_tier_in": [
+          "EXTREME",
+          "HIGH"
+        ]
+      },
+      "relaxation_explanation": "Included HIGH pressure tier deliveries alongside EXTREME tier in the death phase."
+    }
+  ],
+  "batting_scenarios": [
+    {
+      "id": "chase_12_in_6",
+      "name": "Chase 12 Runs in Final 6 Balls",
+      "discipline": "BATTER",
+      "category": "Over 20 Chase",
+      "description": "Chasing team needs 12 or more runs in the final over (Over 20, <= 6 legal balls remaining) with <= 15 runs required.",
+      "tactical_intent": "The supreme finisher test: boundary generation on demand in the deciding over.",
+      "metric_focus": [
+        "strike_rate",
+        "dot_pct",
+        "boundary_pct",
+        "chase_success_rate"
+      ],
+      "exact_rules": {
+        "innings": 2,
+        "balls_remaining_max": 6,
+        "required_run_rate_min": 12.0,
+        "runs_to_chase_max": 15,
+        "runs_to_chase_min": 1
+      },
+      "relaxed_rules": {
+        "innings": 2,
+        "balls_remaining_max": 8,
+        "required_run_rate_min": 10.0,
+        "runs_to_chase_max": 20,
+        "runs_to_chase_min": 1
+      },
+      "relaxation_explanation": "Expanded balls remaining to 8 and required run rate minimum to 10.0 RPO."
+    },
+    {
+      "id": "chase_18_in_12",
+      "name": "Chase 18 Runs in Final 12 Balls",
+      "discipline": "BATTER",
+      "category": "Death Chase",
+      "description": "Chasing team needs 18\u201325 runs across the penultimate and final overs (Overs 19\u201320) with RRR >= 9.0.",
+      "tactical_intent": "Evaluates two-over tactical pacing: balancing strike rotation with calculated boundary attempts.",
+      "metric_focus": [
+        "strike_rate",
+        "dot_pct",
+        "boundary_pct",
+        "chase_success_rate"
+      ],
+      "exact_rules": {
+        "innings": 2,
+        "balls_remaining_max": 12,
+        "balls_remaining_min": 7,
+        "required_run_rate_min": 9.0,
+        "runs_to_chase_max": 25,
+        "runs_to_chase_min": 1
+      },
+      "relaxed_rules": {
+        "innings": 2,
+        "balls_remaining_max": 14,
+        "balls_remaining_min": 5,
+        "required_run_rate_min": 8.5,
+        "runs_to_chase_max": 30,
+        "runs_to_chase_min": 1
+      },
+      "relaxation_explanation": "Broadened window to 5\u201314 balls remaining and up to 30 runs to chase."
+    },
+    {
+      "id": "chase_30_in_18",
+      "name": "Chase 30 Runs in Final 18 Balls",
+      "discipline": "BATTER",
+      "category": "Death Chase",
+      "description": "Chasing team needs >= 30 runs from the final 3 overs (Overs 18\u201320) with RRR >= 10.0 RPO.",
+      "tactical_intent": "Identifies explosive middle-to-death hitters who can take down premier bowlers in the late overs.",
+      "metric_focus": [
+        "strike_rate",
+        "dot_pct",
+        "boundary_pct",
+        "chase_success_rate"
+      ],
+      "exact_rules": {
+        "innings": 2,
+        "balls_remaining_max": 18,
+        "balls_remaining_min": 13,
+        "required_run_rate_min": 10.0
+      },
+      "relaxed_rules": {
+        "innings": 2,
+        "balls_remaining_max": 20,
+        "balls_remaining_min": 11,
+        "required_run_rate_min": 9.0
+      },
+      "relaxation_explanation": "Extended window to 11\u201320 balls remaining with RRR >= 9.0 RPO."
+    },
+    {
+      "id": "post_wicket_recovery",
+      "name": "Recover After Losing a Wicket",
+      "discipline": "BATTER",
+      "category": "Shock Response",
+      "description": "Deliveries faced in the immediate 6 balls following a batting dismissal.",
+      "tactical_intent": "Tests stability and composure: avoiding cluster collapses while keeping the scoreboard moving.",
+      "metric_focus": [
+        "strike_rate",
+        "dot_pct",
+        "dismissal_pct"
+      ],
+      "exact_rules": {
+        "previous_context": "team_wicket_in_last_6_balls"
+      },
+      "relaxed_rules": {
+        "previous_context": "team_wicket_in_last_10_balls"
+      },
+      "relaxation_explanation": "Expanded post-wicket evaluation window from 6 to 10 deliveries."
+    },
+    {
+      "id": "post_dot_drought_recovery",
+      "name": "Recover After 2+ Consecutive Dot Balls",
+      "discipline": "BATTER",
+      "category": "Shock Response",
+      "description": "Deliveries faced by a batter who has accumulated a personal streak of >= 2 dot balls.",
+      "tactical_intent": "Measures attacking resilience: breaking drought pressure with scoring shots or boundaries.",
+      "metric_focus": [
+        "strike_rate",
+        "dot_pct",
+        "boundary_pct",
+        "dismissal_pct"
+      ],
+      "exact_rules": {
+        "previous_context": "personal_dot_streak_ge_2"
+      },
+      "relaxed_rules": {
+        "previous_context": "personal_dot_streak_ge_1"
+      },
+      "relaxation_explanation": "Relaxed trigger to personal dot streak of >= 1 dot with strike rate pressure."
+    },
+    {
+      "id": "sharp_rrr_surge",
+      "name": "Perform When RRR Surges Sharply (Delta RRR >= 3.0)",
+      "discipline": "BATTER",
+      "category": "Chase Crucible",
+      "description": "2nd innings chase deliveries where the required rate has escalated by >= 3.0 runs/over from the opening target.",
+      "tactical_intent": "Evaluates aggressive adaptability when previous quiet overs have put the team behind the game.",
+      "metric_focus": [
+        "strike_rate",
+        "dot_pct",
+        "boundary_pct",
+        "chase_success_rate"
+      ],
+      "exact_rules": {
+        "innings": 2,
+        "delta_rrr_min": 3.0
+      },
+      "relaxed_rules": {
+        "innings": 2,
+        "delta_rrr_min": 2.0
+      },
+      "relaxation_explanation": "Lowered RRR surge delta from 3.0 to 2.0 runs per over."
+    },
+    {
+      "id": "death_acceleration_wickets_in_hand",
+      "name": "Death Acceleration with 6+ Wickets in Hand",
+      "discipline": "BATTER",
+      "category": "Phase & Leverage",
+      "description": "Death overs (16\u201320) batting with a deep batting order remaining (>= 6 wickets in hand).",
+      "tactical_intent": "Measures maximum boundary exploitation when resources permit high-risk attacking cricket.",
+      "metric_focus": [
+        "strike_rate",
+        "dot_pct",
+        "boundary_pct"
+      ],
+      "exact_rules": {
+        "innings_phase": "Death",
+        "wickets_remaining_min": 6
+      },
+      "relaxed_rules": {
+        "innings_phase": "Death",
+        "wickets_remaining_min": 4
+      },
+      "relaxation_explanation": "Reduced wickets in hand threshold from 6 to 4."
+    },
+    {
+      "id": "preserve_wickets_high_rrr",
+      "name": "Preserve Wickets While RRR >= 10.0 RPO",
+      "discipline": "BATTER",
+      "category": "Chase Crucible",
+      "description": "High-wire act: Chasing with RRR >= 10.0 RPO while batting with the lower order (<= 4 wickets in hand).",
+      "tactical_intent": "Evaluates elite tactical maturity: hitting boundaries without throwing away the final wickets.",
+      "metric_focus": [
+        "strike_rate",
+        "dot_pct",
+        "dismissal_pct",
+        "chase_success_rate"
+      ],
+      "exact_rules": {
+        "innings": 2,
+        "required_run_rate_min": 10.0,
+        "wickets_remaining_max": 4,
+        "wickets_remaining_min": 1
+      },
+      "relaxed_rules": {
+        "innings": 2,
+        "required_run_rate_min": 9.0,
+        "wickets_remaining_max": 5,
+        "wickets_remaining_min": 1
+      },
+      "relaxation_explanation": "Relaxed RRR minimum to 9.0 and maximum wickets in hand to 5."
+    }
+  ]
+}
