@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import { Sidebar, PageId } from './components/layout/Sidebar';
 import { Header } from './components/layout/Header';
 import { ExecutiveOverview } from './pages/ExecutiveOverview';
@@ -89,6 +90,7 @@ export const App: React.FC = () => {
           )}
         </main>
       </div>
+      <Analytics />
     </div>
   );
 };
