@@ -3,20 +3,11 @@
   "services": {
     "backend": {
       "root": ".",
-      "runtime": "python",
-      "entrypoint": "api/index.py"
+      "entrypoint": "api.index:app"
     },
     "frontend": {
       "root": "frontend",
-      "framework": "vite",
-      "bindings": [
-        {
-          "type": "service",
-          "service": "backend",
-          "format": "url",
-          "env": "BACKEND_URL"
-        }
-      ]
+      "framework": "vite"
     }
   },
   "rewrites": [
