@@ -8,7 +8,10 @@ from .config import (
     TEST_SEASONS,
     RANDOM_SEED,
 )
-from .pipeline import run_ml_pipeline
+def run_ml_pipeline(*args, **kwargs):
+    """Lazy-load pipeline to avoid importing heavy training libraries (xgboost) during web serving."""
+    from .pipeline import run_ml_pipeline as _run
+    return _run(*args, **kwargs)
 
 __all__ = [
     "BATTER_FEATURE_COLS",
