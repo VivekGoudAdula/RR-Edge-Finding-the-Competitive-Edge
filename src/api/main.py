@@ -12,10 +12,11 @@ from ..models.simulator.service import simulator_service
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    """Preload and cache datasets on API startup."""
-    data_service.load_data()
-    gallery_service.initialize()
-    simulator_service.initialize()
+    """Preload core datasets on API startup for fast sub-second serverless cold start."""
+    try:
+        data_service.load_data()
+    except Exception as err:
+        print(f"Warning: data_service initial cache warm-up failed: {err}")
     yield
 
 
@@ -34,6 +35,23 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+
+@app.middleware("http")
+async def normalize_api_path_middleware(request, call_next):
+    """Ensure endpoints resolve seamlessly whether Vercel forwards with or without the /api prefix."""
+    path = request.scope.get("path", "")
+    if (
+        path
+        and not path.startswith("/api")
+        and not path.startswith("/docs")
+        and not path.startswith("/openapi.json")
+        and not path.startswith("/redoc")
+        and path != "/"
+        and path != "/health"
+    ):
+        request.scope["path"] = f"/api{path}"
+    return await call_next(request)
 
 
 @app.get("/")

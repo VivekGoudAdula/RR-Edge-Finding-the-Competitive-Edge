@@ -182,12 +182,16 @@ class SimulatorService:
         # 1. Load pressure deliveries
         self._df = pd.read_parquet(PROCESSED_DIR / "pressure_deliveries.parquet")
         
-        # 2. Load telemetry subset from ball_by_ball.csv
-        telem_cols = [
-            "match_id", "innings", "overid", "over_ball_num",
-            "stroke", "delivery_style", "bowl_speed", "on_or_off", "dismissal_type"
-        ]
-        self._telemetry_df = pd.read_csv(RAW_DIR / "ball_by_ball.csv", usecols=telem_cols)
+        # 2. Load telemetry subset (prefer fast cached parquet, fall back to raw CSV)
+        telemetry_parquet = PROCESSED_DIR / "simulator_telemetry.parquet"
+        if telemetry_parquet.exists():
+            self._telemetry_df = pd.read_parquet(telemetry_parquet)
+        else:
+            telem_cols = [
+                "match_id", "innings", "overid", "over_ball_num",
+                "stroke", "delivery_style", "bowl_speed", "on_or_off", "dismissal_type"
+            ]
+            self._telemetry_df = pd.read_csv(RAW_DIR / "ball_by_ball.csv", usecols=telem_cols)
         
         # 3. Load matches & team mapping
         self._matches_df = pd.read_csv(RAW_DIR / "matches.csv")

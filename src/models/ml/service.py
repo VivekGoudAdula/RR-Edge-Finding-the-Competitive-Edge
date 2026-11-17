@@ -42,18 +42,22 @@ class MLModelService:
         if preds_file.exists():
             self._sample_preds = pd.read_parquet(preds_file)
 
-        # Load LightGBM Champion Models
-        bat_model_path = ML_MODELS_DIR / "batter_lightgbm.joblib"
-        if bat_model_path.exists():
-            self._batter_lgb = joblib.load(bat_model_path)
+        # Load LightGBM Champion Models with graceful fallback
+        try:
+            bat_model_path = ML_MODELS_DIR / "batter_lightgbm.joblib"
+            if bat_model_path.exists():
+                self._batter_lgb = joblib.load(bat_model_path)
 
-        bowl_runs_path = ML_MODELS_DIR / "bowler_runs_lightgbm.joblib"
-        if bowl_runs_path.exists():
-            self._bowler_runs_lgb = joblib.load(bowl_runs_path)
+            bowl_runs_path = ML_MODELS_DIR / "bowler_runs_lightgbm.joblib"
+            if bowl_runs_path.exists():
+                self._bowler_runs_lgb = joblib.load(bowl_runs_path)
 
-        bowl_wkt_path = ML_MODELS_DIR / "bowler_wkt_lightgbm.joblib"
-        if bowl_wkt_path.exists():
-            self._bowler_wkt_lgb = joblib.load(bowl_wkt_path)
+            bowl_wkt_path = ML_MODELS_DIR / "bowler_wkt_lightgbm.joblib"
+            if bowl_wkt_path.exists():
+                self._bowler_wkt_lgb = joblib.load(bowl_wkt_path)
+        except Exception as e:
+            # Native OpenMP / C-extension loading failure fallback
+            print(f"Warning: ML model binary load deferred: {e}")
 
         self._loaded = True
 
