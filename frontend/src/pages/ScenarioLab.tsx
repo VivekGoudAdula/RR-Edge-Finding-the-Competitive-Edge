@@ -27,6 +27,8 @@ import {
   executeCustomScenario,
   compareScenarioPlayers,
 } from '../services/api';
+import canonicalScenarios from '../data/canonicalScenarios.json';
+import canonicalScenarioExecutions from '../data/canonicalScenarioExecutions.json';
 import {
   ScenarioCatalogResponse,
   ScenarioDefinition,
@@ -63,7 +65,9 @@ interface ScenarioLabProps {
 }
 
 export const ScenarioLab: React.FC<ScenarioLabProps> = ({ onNavigateToGallery }) => {
-  const [catalog, setCatalog] = useState<ScenarioCatalogResponse | null>(null);
+  const [catalog, setCatalog] = useState<ScenarioCatalogResponse | null>(
+    canonicalScenarios as unknown as ScenarioCatalogResponse
+  );
   const [selectedDiscipline, setSelectedDiscipline] = useState<'BOWLER' | 'BATTER'>('BOWLER');
   const [activeScenarioId, setActiveScenarioId] = useState<string>('defend_18_in_6');
   const [formatFilter, setFormatFilter] = useState<string>('IPL');
@@ -72,10 +76,12 @@ export const ScenarioLab: React.FC<ScenarioLabProps> = ({ onNavigateToGallery })
   const [searchQuery, setSearchQuery] = useState<string>('');
   
   // Results
-  const [loading, setLoading] = useState<boolean>(true);
+  const [loading, setLoading] = useState<boolean>(false);
   const [executionError, setExecutionError] = useState<string | null>(null);
   const [catalogError, setCatalogError] = useState<string | null>(null);
-  const [results, setResults] = useState<ScenarioExecutionResult | null>(null);
+  const [results, setResults] = useState<ScenarioExecutionResult | null>(
+    (canonicalScenarioExecutions as Record<string, any>)['defend_18_in_6'] as unknown as ScenarioExecutionResult
+  );
 
   // Custom scenario builder state
   const [customModalOpen, setCustomModalOpen] = useState<boolean>(false);

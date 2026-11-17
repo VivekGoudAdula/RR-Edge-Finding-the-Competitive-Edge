@@ -32,8 +32,8 @@ interface ExplorerRecord {
 }
 
 export const DataExplorer: React.FC = () => {
-  const [records, setRecords] = useState<ExplorerRecord[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [records, setRecords] = useState<ExplorerRecord[]>(canonicalExplorerData as unknown as ExplorerRecord[]);
+  const [loading, setLoading] = useState(false);
   const [search, setSearch] = useState('');
   const [disciplineFilter, setDisciplineFilter] = useState<'ALL' | 'BATTER' | 'BOWLER'>('ALL');
   const [formatFilter, setFormatFilter] = useState<'ALL' | 'IPL' | 'T20I'>('ALL');

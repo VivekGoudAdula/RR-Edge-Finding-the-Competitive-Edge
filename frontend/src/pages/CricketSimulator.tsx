@@ -31,6 +31,10 @@ import {
   fetchSimulatorHeadToHead,
   fetchSimulatorFieldingPresets,
 } from '../services/simulatorApi';
+import canonicalSimulatorPlayers from '../data/canonicalSimulatorPlayers.json';
+import canonicalSimulatorScenarios from '../data/canonicalSimulatorScenarios.json';
+import canonicalSimulatorPresets from '../data/canonicalSimulatorPresets.json';
+import canonicalSimulatorSequences from '../data/canonicalSimulatorSequences.json';
 import { CricketGroundSVG } from '../components/simulator/CricketGroundSVG';
 import { PlaybackControls } from '../components/simulator/PlaybackControls';
 import { AnalyticsPanel } from '../components/simulator/AnalyticsPanel';
@@ -41,15 +45,19 @@ export const CricketSimulator: React.FC = () => {
   const [mode, setMode] = useState<'replay' | 'whatif'>('replay');
 
   // Shared Data
-  const [players, setPlayers] = useState<SimulatorPlayer[]>([]);
-  const [presetScenarios, setPresetScenarios] = useState<PresetScenario[]>([]);
-  const [fieldingPresets, setFieldingPresets] = useState<FieldingPresets | null>(null);
-  const [activeFielders, setActiveFielders] = useState<FielderPosition[]>([]);
+  const [players, setPlayers] = useState<SimulatorPlayer[]>(canonicalSimulatorPlayers as unknown as SimulatorPlayer[]);
+  const [presetScenarios, setPresetScenarios] = useState<PresetScenario[]>(canonicalSimulatorScenarios as unknown as PresetScenario[]);
+  const [fieldingPresets, setFieldingPresets] = useState<FieldingPresets | null>(canonicalSimulatorPresets as unknown as FieldingPresets);
+  const [activeFielders, setActiveFielders] = useState<FielderPosition[]>(
+    ((canonicalSimulatorPresets as any)?.death_protection || []) as FielderPosition[]
+  );
   const [selectedFieldingPreset, setSelectedFieldingPreset] = useState<string>('death_protection');
 
   // Historical Replay State
-  const [sequences, setSequences] = useState<HistoricalSequenceMeta[]>([]);
-  const [selectedSequenceId, setSelectedSequenceId] = useState<string>('');
+  const [sequences, setSequences] = useState<HistoricalSequenceMeta[]>(canonicalSimulatorSequences as unknown as HistoricalSequenceMeta[]);
+  const [selectedSequenceId, setSelectedSequenceId] = useState<string>(
+    (canonicalSimulatorSequences as any[])?.[0]?.sequence_id || 'seq_13512_inn2'
+  );
   const [sequenceData, setSequenceData] = useState<HistoricalSequenceData | null>(null);
   const [currentDeliveryIndex, setCurrentDeliveryIndex] = useState<number>(0);
   const [isPlaying, setIsPlaying] = useState<boolean>(false);

@@ -18,6 +18,7 @@ import {
   Clock,
 } from 'lucide-react';
 import { fetchBatters, fetchBowlers, fetchComparison } from '../services/api';
+import canonicalBatters from '../data/canonicalBatters.json';
 import { PlayerOverview, ComparisonData, Discipline } from '../types';
 import { SectionHeading } from '../components/common/SectionHeading';
 import { ArchetypeBadge, TierBadge } from '../components/common/Badge';
@@ -26,7 +27,7 @@ import { PlayerAvatar } from '../components/common/PlayerAvatar';
 
 export const PlayerComparisonLab: React.FC = () => {
   const [discipline, setDiscipline] = useState<Discipline>('BATTER');
-  const [playersList, setPlayersList] = useState<PlayerOverview[]>([]);
+  const [playersList, setPlayersList] = useState<PlayerOverview[]>(canonicalBatters as unknown as PlayerOverview[]);
   const [playerAId, setPlayerAId] = useState<number>(6396); // Tim David default
   const [playerBId, setPlayerBId] = useState<number>(1699); // SKY default
   const [comparison, setComparison] = useState<ComparisonData | null>(null);

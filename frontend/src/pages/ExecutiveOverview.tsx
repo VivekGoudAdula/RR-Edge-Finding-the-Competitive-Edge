@@ -10,6 +10,7 @@ import {
   Sparkles,
 } from 'lucide-react';
 import { fetchOverview } from '../services/api';
+import canonicalOverview from '../data/canonicalOverview.json';
 import { OverviewData } from '../types';
 import { MetricCard } from '../components/common/MetricCard';
 import { SectionHeading } from '../components/common/SectionHeading';
@@ -23,8 +24,8 @@ interface ExecutiveOverviewProps {
 }
 
 export const ExecutiveOverview: React.FC<ExecutiveOverviewProps> = ({ onNavigate }) => {
-  const [data, setData] = useState<OverviewData | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [data, setData] = useState<OverviewData>(canonicalOverview as unknown as OverviewData);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {

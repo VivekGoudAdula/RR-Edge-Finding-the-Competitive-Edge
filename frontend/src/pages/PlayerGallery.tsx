@@ -34,6 +34,7 @@ import {
   fetchGalleryPlayerMatches,
   fetchGalleryPlayerSeasons,
 } from '../services/api';
+import canonicalAllGalleryPlayers from '../data/canonicalAllGalleryPlayers.json';
 import {
   GalleryPlayerCard,
   GalleryPlayersResponse,
@@ -54,8 +55,15 @@ export const PlayerGallery: React.FC<PlayerGalleryProps> = ({
   onNavigateToComparison,
 }) => {
   // Gallery search and filter state
-  const [playersData, setPlayersData] = useState<GalleryPlayersResponse | null>(null);
-  const [loading, setLoading] = useState<boolean>(true);
+  const initialPlayers = (canonicalAllGalleryPlayers as unknown as any[]).slice(0, 18);
+  const [playersData, setPlayersData] = useState<GalleryPlayersResponse | null>({
+    total_players: (canonicalAllGalleryPlayers as unknown as any[]).length,
+    page: 1,
+    page_size: 18,
+    total_pages: Math.ceil((canonicalAllGalleryPlayers as unknown as any[]).length / 18),
+    players: initialPlayers,
+  });
+  const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
 
   const [search, setSearch] = useState<string>('');

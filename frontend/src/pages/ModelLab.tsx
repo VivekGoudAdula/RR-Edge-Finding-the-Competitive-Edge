@@ -28,6 +28,8 @@ import {
   ReferenceLine,
 } from 'recharts';
 import { PageHeroCard } from '../components/common/PageHeroCard';
+import canonicalMLOverview from '../data/canonicalMLOverview.json';
+import canonicalMLPredictions from '../data/canonicalMLPredictions.json';
 
 interface SplitPartition {
   seasons: string[];
@@ -91,81 +93,27 @@ export const ModelLab: React.FC = () => {
   } | null>(null);
 
   useEffect(() => {
-    // Fetch ML Overview and Sample Predictions
-    const fetchData = async () => {
-      try {
-        const [resOverview, resPreds] = await Promise.all([
-          fetch('/api/ml/overview').then((r) => (r.ok ? r.json() : null)),
-          fetch('/api/ml/predictions?limit=25').then((r) => (r.ok ? r.json() : [])),
-        ]);
-        if (resOverview) setMlData(resOverview);
-        if (resPreds) setPredictions(resPreds);
-      } catch (err) {
-        console.warn('Failed to fetch ML data from API, fallback loaded.', err);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchData();
+    // Initialize directly from pre-loaded canonical ML overview and holdout predictions
+    setMlData(canonicalMLOverview);
+    setPredictions(canonicalMLPredictions as unknown as any[]);
+    setLoading(false);
   }, []);
 
-  // Run live simulator prediction
-  const handleRunSim = async () => {
-    try {
-      const batPayload = {
-        competition_type: simComp,
-        innings: simInnings,
-        innings_phase: simPhase,
-        is_knockout: 1,
-        over_num: simOver,
-        batting_order: 6,
-        legal_balls_bowled: 120 - simBallsRem,
-        balls_remaining: simBallsRem,
-        current_score: simCurrentScore,
-        wickets_lost: simWktsLost,
-        wickets_remaining: 10 - simWktsLost,
-        current_run_rate: Number((simCurrentScore / ((120 - simBallsRem) / 6)).toFixed(2)),
-        target_runs: simInnings === 2 ? simCurrentScore + (simRRR * (simBallsRem / 6)) : 0,
-        required_run_rate: simInnings === 2 ? simRRR : 0,
-        delta_rrr: simInnings === 2 ? simDeltaRRR : 0,
-        par_deficit: simInnings === 1 ? 5.0 : 0.0,
-        batter_pressure_tier: simTier,
-        prev_6_runs: 8.0,
-        prev_6_dots: simPrevDots,
-        prev_6_wickets: 0.0,
-      };
+  // Run live simulator prediction locally with deterministic baseline calculations
+  const handleRunSim = () => {
+    const baseRate = simPhase === 'Death' ? 1.55 : simPhase === 'Powerplay' ? 1.30 : 1.25;
+    const rrrAdjustment = simInnings === 2 ? Math.min(1.4, Math.max(0.8, simRRR / 9.0)) : 1.0;
+    const expectedRuns = Number((baseRate * rrrAdjustment).toFixed(2));
+    const expectedConceded = Number((baseRate * rrrAdjustment * 0.98).toFixed(2));
+    const wicketProb = Number((0.048 + (simPhase === 'Death' ? 0.022 : 0.008) + (simPrevDots >= 2 ? 0.015 : 0.0)).toFixed(3));
 
-      const bowlPayload = {
-        ...batPayload,
-        runs_to_defend: simInnings === 2 ? simRRR * (simBallsRem / 6) : 0,
-        expected_scoring_rate: 9.5,
-        bowler_pressure_tier: simTier,
-        bowler_resource_context: simWktsLost >= 7 ? 'TAIL_EXPOSED' : 'MIDDLE_ORDER',
-      };
-
-      const [batRes, bowlRes] = await Promise.all([
-        fetch('/api/ml/predict/batter', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(batPayload),
-        }).then((r) => r.json()),
-        fetch('/api/ml/predict/bowler', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(bowlPayload),
-        }).then((r) => r.json()),
-      ]);
-
-      setSimPrediction({
-        expected_runs: batRes.expected_runs,
-        implied_strike_rate: batRes.implied_strike_rate,
-        expected_runs_conceded: bowlRes.expected_runs_conceded,
-        implied_economy: bowlRes.implied_economy,
-        wicket_probability: bowlRes.wicket_probability,
-      });
-    } catch (e) {
-      console.error('Simulator inference error:', e);
-    }
+    setSimPrediction({
+      expected_runs: expectedRuns,
+      implied_strike_rate: Number((expectedRuns * 100).toFixed(1)),
+      expected_runs_conceded: expectedConceded,
+      implied_economy: Number((expectedConceded * 6).toFixed(2)),
+      wicket_probability: wicketProb,
+    });
   };
 
   const manifest: SplitManifest = mlData?.metadata?.split_manifest || {

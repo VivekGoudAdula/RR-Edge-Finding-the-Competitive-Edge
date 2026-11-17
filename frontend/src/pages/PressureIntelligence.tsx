@@ -22,14 +22,15 @@ import {
   Cell,
 } from 'recharts';
 import { fetchPressureDistributions } from '../services/api';
+import canonicalPressure from '../data/canonicalPressure.json';
 import { PressureDistributions } from '../types';
 import { SectionHeading } from '../components/common/SectionHeading';
 import { MetricCard } from '../components/common/MetricCard';
 import { PageHeroCard } from '../components/common/PageHeroCard';
 
 export const PressureIntelligence: React.FC = () => {
-  const [data, setData] = useState<PressureDistributions | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [data, setData] = useState<PressureDistributions>(canonicalPressure as unknown as PressureDistributions);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     fetchPressureDistributions().then((res) => {

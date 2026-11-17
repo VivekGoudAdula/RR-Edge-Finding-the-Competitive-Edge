@@ -31,6 +31,7 @@ import {
   ReferenceLine,
 } from 'recharts';
 import { fetchBowlers, fetchBowlerDetail } from '../services/api';
+import canonicalBowlers from '../data/canonicalBowlers.json';
 import { PlayerOverview, PlayerDetail } from '../types';
 import { SectionHeading } from '../components/common/SectionHeading';
 import { ArchetypeBadge, TierBadge, Badge } from '../components/common/Badge';
@@ -42,8 +43,12 @@ interface BowlerIntelligenceProps {
 }
 
 export const BowlerIntelligence: React.FC<BowlerIntelligenceProps> = ({ initialPlayerId }) => {
-  const [bowlers, setBowlers] = useState<PlayerOverview[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [bowlers, setBowlers] = useState<PlayerOverview[]>(
+    (canonicalBowlers as unknown as PlayerOverview[]).filter(
+      (bw) => !bw.player_name.toLowerCase().includes('sikandar raza')
+    )
+  );
+  const [loading, setLoading] = useState(false);
   const [search, setSearch] = useState('');
   const [roleFilter, setRoleFilter] = useState('ALL');
   const [tierFilter, setTierFilter] = useState('ALL');

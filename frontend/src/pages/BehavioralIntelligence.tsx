@@ -23,14 +23,17 @@ import {
   fetchBehavioralBatters,
   fetchBehavioralBowlers,
 } from '../services/api';
+import canonicalBehavioralOverview from '../data/canonicalBehavioralOverview.json';
+import canonicalBehavioralBatters from '../data/canonicalBehavioralBatters.json';
+import canonicalBehavioralBowlers from '../data/canonicalBehavioralBowlers.json';
 import { PageHeroCard } from '../components/common/PageHeroCard';
 
 export const BehavioralIntelligence: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'batting' | 'bowling' | 'methodology'>('batting');
-  const [overview, setOverview] = useState<any>(null);
-  const [batters, setBatters] = useState<any[]>([]);
-  const [bowlers, setBowlers] = useState<any[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [overview, setOverview] = useState<any>(canonicalBehavioralOverview);
+  const [batters, setBatters] = useState<any[]>((canonicalBehavioralBatters as any).results || []);
+  const [bowlers, setBowlers] = useState<any[]>((canonicalBehavioralBowlers as any).results || []);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   // Filters

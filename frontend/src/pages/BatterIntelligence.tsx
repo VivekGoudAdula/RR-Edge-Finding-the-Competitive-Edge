@@ -32,6 +32,7 @@ import {
   ReferenceLine,
 } from 'recharts';
 import { fetchBatters, fetchBatterDetail } from '../services/api';
+import canonicalBatters from '../data/canonicalBatters.json';
 import { PlayerOverview, PlayerDetail } from '../types';
 import { SectionHeading } from '../components/common/SectionHeading';
 import { ArchetypeBadge, TierBadge, Badge } from '../components/common/Badge';
@@ -43,8 +44,8 @@ interface BatterIntelligenceProps {
 }
 
 export const BatterIntelligence: React.FC<BatterIntelligenceProps> = ({ initialPlayerId }) => {
-  const [batters, setBatters] = useState<PlayerOverview[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [batters, setBatters] = useState<PlayerOverview[]>(canonicalBatters as unknown as PlayerOverview[]);
+  const [loading, setLoading] = useState(false);
   const [search, setSearch] = useState('');
   const [roleFilter, setRoleFilter] = useState('ALL');
   const [tierFilter, setTierFilter] = useState('ALL');
