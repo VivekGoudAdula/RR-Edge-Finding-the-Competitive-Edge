@@ -1,0 +1,18 @@
+# Exclude heavy raw datasets not used by runtime API
+data/raw/ball_by_ball.csv
+
+# Exclude documentation, presentations, and submissions
+docs/
+reports/
+notebooks/
+tests/
+*.docx
+*.pdf
+
+# Python caches and test artifacts
+__pycache__/
+*.pyc
+.pytest_cache/
+.coverage
+htmlcov/
+scratch/
