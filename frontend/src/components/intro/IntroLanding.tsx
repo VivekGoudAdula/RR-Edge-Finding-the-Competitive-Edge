@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { ArrowRight, Sparkles, Shield, Swords, Gauge, Gamepad2, Database, Compass, Award } from 'lucide-react';
+import { ArrowRight, Sparkles } from 'lucide-react';
 import { PageId } from '../layout/Sidebar';
 
 interface IntroLandingProps {
@@ -43,7 +43,7 @@ export const IntroLanding: React.FC<IntroLandingProps> = ({ onEnterDashboard }) 
 
   return (
     <div
-      className={`fixed inset-0 z-50 overflow-hidden bg-[#FFFBFD] flex flex-col justify-between selection:bg-rr-soft selection:text-rr-deep transition-all duration-500 ${
+      className={`fixed inset-0 z-50 overflow-hidden bg-[#FFFBFD] flex flex-col items-center justify-center selection:bg-rr-soft selection:text-rr-deep transition-all duration-500 ${
         isExiting ? 'opacity-0 scale-95 pointer-events-none' : 'opacity-100 scale-100'
       }`}
     >
@@ -81,7 +81,7 @@ export const IntroLanding: React.FC<IntroLandingProps> = ({ onEnterDashboard }) 
 
       {/* 1. TOP-LEFT: Hawa Mahal (Illuminated in Pink) */}
       <div
-        className="absolute top-12 sm:top-14 lg:top-16 left-2 sm:left-6 lg:left-12 pointer-events-none transition-transform duration-300 ease-out z-10"
+        className="absolute top-4 sm:top-6 lg:top-8 left-2 sm:left-6 lg:left-10 pointer-events-none transition-transform duration-300 ease-out z-10"
         style={{
           transform: `translate3d(${mousePos.x * -16}px, ${mousePos.y * -12}px, 0)`,
         }}
@@ -100,7 +100,7 @@ export const IntroLanding: React.FC<IntroLandingProps> = ({ onEnterDashboard }) 
 
       {/* 2. TOP-RIGHT: Amber Fort & Palace Architecture */}
       <div
-        className="absolute top-10 sm:top-12 lg:top-14 right-2 sm:right-6 lg:right-12 pointer-events-none transition-transform duration-300 ease-out z-10"
+        className="absolute top-4 sm:top-6 lg:top-8 right-2 sm:right-6 lg:right-10 pointer-events-none transition-transform duration-300 ease-out z-10"
         style={{
           transform: `translate3d(${mousePos.x * 18}px, ${mousePos.y * -14}px, 0)`,
         }}
@@ -117,25 +117,25 @@ export const IntroLanding: React.FC<IntroLandingProps> = ({ onEnterDashboard }) 
         </div>
       </div>
 
-      {/* 3. UPPER-MID LEFT: Chhatri Royal Pavilion */}
+      {/* 3. UPPER-MID LEFT: Stadium Floodlight Tower Casting Pink Beams */}
       <div
-        className="hidden md:block absolute top-[36%] left-4 lg:left-14 pointer-events-none transition-transform duration-300 ease-out z-10"
+        className="hidden md:block absolute top-[30%] sm:top-[32%] left-3 lg:left-10 pointer-events-none transition-transform duration-300 ease-out z-10"
         style={{
           transform: `translate3d(${mousePos.x * -24}px, ${mousePos.y * 10}px, 0)`,
         }}
       >
         <div className="animate-float-reverse">
           <img
-            src="/intro-assets/chhatri-pavilion.png"
-            alt="Rajasthan Chhatri Royal Pavilion"
-            className="w-20 md:w-28 lg:w-36 h-auto object-contain filter drop-shadow-[0_8px_18px_rgba(229,0,87,0.16)] opacity-85"
+            src="/intro-assets/floodlight-tower.png"
+            alt="Stadium Floodlight Tower emitting pink light"
+            className="w-24 md:w-32 lg:w-40 h-auto object-contain filter drop-shadow-[0_8px_18px_rgba(229,0,87,0.22)] opacity-90"
           />
         </div>
       </div>
 
       {/* 4. MID-LEFT: Cricket Ball with Pink Motion Trails */}
       <div
-        className="absolute top-[48%] sm:top-[44%] left-1 sm:left-4 lg:left-20 pointer-events-none transition-transform duration-300 ease-out z-20"
+        className="absolute top-[50%] sm:top-[46%] left-1 sm:left-4 lg:left-16 pointer-events-none transition-transform duration-300 ease-out z-20"
         style={{
           transform: `translate3d(${mousePos.x * -32}px, ${mousePos.y * 20}px, 0)`,
         }}
@@ -149,19 +149,22 @@ export const IntroLanding: React.FC<IntroLandingProps> = ({ onEnterDashboard }) 
         </div>
       </div>
 
-      {/* 5. UPPER-MID RIGHT: Desert Camel with Pink Sun */}
+      {/* 5. UPPER-MID RIGHT: Jal Mahal (Illuminated Water Palace) */}
       <div
-        className="hidden lg:block absolute top-[33%] right-8 xl:right-16 pointer-events-none transition-transform duration-300 ease-out z-10"
+        className="hidden lg:block absolute top-[28%] sm:top-[30%] right-4 xl:right-12 pointer-events-none transition-transform duration-300 ease-out z-10"
         style={{
           transform: `translate3d(${mousePos.x * 22}px, ${mousePos.y * 14}px, 0)`,
         }}
       >
-        <div className="animate-float-slow">
+        <div className="animate-float-slow group cursor-default pointer-events-auto">
           <img
-            src="/intro-assets/desert-camel.png"
-            alt="Desert Camel Rider against Royal Pink Sun"
-            className="w-36 lg:w-48 xl:w-56 h-auto object-contain filter drop-shadow-[0_10px_22px_rgba(229,0,87,0.18)] opacity-90"
+            src="/intro-assets/jal-mahal.png"
+            alt="Jal Mahal illuminated over the water in Jaipur"
+            className="w-44 lg:w-56 xl:w-68 h-auto object-contain filter drop-shadow-[0_10px_22px_rgba(229,0,87,0.2)] opacity-90 hover:opacity-100 transition-opacity"
           />
+          <div className="hidden xl:block absolute -bottom-2 right-6 px-2 py-0.5 rounded-full bg-white/90 backdrop-blur-xs border border-pink-200/80 text-[10px] font-bold text-rr-charcoal shadow-xs">
+            Jal Mahal • Jaipur
+          </div>
         </div>
       </div>
 
@@ -271,51 +274,9 @@ export const IntroLanding: React.FC<IntroLandingProps> = ({ onEnterDashboard }) 
       </div>
 
       {/* =========================================================================
-          TOP NAVIGATION BAR
-         ========================================================================= */}
-      <header className="relative z-30 w-full px-4 sm:px-8 lg:px-14 py-4 sm:py-5 flex items-center justify-between">
-        {/* Left: Brand Identity Mark */}
-        <div className="flex items-center gap-3">
-          <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-white border border-pink-100 shadow-xs flex items-center justify-center p-1.5">
-            <img src="/rr_emblem.png" alt="RR Crest" className="w-full h-full object-contain" />
-          </div>
-          <div className="hidden xs:flex flex-col">
-            <span className="text-xs sm:text-sm font-extrabold tracking-wider text-rr-navy leading-none">
-              RR EDGE
-            </span>
-            <span className="text-[10px] font-semibold text-rr-deep tracking-wider uppercase mt-0.5">
-              SupeRR Selector 2026
-            </span>
-          </div>
-        </div>
-
-        {/* Center: Competition Badge */}
-        <div className="hidden md:inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/80 backdrop-blur-sm border border-pink-200/60 shadow-xs">
-          <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
-          <span className="text-[11px] font-bold text-rr-navy tracking-wide">
-            AUDITED SUBMISSION • PRIMARY PRESSURE COHORT
-          </span>
-        </div>
-
-        {/* Right: Category Label & Direct Enter Button */}
-        <div className="flex items-center gap-2.5">
-          <span className="hidden sm:inline-block px-3 py-1 rounded-full bg-pink-50 text-rr-deep text-xs font-bold tracking-wider border border-pink-100">
-            CRICKET INTELLIGENCE PLATFORM
-          </span>
-          <button
-            onClick={() => handleEnter()}
-            className="inline-flex items-center gap-1.5 px-3 sm:px-4 py-1.5 rounded-xl bg-rr-navy hover:bg-rr-darkNavy text-white text-xs font-bold tracking-wide shadow-sm hover:shadow-md transition-all group"
-          >
-            <span>Enter</span>
-            <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
-          </button>
-        </div>
-      </header>
-
-      {/* =========================================================================
           CENTRAL HERO COMPOSITION (The Heart of RR EDGE)
          ========================================================================= */}
-      <main className="relative z-30 flex-1 flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 text-center max-w-4xl mx-auto my-auto py-2">
+      <main className="relative z-30 flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 text-center max-w-4xl mx-auto py-4">
         {/* Eyebrow Badge */}
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/95 backdrop-blur-md border border-pink-200/90 shadow-sm mb-4 sm:mb-5">
           <Sparkles className="w-3.5 h-3.5 text-rr-pink animate-pulse" />
@@ -401,67 +362,6 @@ export const IntroLanding: React.FC<IntroLandingProps> = ({ onEnterDashboard }) 
           </div>
         </div>
       </main>
-
-      {/* =========================================================================
-          BOTTOM BAR: DIRECT EXPLORATION SHORTCUTS FOR JUDGES
-         ========================================================================= */}
-      <footer className="relative z-30 w-full px-4 sm:px-8 py-3 sm:py-4 bg-white/70 backdrop-blur-md border-t border-pink-100 flex flex-col sm:flex-row items-center justify-between gap-2.5">
-        <div className="flex items-center gap-2 text-[11px] font-medium text-slate-500">
-          <span className="w-1.5 h-1.5 rounded-full bg-rr-pink" />
-          <span>Quick jump to core module:</span>
-        </div>
-
-        {/* One-Click Shortcut Pills */}
-        <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2">
-          <button
-            onClick={() => handleEnter('overview')}
-            className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-white border border-slate-200 hover:border-pink-300 hover:bg-pink-50 text-[11px] font-semibold text-slate-700 hover:text-rr-deep transition-all shadow-2xs"
-          >
-            <Compass className="w-3 h-3 text-rr-pink" />
-            <span>Overview</span>
-          </button>
-          <button
-            onClick={() => handleEnter('batters')}
-            className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-white border border-slate-200 hover:border-pink-300 hover:bg-pink-50 text-[11px] font-semibold text-slate-700 hover:text-rr-deep transition-all shadow-2xs"
-          >
-            <Swords className="w-3 h-3 text-rr-pink" />
-            <span>Top Batters</span>
-          </button>
-          <button
-            onClick={() => handleEnter('bowlers')}
-            className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-white border border-slate-200 hover:border-pink-300 hover:bg-pink-50 text-[11px] font-semibold text-slate-700 hover:text-rr-deep transition-all shadow-2xs"
-          >
-            <Shield className="w-3 h-3 text-rr-pink" />
-            <span>Top Bowlers</span>
-          </button>
-          <button
-            onClick={() => handleEnter('simulator')}
-            className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-white border border-pink-300 bg-pink-50/50 hover:bg-pink-100/60 text-[11px] font-bold text-rr-deep transition-all shadow-2xs"
-          >
-            <Gamepad2 className="w-3 h-3 text-rr-pink" />
-            <span>2D Simulator</span>
-          </button>
-          <button
-            onClick={() => handleEnter('gallery')}
-            className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-white border border-slate-200 hover:border-pink-300 hover:bg-pink-50 text-[11px] font-semibold text-slate-700 hover:text-rr-deep transition-all shadow-2xs"
-          >
-            <Award className="w-3 h-3 text-rr-pink" />
-            <span>888 Gallery</span>
-          </button>
-          <button
-            onClick={() => handleEnter('explorer')}
-            className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-white border border-slate-200 hover:border-pink-300 hover:bg-pink-50 text-[11px] font-semibold text-slate-700 hover:text-rr-deep transition-all shadow-2xs"
-          >
-            <Database className="w-3 h-3 text-rr-pink" />
-            <span>Data Explorer</span>
-          </button>
-        </div>
-
-        {/* Confidential Scouting Platform Badge */}
-        <div className="hidden lg:flex items-center gap-1.5 text-[10px] font-semibold text-slate-400">
-          <span>RR EDGE v2.0 • Rajasthan Royals Selection Intelligence</span>
-        </div>
-      </footer>
     </div>
   );
 };
