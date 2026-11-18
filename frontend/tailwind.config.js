@@ -35,6 +35,8 @@ export default {
         heading: ['Plus Jakarta Sans', 'Outfit', 'sans-serif'],
         display: ['Syne', 'Plus Jakarta Sans', 'sans-serif'],
         royal: ['Cinzel', 'Georgia', 'serif'],
+        cursive: ['Great Vibes', 'Alex Brush', 'Allura', 'Parisienne', 'Pinyon Script', 'cursive'],
+        italicDisplay: ['Playfair Display', 'Georgia', 'serif'],
       },
       boxShadow: {
         'subtle': '0 1px 3px rgba(37, 33, 42, 0.05), 0 1px 2px rgba(230, 0, 126, 0.02)',

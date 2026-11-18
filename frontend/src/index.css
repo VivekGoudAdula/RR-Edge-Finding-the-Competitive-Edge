@@ -1,8 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Allura&family=Cinzel:wght@600;700;800;900&family=Great+Vibes&family=Outfit:wght@400;500;600;700;800;900&family=Parisienne&family=Pinyon+Script&family=Playfair+Display:ital,wght@1,600;1,700&family=Satisfy&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+  /* Prevent image dragging, native ghost selection, and context menus globally on graphics */
+  img, svg {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+  }
+
   body {
     @apply bg-rr-warm text-rr-charcoal antialiased selection:bg-rr-soft selection:text-rr-deep;
     background-color: #FFFBFD;
@@ -152,6 +166,11 @@
     animation: none !important;
   }
 }
+
+.font-cursive-calligraphy {
+  font-family: 'Great Vibes', 'Alex Brush', 'Allura', 'Parisienne', 'Pinyon Script', cursive;
+}
+
 
 
 

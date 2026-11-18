@@ -10,6 +10,16 @@ export const IntroLanding: React.FC<IntroLandingProps> = ({ onEnterDashboard }) 
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [isExiting, setIsExiting] = useState(false);
 
+  // Suppress right-click context menu everywhere on the intro landing so images feel like native UI
+  useEffect(() => {
+    const handleContextMenu = (e: MouseEvent) => {
+      e.preventDefault();
+      return false;
+    };
+    window.addEventListener('contextmenu', handleContextMenu);
+    return () => window.removeEventListener('contextmenu', handleContextMenu);
+  }, []);
+
   // Parallax pointer tracking (normalized -1 to 1)
   const handleMouseMove = useCallback((e: MouseEvent) => {
     const { innerWidth, innerHeight } = window;
@@ -43,18 +53,22 @@ export const IntroLanding: React.FC<IntroLandingProps> = ({ onEnterDashboard }) 
 
   return (
     <div
-      className={`fixed inset-0 z-50 overflow-hidden bg-[#FFFBFD] flex flex-col items-center justify-center selection:bg-rr-soft selection:text-rr-deep transition-all duration-500 ${
+      onContextMenu={(e) => {
+        e.preventDefault();
+        return false;
+      }}
+      className={`fixed inset-0 z-50 overflow-hidden bg-[#FFFBFD] flex flex-col items-center justify-center select-none cursor-default transition-all duration-500 ${
         isExiting ? 'opacity-0 scale-95 pointer-events-none' : 'opacity-100 scale-100'
       }`}
     >
       {/* Background Layer 1: Pink Grid Pattern */}
       <div className="absolute inset-0 bg-grid-pattern pointer-events-none opacity-80" />
 
-      {/* Background Layer 2: Subtle Radiating Sunburst Lines (Inspired by Ruby reference) */}
+      {/* Background Layer 2: Subtle Radiating Sunburst Lines */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden">
         <svg
           viewBox="0 0 1000 1000"
-          className="w-[140vw] max-w-[1500px] h-[140vw] max-h-[1500px] opacity-25 animate-ray-rotate"
+          className="w-[140vw] max-w-[1500px] h-[140vw] max-h-[1500px] opacity-25 animate-ray-rotate select-none pointer-events-none"
           style={{ willChange: 'transform' }}
         >
           <g stroke="#E50057" strokeWidth="1" strokeDasharray="3 7">
@@ -74,142 +88,124 @@ export const IntroLanding: React.FC<IntroLandingProps> = ({ onEnterDashboard }) 
       {/* Background Layer 3: Soft Central Glow / Aura */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[650px] rounded-full bg-gradient-to-r from-pink-300/20 via-rose-200/25 to-amber-200/15 blur-3xl pointer-events-none animate-pulse-glow" />
 
-      {/* Fullscreen Royal Frame Asset (bg.png) */}
+      {/* Fullscreen Royal Frame Asset (bg.png) - 100% Protected, Non-Draggable Canvas-like UI */}
       <img
         src="/intro-assets/bg.png"
-        alt="Royal Rajasthan Frame"
+        alt=""
+        draggable={false}
+        onContextMenu={(e) => e.preventDefault()}
         className="absolute inset-0 w-full h-full object-fill pointer-events-none z-0 select-none opacity-95"
       />
 
       {/* =========================================================================
-          FLOATING VISUAL ASSETS (Rajasthan Royalty × Cricket Architecture)
-          Arranged around perimeter with depth, scale, and subtle parallax
+          FLOATING VISUAL ASSETS (Evenly Distributed Across Perimeter & Top Corners)
+          All assets are pointer-events-none, non-draggable, and context-menu blocked
          ========================================================================= */}
 
-      {/* 1. TOP-LEFT: Hawa Mahal (Illuminated in Pink) */}
+      {/* 1. TOP-LEFT CORNER (Fills empty white space): Cricket Ball with Pink Motion Trails */}
       <div
-        className="absolute top-4 sm:top-6 lg:top-8 left-2 sm:left-6 lg:left-10 pointer-events-none transition-transform duration-300 ease-out z-10"
+        className="absolute top-8 sm:top-10 md:top-14 left-8 sm:left-14 md:left-20 lg:left-28 pointer-events-none transition-transform duration-300 ease-out z-20 select-none"
         style={{
-          transform: `translate3d(${mousePos.x * -16}px, ${mousePos.y * -12}px, 0)`,
-        }}
-      >
-        <div className="animate-float-slow group cursor-default pointer-events-auto">
-          <img
-            src="/intro-assets/hawamahal.png"
-            alt="Hawa Mahal illuminated in Royal Pink"
-            className="w-36 sm:w-52 md:w-64 lg:w-72 xl:w-80 h-auto object-contain filter drop-shadow-[0_12px_24px_rgba(229,0,87,0.18)] opacity-90 hover:opacity-100 transition-opacity"
-          />
-        </div>
-      </div>
-
-      {/* 2. TOP-RIGHT: Stadium illuminated under floodlights */}
-      <div
-        className="absolute top-4 sm:top-6 lg:top-8 right-2 sm:right-6 lg:right-10 pointer-events-none transition-transform duration-300 ease-out z-10"
-        style={{
-          transform: `translate3d(${mousePos.x * 18}px, ${mousePos.y * -14}px, 0)`,
-        }}
-      >
-        <div className="animate-float-medium group cursor-default pointer-events-auto">
-          <img
-            src="/intro-assets/stadium.png"
-            alt="Cricket Stadium illuminated in Royal Pink"
-            className="w-40 sm:w-52 md:w-64 lg:w-72 xl:w-80 h-auto object-contain filter drop-shadow-[0_12px_24px_rgba(229,0,87,0.18)] opacity-90 hover:opacity-100 transition-opacity"
-          />
-        </div>
-      </div>
-
-      {/* 3. MID-LEFT: Cricket Ball with Pink Motion Trails */}
-      <div
-        className="absolute top-[48%] sm:top-[44%] left-1 sm:left-4 lg:left-16 pointer-events-none transition-transform duration-300 ease-out z-20"
-        style={{
-          transform: `translate3d(${mousePos.x * -32}px, ${mousePos.y * 20}px, 0)`,
+          transform: `translate3d(${mousePos.x * -22}px, ${mousePos.y * -14}px, 0)`,
         }}
       >
         <div className="animate-float-fast">
           <img
             src="/intro-assets/ball.png"
-            alt="Cricket ball with neon pink motion trail"
-            className="w-24 sm:w-32 md:w-40 lg:w-44 h-auto object-contain filter drop-shadow-[0_10px_20px_rgba(229,0,87,0.25)]"
+            alt=""
+            draggable={false}
+            onContextMenu={(e) => e.preventDefault()}
+            className="w-28 sm:w-36 md:w-44 lg:w-52 h-auto object-contain filter drop-shadow-[0_12px_24px_rgba(229,0,87,0.25)] select-none pointer-events-none"
           />
         </div>
       </div>
 
-      {/* 4. MID-RIGHT: Royal Rajasthan Flag */}
+      {/* 2. TOP-RIGHT CORNER (Fills empty white space): Royal Rajasthan Flag */}
       <div
-        className="hidden sm:block absolute top-[44%] right-2 sm:right-6 lg:right-16 pointer-events-none transition-transform duration-300 ease-out z-10"
+        className="absolute top-8 sm:top-10 md:top-14 right-8 sm:right-14 md:right-20 lg:right-28 pointer-events-none transition-transform duration-300 ease-out z-10 select-none"
         style={{
-          transform: `translate3d(${mousePos.x * 28}px, ${mousePos.y * 18}px, 0)`,
+          transform: `translate3d(${mousePos.x * 22}px, ${mousePos.y * -14}px, 0)`,
         }}
       >
         <div className="animate-float-reverse">
           <img
             src="/intro-assets/flag.png"
-            alt="Royal Rajasthan Flag"
-            className="w-24 sm:w-32 md:w-40 lg:w-44 h-auto object-contain filter drop-shadow-[0_8px_16px_rgba(229,0,87,0.2)] opacity-85"
+            alt=""
+            draggable={false}
+            onContextMenu={(e) => e.preventDefault()}
+            className="w-28 sm:w-36 md:w-44 lg:w-52 h-auto object-contain filter drop-shadow-[0_10px_20px_rgba(229,0,87,0.2)] opacity-95 select-none pointer-events-none"
+          />
+        </div>
+      </div>
+
+      {/* 3. MID-LEFT: Glowing Stumps & Bails */}
+      <div
+        className="hidden sm:block absolute top-[48%] -translate-y-1/2 left-6 sm:left-10 md:left-14 lg:left-18 pointer-events-none transition-transform duration-300 ease-out z-15 select-none"
+        style={{
+          transform: `translate3d(${mousePos.x * -16}px, ${mousePos.y * 12}px, 0)`,
+        }}
+      >
+        <div className="animate-float-medium">
+          <img
+            src="/intro-assets/wickets.png"
+            alt=""
+            draggable={false}
+            onContextMenu={(e) => e.preventDefault()}
+            className="w-18 sm:w-22 md:w-26 lg:w-30 h-auto object-contain filter drop-shadow-[0_8px_18px_rgba(229,0,87,0.22)] opacity-90 select-none pointer-events-none"
+          />
+        </div>
+      </div>
+
+      {/* 4. MID-RIGHT: Royal Cricket Helmet */}
+      <div
+        className="hidden sm:block absolute top-[48%] -translate-y-1/2 right-6 sm:right-10 md:right-14 lg:right-18 pointer-events-none transition-transform duration-300 ease-out z-15 select-none"
+        style={{
+          transform: `translate3d(${mousePos.x * 16}px, ${mousePos.y * 12}px, 0)`,
+        }}
+      >
+        <div className="animate-float-slow">
+          <img
+            src="/intro-assets/cap.png"
+            alt=""
+            draggable={false}
+            onContextMenu={(e) => e.preventDefault()}
+            className="w-20 sm:w-26 md:w-30 lg:w-36 h-auto object-contain filter drop-shadow-[0_8px_18px_rgba(229,0,87,0.2)] opacity-95 select-none pointer-events-none"
           />
         </div>
       </div>
 
       {/* 5. BOTTOM-LEFT: Batter Silhouette Playing Drive */}
       <div
-        className="absolute bottom-8 sm:bottom-12 lg:bottom-16 left-2 sm:left-8 lg:left-16 pointer-events-none transition-transform duration-300 ease-out z-20"
+        className="absolute bottom-6 sm:bottom-8 md:bottom-12 left-8 sm:left-14 md:left-20 lg:left-28 pointer-events-none transition-transform duration-300 ease-out z-20 select-none"
         style={{
-          transform: `translate3d(${mousePos.x * -20}px, ${mousePos.y * 24}px, 0)`,
+          transform: `translate3d(${mousePos.x * -20}px, ${mousePos.y * 20}px, 0)`,
         }}
       >
         <div className="animate-float-medium">
           <img
             src="/intro-assets/batter.png"
-            alt="Batter playing stroke with pink swoosh trail"
-            className="w-24 sm:w-32 md:w-44 lg:w-52 h-auto object-contain filter drop-shadow-[0_14px_28px_rgba(229,0,87,0.25)]"
+            alt=""
+            draggable={false}
+            onContextMenu={(e) => e.preventDefault()}
+            className="w-24 sm:w-32 md:w-40 lg:w-48 h-auto object-contain filter drop-shadow-[0_14px_28px_rgba(229,0,87,0.25)] select-none pointer-events-none"
           />
         </div>
       </div>
 
-      {/* 6. BOTTOM-LEFT-CENTER: Stumps & Bails with Pink Glow */}
+      {/* 6. BOTTOM-RIGHT: Bowler Silhouette in Delivery */}
       <div
-        className="hidden md:block absolute bottom-12 lg:bottom-16 left-[22%] lg:left-[24%] pointer-events-none transition-transform duration-300 ease-out z-15"
+        className="absolute bottom-6 sm:bottom-8 md:bottom-12 right-8 sm:right-14 md:right-20 lg:right-28 pointer-events-none transition-transform duration-300 ease-out z-20 select-none"
         style={{
-          transform: `translate3d(${mousePos.x * -12}px, ${mousePos.y * 16}px, 0)`,
-        }}
-      >
-        <div className="animate-float-reverse">
-          <img
-            src="/intro-assets/wickets.png"
-            alt="Cricket stumps and bails"
-            className="w-16 md:w-20 lg:w-24 h-auto object-contain filter drop-shadow-[0_8px_18px_rgba(229,0,87,0.22)] opacity-85"
-          />
-        </div>
-      </div>
-
-      {/* 7. BOTTOM-RIGHT: Bowler Silhouette in Delivery */}
-      <div
-        className="absolute bottom-8 sm:bottom-12 lg:bottom-16 right-2 sm:right-8 lg:right-16 pointer-events-none transition-transform duration-300 ease-out z-20"
-        style={{
-          transform: `translate3d(${mousePos.x * 24}px, ${mousePos.y * 22}px, 0)`,
+          transform: `translate3d(${mousePos.x * 20}px, ${mousePos.y * 20}px, 0)`,
         }}
       >
         <div className="animate-float-fast">
           <img
             src="/intro-assets/bowler.png"
-            alt="Bowler in delivery action with pink ball trail"
-            className="w-22 sm:w-28 md:w-38 lg:w-46 h-auto object-contain filter drop-shadow-[0_14px_28px_rgba(229,0,87,0.25)]"
-          />
-        </div>
-      </div>
-
-      {/* 8. BOTTOM-RIGHT-CENTER: Cricket Helmet with RR Crest */}
-      <div
-        className="hidden sm:block absolute bottom-12 lg:bottom-16 right-[22%] lg:right-[24%] pointer-events-none transition-transform duration-300 ease-out z-15"
-        style={{
-          transform: `translate3d(${mousePos.x * 14}px, ${mousePos.y * 18}px, 0)`,
-        }}
-      >
-        <div className="animate-float-slow">
-          <img
-            src="/intro-assets/cap.png"
-            alt="Cricket helmet with Rajasthan Royals crest"
-            className="w-20 md:w-24 lg:w-28 h-auto object-contain filter drop-shadow-[0_8px_18px_rgba(229,0,87,0.2)] opacity-90"
+            alt=""
+            draggable={false}
+            onContextMenu={(e) => e.preventDefault()}
+            className="w-24 sm:w-32 md:w-40 lg:w-48 h-auto object-contain filter drop-shadow-[0_14px_28px_rgba(229,0,87,0.25)] select-none pointer-events-none"
           />
         </div>
       </div>
@@ -217,34 +213,39 @@ export const IntroLanding: React.FC<IntroLandingProps> = ({ onEnterDashboard }) 
       {/* =========================================================================
           CENTRAL HERO COMPOSITION (The Heart of RR EDGE)
          ========================================================================= */}
-      <main className="relative z-30 flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 text-center max-w-4xl mx-auto py-2">
-        {/* Hero Tagline / Pitch (Stylish Typography) */}
-        <h1 className="font-display text-center max-w-3xl mb-5 sm:mb-7">
-          <span className="block text-[11px] sm:text-xs md:text-sm font-extrabold uppercase tracking-[0.28em] text-slate-500 mb-1.5 font-heading">
-            Finding the Competitive Edge
+      <main className="relative z-30 flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 text-center max-w-5xl mx-auto py-2 select-none">
+        {/* Royal Cursive Script Headline (Clean 2-Line Calligraphy) */}
+        <h1 className="text-center w-full mx-auto mb-4 sm:mb-6 select-none">
+          <span
+            className="block text-2xl sm:text-3xl md:text-4xl lg:text-[46px] xl:text-[52px] font-normal text-rr-navy tracking-wide leading-[1.3] drop-shadow-xs font-cursive-calligraphy whitespace-nowrap"
+            style={{ fontFamily: "'Great Vibes', 'Alex Brush', 'Allura', 'Parisienne', cursive" }}
+          >
+            Uncovering Latent Match Leverage
           </span>
-          <span className="block text-xl sm:text-3xl md:text-4xl lg:text-[42px] font-black tracking-tight text-rr-navy leading-[1.18] font-display">
-            Uncovering Latent Match Leverage{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E50057] via-[#FF007F] to-rose-600 drop-shadow-[0_4px_16px_rgba(229,0,87,0.18)]">
-              Under Peak Pressure
-            </span>
+          <span
+            className="block text-2xl sm:text-3xl md:text-4xl lg:text-[48px] xl:text-[54px] font-normal leading-[1.3] text-transparent bg-clip-text bg-gradient-to-r from-[#E50057] via-[#FF007F] to-[#E50057] drop-shadow-[0_4px_16px_rgba(229,0,87,0.25)] font-cursive-calligraphy whitespace-nowrap mt-1 sm:mt-1.5"
+            style={{ fontFamily: "'Great Vibes', 'Alex Brush', 'Allura', 'Parisienne', cursive" }}
+          >
+            Under Peak Pressure
           </span>
         </h1>
 
-        {/* Central Logo Composition - in exact center */}
-        <div className="relative mb-6 sm:mb-8 group">
+        {/* Central Logo Composition - Pure Native Feel */}
+        <div className="relative mb-6 sm:mb-8 pointer-events-none select-none">
           {/* Subtle back-glow */}
           <div className="absolute inset-0 bg-pink-400/20 blur-2xl rounded-full scale-125 pointer-events-none" />
 
-          {/* Real Supplied Logo */}
+          {/* Official Supplied Logo */}
           <img
             src="/logo.png"
-            alt="RR EDGE — Finding the Competitive Edge"
-            className="relative w-auto max-h-26 sm:max-h-32 md:max-h-40 lg:max-h-44 object-contain drop-shadow-[0_12px_28px_rgba(229,0,87,0.2)] mx-auto transition-transform duration-300 group-hover:scale-[1.03]"
+            alt=""
+            draggable={false}
+            onContextMenu={(e) => e.preventDefault()}
+            className="relative w-auto max-h-24 sm:max-h-28 md:max-h-36 lg:max-h-40 object-contain drop-shadow-[0_12px_28px_rgba(229,0,87,0.2)] mx-auto pointer-events-none select-none"
           />
         </div>
 
-        {/* Prominent Primary CTA Button with Neat Gold Shining Border */}
+        {/* Prominent Primary CTA Button with Shining 24K Gold Border */}
         <div className="relative group mb-5 sm:mb-6 cursor-pointer">
           {/* Luxury 24K Shining Gold Border Wrapper */}
           <div className="relative p-[2.5px] rounded-full bg-gradient-to-r from-[#BF953F] via-[#FCF6BA] via-[#B38728] via-[#FBF5B7] to-[#AA771C] animate-gold-beam shadow-md transition-all duration-300">
@@ -269,12 +270,12 @@ export const IntroLanding: React.FC<IntroLandingProps> = ({ onEnterDashboard }) 
         </div>
 
         {/* Supporting Micro-Text Below Button */}
-        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-[10px] sm:text-[11px] font-heading font-extrabold text-slate-500 tracking-[0.25em] uppercase">
+        <div className="flex flex-wrap items-center justify-center gap-2.5 sm:gap-4 text-[10px] sm:text-[11px] font-heading font-bold text-slate-400 tracking-[0.25em] uppercase select-none">
           <span className="hover:text-rr-deepPink transition-colors">PRESSURE PERFORMANCE</span>
           <span className="w-1.5 h-1.5 rounded-full bg-[#E50057] inline-block opacity-70" />
           <span className="hover:text-rr-deepPink transition-colors">PLAYER RELIABILITY</span>
           <span className="w-1.5 h-1.5 rounded-full bg-[#E50057] inline-block opacity-70" />
-          <span className="hover:text-rr-deepPink transition-colors">IPL & T20I</span>
+          <span className="hover:text-rr-deepPink transition-colors">IPL & T20I AUDITED</span>
         </div>
       </main>
     </div>
