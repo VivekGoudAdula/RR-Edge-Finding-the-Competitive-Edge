@@ -48,6 +48,90 @@
       linear-gradient(to bottom, rgba(230, 0, 126, 0.14) 1px, transparent 1px);
     background-size: 22px 22px;
   }
+
+  .bg-radial-rays {
+    background: radial-gradient(circle at center, rgba(230, 0, 126, 0.08) 0%, rgba(230, 0, 126, 0.02) 45%, transparent 70%);
+  }
 }
+
+@keyframes floatSlow {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(1.2deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+@keyframes floatMedium {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-14px) rotate(-1.5deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+@keyframes floatFast {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+@keyframes floatReverse {
+  0% { transform: translateY(-10px) rotate(1deg); }
+  50% { transform: translateY(6px) rotate(-1.2deg); }
+  100% { transform: translateY(-10px) rotate(1deg); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.06); }
+}
+
+@keyframes rayRotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(200%); }
+}
+
+.animate-float-slow {
+  animation: floatSlow 7s ease-in-out infinite;
+}
+
+.animate-float-medium {
+  animation: floatMedium 5.5s ease-in-out infinite;
+}
+
+.animate-float-fast {
+  animation: floatFast 4.2s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: floatReverse 6.2s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+.animate-ray-rotate {
+  animation: rayRotate 90s linear infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 2.5s infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float-slow,
+  .animate-float-medium,
+  .animate-float-fast,
+  .animate-float-reverse,
+  .animate-pulse-glow,
+  .animate-ray-rotate,
+  .animate-shimmer {
+    animation: none !important;
+  }
+}
+
 
 

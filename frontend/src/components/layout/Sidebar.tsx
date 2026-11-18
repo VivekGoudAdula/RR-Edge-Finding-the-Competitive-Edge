@@ -88,7 +88,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
               onCloseMobile();
             }}
             className="w-full h-full flex items-center justify-center group cursor-pointer focus:outline-none"
-            title="RR EDGE - Return to Executive Overview"
+            title="RR EDGE - Executive Overview"
           >
             <div className="w-full py-1 px-2 flex items-center justify-center rounded-xl group-hover:bg-rr-palePink/60 transition-colors">
               <img
