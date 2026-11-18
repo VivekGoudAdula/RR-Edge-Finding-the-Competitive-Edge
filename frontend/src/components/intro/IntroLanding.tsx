@@ -74,6 +74,13 @@ export const IntroLanding: React.FC<IntroLandingProps> = ({ onEnterDashboard }) 
       {/* Background Layer 3: Soft Central Glow / Aura */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[650px] rounded-full bg-gradient-to-r from-pink-300/20 via-rose-200/25 to-amber-200/15 blur-3xl pointer-events-none animate-pulse-glow" />
 
+      {/* Fullscreen Royal Frame Asset (bg.png) */}
+      <img
+        src="/intro-assets/bg.png"
+        alt="Royal Rajasthan Frame"
+        className="absolute inset-0 w-full h-full object-fill pointer-events-none z-0 select-none opacity-95"
+      />
+
       {/* =========================================================================
           FLOATING VISUAL ASSETS (Rajasthan Royalty × Cricket Architecture)
           Arranged around perimeter with depth, scale, and subtle parallax
@@ -276,9 +283,9 @@ export const IntroLanding: React.FC<IntroLandingProps> = ({ onEnterDashboard }) 
       {/* =========================================================================
           CENTRAL HERO COMPOSITION (The Heart of RR EDGE)
          ========================================================================= */}
-      <main className="relative z-30 flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 text-center max-w-4xl mx-auto py-4">
+      <main className="relative z-30 flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 text-center max-w-4xl mx-auto py-2">
         {/* Eyebrow Badge */}
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/95 backdrop-blur-md border border-pink-200/90 shadow-sm mb-4 sm:mb-5">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/95 backdrop-blur-md border border-pink-200/90 shadow-sm mb-3 sm:mb-4">
           <Sparkles className="w-3.5 h-3.5 text-rr-pink animate-pulse" />
           <span className="text-xs font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-rr-pink via-rose-600 to-rr-deep">
             FINDING THE COMPETITIVE EDGE
@@ -289,35 +296,29 @@ export const IntroLanding: React.FC<IntroLandingProps> = ({ onEnterDashboard }) 
           </span>
         </div>
 
-        {/* Central Logo Composition */}
-        <div className="relative mb-3 sm:mb-4 group">
-          {/* Subtle back-glow */}
-          <div className="absolute inset-0 bg-pink-400/20 blur-2xl rounded-full scale-110 pointer-events-none" />
-
-          {/* Real Supplied Logo */}
-          <img
-            src="/logo.png"
-            alt="RR EDGE — Finding the Competitive Edge"
-            className="relative w-auto max-h-20 sm:max-h-24 md:max-h-28 lg:max-h-32 object-contain drop-shadow-[0_8px_20px_rgba(229,0,87,0.15)] mx-auto transition-transform duration-300 group-hover:scale-[1.02]"
-          />
-        </div>
-
-        {/* Hero Tagline / Pitch */}
-        <h1 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-rr-navy tracking-tight max-w-2xl mb-3 sm:mb-4">
+        {/* Hero Tagline / Pitch (Moved Up Above Logo) */}
+        <h1 className="text-lg sm:text-2xl md:text-3xl font-extrabold text-rr-navy tracking-tight max-w-2xl mb-4 sm:mb-6">
           Uncovering Latent Match Leverage{' '}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-rr-pink via-pink-600 to-rr-deep">
             Under Peak Pressure
           </span>
         </h1>
 
-        {/* Editorial Description */}
-        <p className="text-xs sm:text-sm md:text-base text-slate-600 max-w-xl leading-relaxed mb-6 sm:mb-7 font-normal">
-          A data-driven approach to identifying players who deliver when the game gets difficult.
-          Empirical Bayes shrinkage, Context RAE/RCAE, and match-cluster bootstrap uncertainty across 192,373 deliveries.
-        </p>
+        {/* Central Logo Composition - in exact center */}
+        <div className="relative mb-5 sm:mb-7 group">
+          {/* Subtle back-glow */}
+          <div className="absolute inset-0 bg-pink-400/20 blur-2xl rounded-full scale-125 pointer-events-none" />
+
+          {/* Real Supplied Logo */}
+          <img
+            src="/logo.png"
+            alt="RR EDGE — Finding the Competitive Edge"
+            className="relative w-auto max-h-24 sm:max-h-28 md:max-h-36 lg:max-h-40 object-contain drop-shadow-[0_10px_25px_rgba(229,0,87,0.18)] mx-auto transition-transform duration-300 group-hover:scale-[1.03]"
+          />
+        </div>
 
         {/* Prominent Primary CTA Button */}
-        <div className="relative group mb-5 sm:mb-6">
+        <div className="relative group mb-4 sm:mb-5">
           {/* Button Outer Pulse Ring */}
           <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-rr-pink via-rose-500 to-rr-deep opacity-60 blur-md group-hover:opacity-100 group-hover:blur-lg transition-all duration-300" />
 
