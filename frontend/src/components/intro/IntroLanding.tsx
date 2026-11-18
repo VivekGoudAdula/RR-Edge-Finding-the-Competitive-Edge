@@ -104,7 +104,7 @@ export const IntroLanding: React.FC<IntroLandingProps> = ({ onEnterDashboard }) 
 
       {/* 1. TOP-LEFT CORNER (Fills empty white space): Cricket Ball with Pink Motion Trails */}
       <div
-        className="absolute top-8 sm:top-10 md:top-14 left-8 sm:left-14 md:left-20 lg:left-28 pointer-events-none transition-transform duration-300 ease-out z-20 select-none"
+        className="absolute top-8 sm:top-10 md:top-14 left-8 sm:left-14 md:left-20 lg:left-28 pointer-events-none transition-transform duration-300 ease-out z-20 select-none mix-blend-multiply"
         style={{
           transform: `translate3d(${mousePos.x * -22}px, ${mousePos.y * -14}px, 0)`,
         }}
@@ -115,14 +115,14 @@ export const IntroLanding: React.FC<IntroLandingProps> = ({ onEnterDashboard }) 
             alt=""
             draggable={false}
             onContextMenu={(e) => e.preventDefault()}
-            className="w-28 sm:w-36 md:w-44 lg:w-52 h-auto object-contain filter drop-shadow-[0_12px_24px_rgba(229,0,87,0.25)] select-none pointer-events-none"
+            className="w-28 sm:w-36 md:w-44 lg:w-52 h-auto object-contain filter drop-shadow-[0_8px_18px_rgba(229,0,87,0.18)] select-none pointer-events-none"
           />
         </div>
       </div>
 
       {/* 2. TOP-RIGHT CORNER (Fills empty white space): Royal Rajasthan Flag */}
       <div
-        className="absolute top-8 sm:top-10 md:top-14 right-8 sm:right-14 md:right-20 lg:right-28 pointer-events-none transition-transform duration-300 ease-out z-10 select-none"
+        className="absolute top-8 sm:top-10 md:top-14 right-8 sm:right-14 md:right-20 lg:right-28 pointer-events-none transition-transform duration-300 ease-out z-10 select-none mix-blend-multiply"
         style={{
           transform: `translate3d(${mousePos.x * 22}px, ${mousePos.y * -14}px, 0)`,
         }}
@@ -133,14 +133,14 @@ export const IntroLanding: React.FC<IntroLandingProps> = ({ onEnterDashboard }) 
             alt=""
             draggable={false}
             onContextMenu={(e) => e.preventDefault()}
-            className="w-28 sm:w-36 md:w-44 lg:w-52 h-auto object-contain filter drop-shadow-[0_10px_20px_rgba(229,0,87,0.2)] opacity-95 select-none pointer-events-none"
+            className="w-28 sm:w-36 md:w-44 lg:w-52 h-auto object-contain filter drop-shadow-[0_8px_16px_rgba(229,0,87,0.16)] opacity-95 select-none pointer-events-none"
           />
         </div>
       </div>
 
-      {/* 3. MID-LEFT: Glowing Stumps & Bails */}
+      {/* 3. MID-LEFT: Glowing Stumps & Bails (Neatly proportioned) */}
       <div
-        className="hidden sm:block absolute top-[48%] -translate-y-1/2 left-6 sm:left-10 md:left-14 lg:left-18 pointer-events-none transition-transform duration-300 ease-out z-15 select-none"
+        className="hidden sm:block absolute top-[48%] -translate-y-1/2 left-6 sm:left-10 md:left-14 lg:left-18 pointer-events-none transition-transform duration-300 ease-out z-15 select-none mix-blend-multiply"
         style={{
           transform: `translate3d(${mousePos.x * -16}px, ${mousePos.y * 12}px, 0)`,
         }}
@@ -151,14 +151,14 @@ export const IntroLanding: React.FC<IntroLandingProps> = ({ onEnterDashboard }) 
             alt=""
             draggable={false}
             onContextMenu={(e) => e.preventDefault()}
-            className="w-18 sm:w-22 md:w-26 lg:w-30 h-auto object-contain filter drop-shadow-[0_8px_18px_rgba(229,0,87,0.22)] opacity-90 select-none pointer-events-none"
+            className="w-14 sm:w-16 md:w-20 lg:w-24 h-auto object-contain filter drop-shadow-[0_6px_14px_rgba(229,0,87,0.18)] opacity-90 select-none pointer-events-none"
           />
         </div>
       </div>
 
       {/* 4. MID-RIGHT: Royal Cricket Helmet */}
       <div
-        className="hidden sm:block absolute top-[48%] -translate-y-1/2 right-6 sm:right-10 md:right-14 lg:right-18 pointer-events-none transition-transform duration-300 ease-out z-15 select-none"
+        className="hidden sm:block absolute top-[48%] -translate-y-1/2 right-6 sm:right-10 md:right-14 lg:right-18 pointer-events-none transition-transform duration-300 ease-out z-15 select-none mix-blend-multiply"
         style={{
           transform: `translate3d(${mousePos.x * 16}px, ${mousePos.y * 12}px, 0)`,
         }}
@@ -169,14 +169,14 @@ export const IntroLanding: React.FC<IntroLandingProps> = ({ onEnterDashboard }) 
             alt=""
             draggable={false}
             onContextMenu={(e) => e.preventDefault()}
-            className="w-20 sm:w-26 md:w-30 lg:w-36 h-auto object-contain filter drop-shadow-[0_8px_18px_rgba(229,0,87,0.2)] opacity-95 select-none pointer-events-none"
+            className="w-20 sm:w-26 md:w-30 lg:w-36 h-auto object-contain filter drop-shadow-[0_6px_14px_rgba(229,0,87,0.16)] opacity-95 select-none pointer-events-none"
           />
         </div>
       </div>
 
       {/* 5. BOTTOM-LEFT: Batter Silhouette Playing Drive */}
       <div
-        className="absolute bottom-6 sm:bottom-8 md:bottom-12 left-8 sm:left-14 md:left-20 lg:left-28 pointer-events-none transition-transform duration-300 ease-out z-20 select-none"
+        className="absolute bottom-6 sm:bottom-8 md:bottom-12 left-8 sm:left-14 md:left-20 lg:left-28 pointer-events-none transition-transform duration-300 ease-out z-20 select-none mix-blend-multiply"
         style={{
           transform: `translate3d(${mousePos.x * -20}px, ${mousePos.y * 20}px, 0)`,
         }}
@@ -187,14 +187,14 @@ export const IntroLanding: React.FC<IntroLandingProps> = ({ onEnterDashboard }) 
             alt=""
             draggable={false}
             onContextMenu={(e) => e.preventDefault()}
-            className="w-24 sm:w-32 md:w-40 lg:w-48 h-auto object-contain filter drop-shadow-[0_14px_28px_rgba(229,0,87,0.25)] select-none pointer-events-none"
+            className="w-24 sm:w-32 md:w-40 lg:w-48 h-auto object-contain filter drop-shadow-[0_10px_20px_rgba(229,0,87,0.18)] select-none pointer-events-none"
           />
         </div>
       </div>
 
       {/* 6. BOTTOM-RIGHT: Bowler Silhouette in Delivery */}
       <div
-        className="absolute bottom-6 sm:bottom-8 md:bottom-12 right-8 sm:right-14 md:right-20 lg:right-28 pointer-events-none transition-transform duration-300 ease-out z-20 select-none"
+        className="absolute bottom-6 sm:bottom-8 md:bottom-12 right-8 sm:right-14 md:right-20 lg:right-28 pointer-events-none transition-transform duration-300 ease-out z-20 select-none mix-blend-multiply"
         style={{
           transform: `translate3d(${mousePos.x * 20}px, ${mousePos.y * 20}px, 0)`,
         }}
@@ -205,7 +205,7 @@ export const IntroLanding: React.FC<IntroLandingProps> = ({ onEnterDashboard }) 
             alt=""
             draggable={false}
             onContextMenu={(e) => e.preventDefault()}
-            className="w-24 sm:w-32 md:w-40 lg:w-48 h-auto object-contain filter drop-shadow-[0_14px_28px_rgba(229,0,87,0.25)] select-none pointer-events-none"
+            className="w-24 sm:w-32 md:w-40 lg:w-48 h-auto object-contain filter drop-shadow-[0_10px_20px_rgba(229,0,87,0.18)] select-none pointer-events-none"
           />
         </div>
       </div>
@@ -216,14 +216,18 @@ export const IntroLanding: React.FC<IntroLandingProps> = ({ onEnterDashboard }) 
       <main className="relative z-30 flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 text-center max-w-5xl mx-auto py-2 select-none">
         {/* Royal Cursive Script Headline (Clean 2-Line Calligraphy) */}
         <h1 className="text-center w-full mx-auto mb-4 sm:mb-6 select-none">
+          {/* Normal Font Tagline on Top */}
+          <span className="block text-[11px] sm:text-xs md:text-sm font-extrabold uppercase tracking-[0.28em] text-slate-500 mb-2 sm:mb-3 font-heading">
+            Finding the Competitive Edge
+          </span>
           <span
-            className="block text-2xl sm:text-3xl md:text-4xl lg:text-[46px] xl:text-[52px] font-normal text-rr-navy tracking-wide leading-[1.3] drop-shadow-xs font-cursive-calligraphy whitespace-nowrap"
+            className="block text-2xl sm:text-3xl md:text-[36px] lg:text-[40px] xl:text-[44px] font-normal text-rr-navy tracking-wide leading-[1.4] drop-shadow-xs font-cursive-calligraphy whitespace-nowrap py-1"
             style={{ fontFamily: "'Great Vibes', 'Alex Brush', 'Allura', 'Parisienne', cursive" }}
           >
             Uncovering Latent Match Leverage
           </span>
           <span
-            className="block text-2xl sm:text-3xl md:text-4xl lg:text-[48px] xl:text-[54px] font-normal leading-[1.3] text-transparent bg-clip-text bg-gradient-to-r from-[#E50057] via-[#FF007F] to-[#E50057] drop-shadow-[0_4px_16px_rgba(229,0,87,0.25)] font-cursive-calligraphy whitespace-nowrap mt-1 sm:mt-1.5"
+            className="block text-2xl sm:text-3xl md:text-[38px] lg:text-[42px] xl:text-[46px] font-normal leading-[1.5] text-[#E50057] drop-shadow-[0_4px_16px_rgba(229,0,87,0.22)] font-cursive-calligraphy whitespace-nowrap mt-1 sm:mt-2 py-1"
             style={{ fontFamily: "'Great Vibes', 'Alex Brush', 'Allura', 'Parisienne', cursive" }}
           >
             Under Peak Pressure
