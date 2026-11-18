@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { PageId } from '../layout/Sidebar';
 
 interface IntroLandingProps {
@@ -95,17 +95,14 @@ export const IntroLanding: React.FC<IntroLandingProps> = ({ onEnterDashboard }) 
       >
         <div className="animate-float-slow group cursor-default pointer-events-auto">
           <img
-            src="/intro-assets/hawa-mahal.png"
+            src="/intro-assets/hawamahal.png"
             alt="Hawa Mahal illuminated in Royal Pink"
             className="w-36 sm:w-52 md:w-64 lg:w-72 xl:w-80 h-auto object-contain filter drop-shadow-[0_12px_24px_rgba(229,0,87,0.18)] opacity-90 hover:opacity-100 transition-opacity"
           />
-          <div className="hidden xl:block absolute -bottom-3 left-6 px-2.5 py-0.5 rounded-full bg-white/90 backdrop-blur-xs border border-pink-200/80 text-[10px] font-bold text-rr-charcoal shadow-xs">
-            Hawa Mahal • Jaipur
-          </div>
         </div>
       </div>
 
-      {/* 2. TOP-RIGHT: Amber Fort & Palace Architecture */}
+      {/* 2. TOP-RIGHT: Stadium illuminated under floodlights */}
       <div
         className="absolute top-4 sm:top-6 lg:top-8 right-2 sm:right-6 lg:right-10 pointer-events-none transition-transform duration-300 ease-out z-10"
         style={{
@@ -114,84 +111,46 @@ export const IntroLanding: React.FC<IntroLandingProps> = ({ onEnterDashboard }) 
       >
         <div className="animate-float-medium group cursor-default pointer-events-auto">
           <img
-            src="/intro-assets/amber-fort.png"
-            alt="Amber Fort Fortress & Hilltop Palace"
-            className="w-44 sm:w-60 md:w-72 lg:w-84 xl:w-96 h-auto object-contain filter drop-shadow-[0_14px_28px_rgba(229,0,87,0.18)] opacity-90 hover:opacity-100 transition-opacity"
-          />
-          <div className="hidden xl:block absolute -bottom-3 right-8 px-2.5 py-0.5 rounded-full bg-white/90 backdrop-blur-xs border border-pink-200/80 text-[10px] font-bold text-rr-charcoal shadow-xs">
-            Amber Fort Architecture
-          </div>
-        </div>
-      </div>
-
-      {/* 3. UPPER-MID LEFT: Stadium Floodlight Tower Casting Pink Beams */}
-      <div
-        className="hidden md:block absolute top-[30%] sm:top-[32%] left-3 lg:left-10 pointer-events-none transition-transform duration-300 ease-out z-10"
-        style={{
-          transform: `translate3d(${mousePos.x * -24}px, ${mousePos.y * 10}px, 0)`,
-        }}
-      >
-        <div className="animate-float-reverse">
-          <img
-            src="/intro-assets/floodlight-tower.png"
-            alt="Stadium Floodlight Tower emitting pink light"
-            className="w-24 md:w-32 lg:w-40 h-auto object-contain filter drop-shadow-[0_8px_18px_rgba(229,0,87,0.22)] opacity-90"
+            src="/intro-assets/stadium.png"
+            alt="Cricket Stadium illuminated in Royal Pink"
+            className="w-40 sm:w-52 md:w-64 lg:w-72 xl:w-80 h-auto object-contain filter drop-shadow-[0_12px_24px_rgba(229,0,87,0.18)] opacity-90 hover:opacity-100 transition-opacity"
           />
         </div>
       </div>
 
-      {/* 4. MID-LEFT: Cricket Ball with Pink Motion Trails */}
+      {/* 3. MID-LEFT: Cricket Ball with Pink Motion Trails */}
       <div
-        className="absolute top-[50%] sm:top-[46%] left-1 sm:left-4 lg:left-16 pointer-events-none transition-transform duration-300 ease-out z-20"
+        className="absolute top-[48%] sm:top-[44%] left-1 sm:left-4 lg:left-16 pointer-events-none transition-transform duration-300 ease-out z-20"
         style={{
           transform: `translate3d(${mousePos.x * -32}px, ${mousePos.y * 20}px, 0)`,
         }}
       >
         <div className="animate-float-fast">
           <img
-            src="/intro-assets/cricket-ball-trail.png"
+            src="/intro-assets/ball.png"
             alt="Cricket ball with neon pink motion trail"
             className="w-24 sm:w-32 md:w-40 lg:w-44 h-auto object-contain filter drop-shadow-[0_10px_20px_rgba(229,0,87,0.25)]"
           />
         </div>
       </div>
 
-      {/* 5. UPPER-MID RIGHT: Jal Mahal (Illuminated Water Palace) */}
+      {/* 4. MID-RIGHT: Royal Rajasthan Flag */}
       <div
-        className="hidden lg:block absolute top-[28%] sm:top-[30%] right-4 xl:right-12 pointer-events-none transition-transform duration-300 ease-out z-10"
-        style={{
-          transform: `translate3d(${mousePos.x * 22}px, ${mousePos.y * 14}px, 0)`,
-        }}
-      >
-        <div className="animate-float-slow group cursor-default pointer-events-auto">
-          <img
-            src="/intro-assets/jal-mahal.png"
-            alt="Jal Mahal illuminated over the water in Jaipur"
-            className="w-44 lg:w-56 xl:w-68 h-auto object-contain filter drop-shadow-[0_10px_22px_rgba(229,0,87,0.2)] opacity-90 hover:opacity-100 transition-opacity"
-          />
-          <div className="hidden xl:block absolute -bottom-2 right-6 px-2 py-0.5 rounded-full bg-white/90 backdrop-blur-xs border border-pink-200/80 text-[10px] font-bold text-rr-charcoal shadow-xs">
-            Jal Mahal • Jaipur
-          </div>
-        </div>
-      </div>
-
-      {/* 6. MID-RIGHT: Cricket Stadium with Floodlights */}
-      <div
-        className="hidden sm:block absolute top-[48%] right-2 sm:right-6 lg:right-20 pointer-events-none transition-transform duration-300 ease-out z-10"
+        className="hidden sm:block absolute top-[44%] right-2 sm:right-6 lg:right-16 pointer-events-none transition-transform duration-300 ease-out z-10"
         style={{
           transform: `translate3d(${mousePos.x * 28}px, ${mousePos.y * 18}px, 0)`,
         }}
       >
-        <div className="animate-float-medium">
+        <div className="animate-float-reverse">
           <img
-            src="/intro-assets/cricket-stadium.png"
-            alt="Cricket stadium illuminated under floodlights"
-            className="w-40 sm:w-52 md:w-64 lg:w-72 h-auto object-contain filter drop-shadow-[0_12px_24px_rgba(229,0,87,0.2)] opacity-85"
+            src="/intro-assets/flag.png"
+            alt="Royal Rajasthan Flag"
+            className="w-24 sm:w-32 md:w-40 lg:w-44 h-auto object-contain filter drop-shadow-[0_8px_16px_rgba(229,0,87,0.2)] opacity-85"
           />
         </div>
       </div>
 
-      {/* 7. BOTTOM-LEFT: Batter Silhouette Playing Drive */}
+      {/* 5. BOTTOM-LEFT: Batter Silhouette Playing Drive */}
       <div
         className="absolute bottom-8 sm:bottom-12 lg:bottom-16 left-2 sm:left-8 lg:left-16 pointer-events-none transition-transform duration-300 ease-out z-20"
         style={{
@@ -200,14 +159,14 @@ export const IntroLanding: React.FC<IntroLandingProps> = ({ onEnterDashboard }) 
       >
         <div className="animate-float-medium">
           <img
-            src="/intro-assets/batter-drive.png"
+            src="/intro-assets/batter.png"
             alt="Batter playing stroke with pink swoosh trail"
             className="w-24 sm:w-32 md:w-44 lg:w-52 h-auto object-contain filter drop-shadow-[0_14px_28px_rgba(229,0,87,0.25)]"
           />
         </div>
       </div>
 
-      {/* 8. BOTTOM-LEFT-CENTER: Stumps & Bails with Pink Glow */}
+      {/* 6. BOTTOM-LEFT-CENTER: Stumps & Bails with Pink Glow */}
       <div
         className="hidden md:block absolute bottom-12 lg:bottom-16 left-[22%] lg:left-[24%] pointer-events-none transition-transform duration-300 ease-out z-15"
         style={{
@@ -216,14 +175,14 @@ export const IntroLanding: React.FC<IntroLandingProps> = ({ onEnterDashboard }) 
       >
         <div className="animate-float-reverse">
           <img
-            src="/intro-assets/cricket-stumps.png"
+            src="/intro-assets/wickets.png"
             alt="Cricket stumps and bails"
             className="w-16 md:w-20 lg:w-24 h-auto object-contain filter drop-shadow-[0_8px_18px_rgba(229,0,87,0.22)] opacity-85"
           />
         </div>
       </div>
 
-      {/* 9. BOTTOM-RIGHT: Bowler Silhouette in Delivery */}
+      {/* 7. BOTTOM-RIGHT: Bowler Silhouette in Delivery */}
       <div
         className="absolute bottom-8 sm:bottom-12 lg:bottom-16 right-2 sm:right-8 lg:right-16 pointer-events-none transition-transform duration-300 ease-out z-20"
         style={{
@@ -232,14 +191,14 @@ export const IntroLanding: React.FC<IntroLandingProps> = ({ onEnterDashboard }) 
       >
         <div className="animate-float-fast">
           <img
-            src="/intro-assets/bowler-delivery.png"
+            src="/intro-assets/bowler.png"
             alt="Bowler in delivery action with pink ball trail"
             className="w-22 sm:w-28 md:w-38 lg:w-46 h-auto object-contain filter drop-shadow-[0_14px_28px_rgba(229,0,87,0.25)]"
           />
         </div>
       </div>
 
-      {/* 10. BOTTOM-RIGHT-CENTER: Cricket Helmet with RR Crest */}
+      {/* 8. BOTTOM-RIGHT-CENTER: Cricket Helmet with RR Crest */}
       <div
         className="hidden sm:block absolute bottom-12 lg:bottom-16 right-[22%] lg:right-[24%] pointer-events-none transition-transform duration-300 ease-out z-15"
         style={{
@@ -248,64 +207,32 @@ export const IntroLanding: React.FC<IntroLandingProps> = ({ onEnterDashboard }) 
       >
         <div className="animate-float-slow">
           <img
-            src="/intro-assets/cricket-helmet.png"
+            src="/intro-assets/cap.png"
             alt="Cricket helmet with Rajasthan Royals crest"
             className="w-20 md:w-24 lg:w-28 h-auto object-contain filter drop-shadow-[0_8px_18px_rgba(229,0,87,0.2)] opacity-90"
           />
         </div>
       </div>
 
-      {/* 11. TOP-RIGHT EMBLEM: Royal Rajasthan Flag */}
-      <div
-        className="hidden xl:block absolute top-[28%] right-2 pointer-events-none transition-transform duration-300 ease-out z-10"
-        style={{
-          transform: `translate3d(${mousePos.x * 30}px, ${mousePos.y * -8}px, 0)`,
-        }}
-      >
-        <div className="animate-float-reverse">
-          <img
-            src="/intro-assets/rajasthan-flag.png"
-            alt="Royal Rajasthan Flag"
-            className="w-28 h-auto object-contain filter drop-shadow-[0_8px_16px_rgba(229,0,87,0.2)] opacity-80"
-          />
-        </div>
-      </div>
-
-      {/* 12. BOTTOM CENTER-BACKGROUND: Flowing Pink Ribbon Wave */}
-      <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-full max-w-[1200px] pointer-events-none opacity-40 z-0">
-        <img
-          src="/intro-assets/pink-ribbon.png"
-          alt="Flowing royal pink fabric"
-          className="w-full h-auto object-contain filter blur-[1px]"
-        />
-      </div>
-
       {/* =========================================================================
           CENTRAL HERO COMPOSITION (The Heart of RR EDGE)
          ========================================================================= */}
       <main className="relative z-30 flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 text-center max-w-4xl mx-auto py-2">
-        {/* Eyebrow Badge */}
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/95 backdrop-blur-md border border-pink-200/90 shadow-sm mb-3 sm:mb-4">
-          <Sparkles className="w-3.5 h-3.5 text-rr-pink animate-pulse" />
-          <span className="text-xs font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-rr-pink via-rose-600 to-rr-deep">
-            FINDING THE COMPETITIVE EDGE
+        {/* Hero Tagline / Pitch (Stylish Typography) */}
+        <h1 className="font-display text-center max-w-3xl mb-5 sm:mb-7">
+          <span className="block text-[11px] sm:text-xs md:text-sm font-extrabold uppercase tracking-[0.28em] text-slate-500 mb-1.5 font-heading">
+            Finding the Competitive Edge
           </span>
-          <span className="hidden sm:inline-block w-1 h-1 rounded-full bg-pink-300" />
-          <span className="hidden sm:inline-block text-[11px] font-semibold text-slate-500">
-            Season 2 Audited Engine
-          </span>
-        </div>
-
-        {/* Hero Tagline / Pitch (Moved Up Above Logo) */}
-        <h1 className="text-lg sm:text-2xl md:text-3xl font-extrabold text-rr-navy tracking-tight max-w-2xl mb-4 sm:mb-6">
-          Uncovering Latent Match Leverage{' '}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-rr-pink via-pink-600 to-rr-deep">
-            Under Peak Pressure
+          <span className="block text-xl sm:text-3xl md:text-4xl lg:text-[42px] font-black tracking-tight text-rr-navy leading-[1.18] font-display">
+            Uncovering Latent Match Leverage{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E50057] via-[#FF007F] to-rose-600 drop-shadow-[0_4px_16px_rgba(229,0,87,0.18)]">
+              Under Peak Pressure
+            </span>
           </span>
         </h1>
 
         {/* Central Logo Composition - in exact center */}
-        <div className="relative mb-5 sm:mb-7 group">
+        <div className="relative mb-6 sm:mb-8 group">
           {/* Subtle back-glow */}
           <div className="absolute inset-0 bg-pink-400/20 blur-2xl rounded-full scale-125 pointer-events-none" />
 
@@ -313,54 +240,41 @@ export const IntroLanding: React.FC<IntroLandingProps> = ({ onEnterDashboard }) 
           <img
             src="/logo.png"
             alt="RR EDGE — Finding the Competitive Edge"
-            className="relative w-auto max-h-24 sm:max-h-28 md:max-h-36 lg:max-h-40 object-contain drop-shadow-[0_10px_25px_rgba(229,0,87,0.18)] mx-auto transition-transform duration-300 group-hover:scale-[1.03]"
+            className="relative w-auto max-h-26 sm:max-h-32 md:max-h-40 lg:max-h-44 object-contain drop-shadow-[0_12px_28px_rgba(229,0,87,0.2)] mx-auto transition-transform duration-300 group-hover:scale-[1.03]"
           />
         </div>
 
-        {/* Prominent Primary CTA Button */}
-        <div className="relative group mb-4 sm:mb-5">
-          {/* Button Outer Pulse Ring */}
-          <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-rr-pink via-rose-500 to-rr-deep opacity-60 blur-md group-hover:opacity-100 group-hover:blur-lg transition-all duration-300" />
+        {/* Prominent Primary CTA Button with Neat Gold Shining Border */}
+        <div className="relative group mb-5 sm:mb-6 cursor-pointer">
+          {/* Luxury 24K Shining Gold Border Wrapper */}
+          <div className="relative p-[2.5px] rounded-full bg-gradient-to-r from-[#BF953F] via-[#FCF6BA] via-[#B38728] via-[#FBF5B7] to-[#AA771C] animate-gold-beam shadow-md transition-all duration-300">
+            <button
+              onClick={() => handleEnter()}
+              className="relative flex items-center justify-center gap-3.5 px-10 sm:px-14 py-3.5 sm:py-4 rounded-full bg-[#E50057] hover:bg-[#D0004F] text-white font-heading font-black text-xs sm:text-sm tracking-[0.25em] uppercase transition-all duration-300 group-hover:scale-[1.01] active:scale-[0.98] overflow-hidden cursor-pointer"
+            >
+              {/* Shimmer sweep effect */}
+              <div className="absolute inset-0 w-1/2 h-full bg-gradient-to-r from-transparent via-white/30 to-transparent skew-x-12 animate-shimmer pointer-events-none" />
 
-          <button
-            onClick={() => handleEnter()}
-            className="relative flex items-center justify-center gap-3 px-8 sm:px-10 py-3.5 sm:py-4 rounded-xl bg-gradient-to-r from-rr-pink via-[#E6007E] to-rr-deep text-white font-extrabold text-sm sm:text-base tracking-wide shadow-lg hover:shadow-pink-500/30 transition-all duration-300 active:scale-[0.98] overflow-hidden"
-          >
-            {/* Shimmer sweep effect */}
-            <div className="absolute inset-0 w-1/2 h-full bg-white/20 skew-x-12 animate-shimmer pointer-events-none" />
+              {/* Text */}
+              <span className="relative z-10 font-heading font-black tracking-[0.25em] drop-shadow-xs">
+                ENTER DASHBOARD
+              </span>
 
-            <span className="relative z-10">ENTER DASHBOARD</span>
-            <ArrowRight className="relative z-10 w-5 h-5 transition-transform duration-300 group-hover:translate-x-2" />
-          </button>
+              {/* Circular arrow icon */}
+              <div className="relative z-10 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white/20 flex items-center justify-center border border-white/40 shadow-xs group-hover:bg-white group-hover:text-[#E50057] transition-all duration-300">
+                <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5" />
+              </div>
+            </button>
+          </div>
         </div>
 
         {/* Supporting Micro-Text Below Button */}
-        <div className="flex items-center justify-center gap-2 text-[10px] sm:text-xs font-bold text-slate-500 tracking-wider uppercase mb-5 sm:mb-6">
-          <span>PRESSURE PERFORMANCE</span>
-          <span>•</span>
-          <span>PLAYER RELIABILITY</span>
-          <span>•</span>
-          <span>IPL & T20I</span>
-        </div>
-
-        {/* Live Metrics Showcase Bar */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 w-full max-w-2xl bg-white/90 backdrop-blur-md rounded-2xl border border-pink-200/80 p-2.5 sm:p-3 shadow-xs">
-          <div className="flex flex-col items-center justify-center py-1.5 px-2 rounded-xl bg-pink-50/60 border border-pink-100/60">
-            <span className="text-sm sm:text-base font-extrabold text-rr-deep">192,373</span>
-            <span className="text-[10px] font-semibold text-slate-500 tracking-tight">Pressure Deliveries</span>
-          </div>
-          <div className="flex flex-col items-center justify-center py-1.5 px-2 rounded-xl bg-pink-50/60 border border-pink-100/60">
-            <span className="text-sm sm:text-base font-extrabold text-rr-navy">888</span>
-            <span className="text-[10px] font-semibold text-slate-500 tracking-tight">Audited Players</span>
-          </div>
-          <div className="flex flex-col items-center justify-center py-1.5 px-2 rounded-xl bg-pink-50/60 border border-pink-100/60">
-            <span className="text-sm sm:text-base font-extrabold text-rr-pink">M = 45</span>
-            <span className="text-[10px] font-semibold text-slate-500 tracking-tight">Bayes Shrinkage</span>
-          </div>
-          <div className="flex flex-col items-center justify-center py-1.5 px-2 rounded-xl bg-pink-50/60 border border-pink-100/60">
-            <span className="text-sm sm:text-base font-extrabold text-amber-600">10,000</span>
-            <span className="text-[10px] font-semibold text-slate-500 tracking-tight">Bootstrap Runs</span>
-          </div>
+        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-[10px] sm:text-[11px] font-heading font-extrabold text-slate-500 tracking-[0.25em] uppercase">
+          <span className="hover:text-rr-deepPink transition-colors">PRESSURE PERFORMANCE</span>
+          <span className="w-1.5 h-1.5 rounded-full bg-[#E50057] inline-block opacity-70" />
+          <span className="hover:text-rr-deepPink transition-colors">PLAYER RELIABILITY</span>
+          <span className="w-1.5 h-1.5 rounded-full bg-[#E50057] inline-block opacity-70" />
+          <span className="hover:text-rr-deepPink transition-colors">IPL & T20I</span>
         </div>
       </main>
     </div>

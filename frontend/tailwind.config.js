@@ -31,8 +31,10 @@ export default {
         }
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
-        heading: ['Plus Jakarta Sans', 'Manrope', 'Inter', 'sans-serif'],
+        sans: ['Outfit', 'Inter', 'system-ui', '-apple-system', 'sans-serif'],
+        heading: ['Plus Jakarta Sans', 'Outfit', 'sans-serif'],
+        display: ['Syne', 'Plus Jakarta Sans', 'sans-serif'],
+        royal: ['Cinzel', 'Georgia', 'serif'],
       },
       boxShadow: {
         'subtle': '0 1px 3px rgba(37, 33, 42, 0.05), 0 1px 2px rgba(230, 0, 126, 0.02)',

@@ -93,6 +93,26 @@
   100% { transform: translateX(200%); }
 }
 
+@keyframes goldBeam {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes goldSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-gold-beam {
+  background-size: 300% 300%;
+  animation: goldBeam 3.5s ease infinite;
+}
+
+.animate-gold-spin {
+  animation: goldSpin 4s linear infinite;
+}
+
 .animate-float-slow {
   animation: floatSlow 7s ease-in-out infinite;
 }
